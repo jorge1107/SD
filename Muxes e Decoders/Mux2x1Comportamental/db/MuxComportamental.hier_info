@@ -1,0 +1,14 @@
+|MuxComportamental
+in0 => Mux2x1Comportamental:u1.i0
+in1 => Mux2x1Comportamental:u1.i1
+select0 => Mux2x1Comportamental:u1.s0
+display <= Mux2x1Comportamental:u1.d
+
+
+|MuxComportamental|Mux2x1Comportamental:u1
+i0 => d.DATAB
+i1 => d.DATAA
+s0 => d.OUTPUTSELECT
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+
+

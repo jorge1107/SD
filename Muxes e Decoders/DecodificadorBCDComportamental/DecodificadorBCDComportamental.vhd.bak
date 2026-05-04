@@ -1,0 +1,14 @@
+-- Biblioteca e pacotes
+library ieee;
+use ieee.std_logic_1164.all;
+
+-- Entidade
+entity DecodificadorBCDComportamental is
+	port();
+end DecodificadorBCDComportamental;
+
+-- Arquitetura
+architecture main of DecodificadorBCDComportamental is
+	begin
+	
+end architecture main;

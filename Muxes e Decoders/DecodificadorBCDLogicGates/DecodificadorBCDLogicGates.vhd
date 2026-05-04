@@ -1,0 +1,23 @@
+-- Biblioteca e pacotes
+library ieee;
+use ieee.std_logic_1164.all;
+
+-- Entidade
+entity DecodificadorBCDLogicGates is
+	port(
+		A4, A3, A2, A1 : in bit;
+		S6, S5, S4, S3, S2, S1, s0 : out bit
+	);
+end DecodificadorBCDLogicGates;
+
+-- Arquitetura
+architecture main of DecodificadorBCDLogicGates is
+	begin
+	S6 <= (A4 and A3) or (A4 and A2) or (A3 and A2 and A1) or ((not A4) and (not A3) and (not A2));
+	S5 <= (A4 and A3) or ((not A3) and A2) or (A2 and A1) or ((not A4) and (not A3) and A1);
+	S4 <= (A4 and A2) or (A3 and (not A2)) or (A1);
+	S3 <= (A4 and A3) or (A4 and A2) or (A3 and A2 and A1) or (A3 and (not A2) and (not A1)) or ((not A4) and (not A3) and (not A2) and A1);
+	S2 <= (A4 and A3) or (A4 and A2) or ((not A3) and A2 and (not A1));
+	S1 <= (A4 and A3) or (A4 and A2) or (A3 and (not A2) and A1) or (A3 and A2 and (not A1));
+	S0 <= (A4 and A3) or (A4 and A2) or (A3 and (not A2) and (not A1)) or ((not A4) and (not A3) and (not A2) and A1);
+end architecture main;

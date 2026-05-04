@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\SD\Muxes e Decoders\DecodificadorBCDComportamental\simulation\qsim
+vDecodificadorBCDComportamental
+Z1 I69zbhHfIjQlXNa@]NE[@m3
+Z2 V[OL^c_2FiA1ZjJ]UJnZdJ1
+Z3 dD:\SD\Muxes e Decoders\DecodificadorBCDComportamental\simulation\qsim
+Z4 w1777586922
+Z5 8DecodificadorBCDComportamental.vo
+Z6 FDecodificadorBCDComportamental.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+Z9 n@decodificador@b@c@d@comportamental
+!i10b 1
+Z10 !s100 ;foeIO5?S]Io_0NhhEajh2
+!s85 0
+Z11 !s108 1777586924.296000
+Z12 !s107 DecodificadorBCDComportamental.vo|
+Z13 !s90 -work|work|DecodificadorBCDComportamental.vo|
+!s101 -O0
+vDecodificadorBCDComportamental_vlg_check_tst
+!i10b 1
+!s100 <^Jo29mCEEh8H]gbzl:lX0
+Ii;Ako03<N^IN8>gMmRXU@2
+Va`mYl4F8?CRTg?a<cYM5W0
+R3
+Z14 w1777586921
+Z15 8DecodificadorBCDComportamental.vt
+Z16 FDecodificadorBCDComportamental.vt
+L0 63
+R7
+r1
+!s85 0
+31
+Z17 !s108 1777586924.508000
+Z18 !s107 DecodificadorBCDComportamental.vt|
+Z19 !s90 -work|work|DecodificadorBCDComportamental.vt|
+!s101 -O0
+R8
+n@decodificador@b@c@d@comportamental_vlg_check_tst
+vDecodificadorBCDComportamental_vlg_sample_tst
+!i10b 1
+!s100 LiOPPld;;QMn1<9`4XkTI2
+IZ_GSaY6HA_B6YGVmP2Rff2
+V2S6FiQFkgC7eTgGF2EA^i3
+R3
+R14
+R15
+R16
+L0 29
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R8
+n@decodificador@b@c@d@comportamental_vlg_sample_tst
+vDecodificadorBCDComportamental_vlg_vec_tst
+!i10b 1
+!s100 4h<T;LV2k_Y0=]oEK4LXH0
+I7HKfKiBD3>NnWH@89P`hN3
+V41_6CJ8eRjX<Jij8QAE1_0
+R3
+R14
+R15
+R16
+L0 320
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R8
+n@decodificador@b@c@d@comportamental_vlg_vec_tst

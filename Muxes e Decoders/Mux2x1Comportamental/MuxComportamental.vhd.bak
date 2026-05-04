@@ -1,0 +1,19 @@
+-- Biblioteca e pacotes
+library ieee;
+use ieee.std_logic_1164.all;
+
+-- Entidade
+entity MuxComportamental is
+	port(
+		in1, in1, select0 : in bit;
+		display : out bit
+	);
+
+-- Arquitetura
+architecture main of MuxComportamental is
+	component Mux2x1Comportamental is
+		port(i0, i1, s0 : in bit; d out bit);
+	end component;
+	begin
+	u1 : Mux2x1Comportamental port map(i1 => in1, in2 => i2, select0 => s0);
+end architecture main;

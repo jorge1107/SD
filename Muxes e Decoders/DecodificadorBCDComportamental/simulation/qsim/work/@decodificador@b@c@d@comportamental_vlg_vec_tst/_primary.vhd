@@ -1,0 +1,4 @@
+library verilog;
+use verilog.vl_types.all;
+entity DecodificadorBCDComportamental_vlg_vec_tst is
+end DecodificadorBCDComportamental_vlg_vec_tst;

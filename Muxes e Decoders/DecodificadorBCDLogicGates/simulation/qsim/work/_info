@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\SD\Muxes e Decoders\DecodificadorBCDLogicGates\simulation\qsim
+vDecodificadorBCDLogicGates
+Z1 !s100 aYmN@^A<N0ZZ@n?Sk=@L83
+Z2 IkK]oTEnH6aCEzA?TTJJ@;2
+Z3 VMO3OTm>Fh5JMja]N]@aFc2
+Z4 dD:\SD\Muxes e Decoders\DecodificadorBCDLogicGates\simulation\qsim
+Z5 w1777584611
+Z6 8DecodificadorBCDLogicGates.vo
+Z7 FDecodificadorBCDLogicGates.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|DecodificadorBCDLogicGates.vo|
+Z10 o-work work -O0
+Z11 n@decodificador@b@c@d@logic@gates
+!i10b 1
+!s85 0
+Z12 !s108 1777584612.537000
+Z13 !s107 DecodificadorBCDLogicGates.vo|
+!s101 -O0
+vDecodificadorBCDLogicGates_vlg_check_tst
+!i10b 1
+Z14 !s100 SZ?I3o?<DCMI_Njno:5741
+Z15 ILQb6>]F]5K2m0:J4U<1nn3
+Z16 VFlE2fSg76iT9MZ@h;gK^X0
+R4
+Z17 w1777584610
+Z18 8DecodificadorBCDLogicGates.vt
+Z19 FDecodificadorBCDLogicGates.vt
+L0 63
+R8
+r1
+!s85 0
+31
+Z20 !s108 1777584612.726000
+Z21 !s107 DecodificadorBCDLogicGates.vt|
+Z22 !s90 -work|work|DecodificadorBCDLogicGates.vt|
+!s101 -O0
+R10
+Z23 n@decodificador@b@c@d@logic@gates_vlg_check_tst
+vDecodificadorBCDLogicGates_vlg_sample_tst
+!i10b 1
+Z24 !s100 VLfoTdK64UDF^HakL3m0z0
+Z25 IhN1;3gbXlfYS>aU:E0Pzg3
+Z26 Vi4hmAAUeQB`Q:4M^GTjl<2
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 n@decodificador@b@c@d@logic@gates_vlg_sample_tst
+vDecodificadorBCDLogicGates_vlg_vec_tst
+!i10b 1
+Z28 !s100 ANlVk_]OjC4[bkl7KnXiF2
+Z29 I=LEJ2<ZYB4UHCRP;3_LmL2
+Z30 V1@I^B4zW5@hO9kVTKUa@20
+R4
+R17
+R18
+R19
+Z31 L0 320
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z32 n@decodificador@b@c@d@logic@gates_vlg_vec_tst

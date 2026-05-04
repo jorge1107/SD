@@ -1,0 +1,15 @@
+vendor_name = ModelSim
+source_file = 1, D:/SD/Muxes e Decoders/Mux2x1Comportamental/MuxComportamental.vhd
+source_file = 1, D:/SD/Muxes e Decoders/Mux2x1Comportamental/Mux2x1Comportamental.vhd
+source_file = 1, D:/SD/Muxes e Decoders/Mux2x1Comportamental/Mux2x1LogicGates.vhd
+source_file = 1, D:/SD/Muxes e Decoders/Mux2x1Comportamental/db/MuxComportamental.cbx.xml
+source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = MuxComportamental
+instance = comp, \select0~I\, select0, MuxComportamental, 1
+instance = comp, \in1~I\, in1, MuxComportamental, 1
+instance = comp, \in0~I\, in0, MuxComportamental, 1
+instance = comp, \u1|d~0\, u1|d~0, MuxComportamental, 1
+instance = comp, \display~I\, display, MuxComportamental, 1
