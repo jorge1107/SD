@@ -7,5 +7,5 @@ end Mux2x1LogicGates;
 
 architecture behav of Mux2x1LogicGates is
 	begin
-		d <= (((not s0) and (i1)) or ((s0) and (i1)));
+		d <= (((not s0) and (i0)) or ((s0) and (i1)));
 end architecture behav;
