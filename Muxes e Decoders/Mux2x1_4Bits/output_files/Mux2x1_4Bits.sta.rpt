@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for Mux2x1_4Bits
-Thu Apr 30 15:09:12 2026
+Fri May 08 21:53:18 2026
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -121,28 +121,44 @@ No paths to report.
 No paths to report.
 
 
-+----------------------------------------------------+
-; Propagation Delay                                  ;
-+------------+-------------+-------+----+----+-------+
-; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
-+------------+-------------+-------+----+----+-------+
-; in0b       ; display0    ; 8.806 ;    ;    ; 8.806 ;
-; in1b       ; display1    ; 8.854 ;    ;    ; 8.854 ;
-; in2b       ; display2    ; 8.894 ;    ;    ; 8.894 ;
-; in3b       ; display3    ; 8.909 ;    ;    ; 8.909 ;
-+------------+-------------+-------+----+----+-------+
++----------------------------------------------------------+
+; Propagation Delay                                        ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; in0a       ; display0    ; 5.635 ;       ;       ; 5.635 ;
+; in0b       ; display0    ; 5.488 ;       ;       ; 5.488 ;
+; in1a       ; display1    ; 9.650 ;       ;       ; 9.650 ;
+; in1b       ; display1    ; 9.602 ;       ;       ; 9.602 ;
+; in2a       ; display2    ; 9.524 ;       ;       ; 9.524 ;
+; in2b       ; display2    ; 9.359 ;       ;       ; 9.359 ;
+; in3a       ; display3    ; 9.448 ;       ;       ; 9.448 ;
+; in3b       ; display3    ; 9.645 ;       ;       ; 9.645 ;
+; select0    ; display0    ; 9.518 ; 9.518 ; 9.518 ; 9.518 ;
+; select0    ; display1    ; 9.558 ; 9.558 ; 9.558 ; 9.558 ;
+; select0    ; display2    ; 9.315 ; 9.315 ; 9.315 ; 9.315 ;
+; select0    ; display3    ; 9.337 ; 9.337 ; 9.337 ; 9.337 ;
++------------+-------------+-------+-------+-------+-------+
 
 
-+----------------------------------------------------+
-; Minimum Propagation Delay                          ;
-+------------+-------------+-------+----+----+-------+
-; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
-+------------+-------------+-------+----+----+-------+
-; in0b       ; display0    ; 8.806 ;    ;    ; 8.806 ;
-; in1b       ; display1    ; 8.854 ;    ;    ; 8.854 ;
-; in2b       ; display2    ; 8.894 ;    ;    ; 8.894 ;
-; in3b       ; display3    ; 8.909 ;    ;    ; 8.909 ;
-+------------+-------------+-------+----+----+-------+
++----------------------------------------------------------+
+; Minimum Propagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; in0a       ; display0    ; 5.635 ;       ;       ; 5.635 ;
+; in0b       ; display0    ; 5.488 ;       ;       ; 5.488 ;
+; in1a       ; display1    ; 9.650 ;       ;       ; 9.650 ;
+; in1b       ; display1    ; 9.602 ;       ;       ; 9.602 ;
+; in2a       ; display2    ; 9.524 ;       ;       ; 9.524 ;
+; in2b       ; display2    ; 9.359 ;       ;       ; 9.359 ;
+; in3a       ; display3    ; 9.448 ;       ;       ; 9.448 ;
+; in3b       ; display3    ; 9.645 ;       ;       ; 9.645 ;
+; select0    ; display0    ; 9.518 ; 9.518 ; 9.518 ; 9.518 ;
+; select0    ; display1    ; 9.558 ; 9.558 ; 9.558 ; 9.558 ;
+; select0    ; display2    ; 9.315 ; 9.315 ; 9.315 ; 9.315 ;
+; select0    ; display3    ; 9.337 ; 9.337 ; 9.337 ; 9.337 ;
++------------+-------------+-------+-------+-------+-------+
 
 
 ----------------------------
@@ -175,28 +191,44 @@ No paths to report.
 No paths to report.
 
 
-+----------------------------------------------------+
-; Propagation Delay                                  ;
-+------------+-------------+-------+----+----+-------+
-; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
-+------------+-------------+-------+----+----+-------+
-; in0b       ; display0    ; 5.005 ;    ;    ; 5.005 ;
-; in1b       ; display1    ; 5.025 ;    ;    ; 5.025 ;
-; in2b       ; display2    ; 5.080 ;    ;    ; 5.080 ;
-; in3b       ; display3    ; 5.085 ;    ;    ; 5.085 ;
-+------------+-------------+-------+----+----+-------+
++----------------------------------------------------------+
+; Propagation Delay                                        ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; in0a       ; display0    ; 2.921 ;       ;       ; 2.921 ;
+; in0b       ; display0    ; 2.847 ;       ;       ; 2.847 ;
+; in1a       ; display1    ; 5.361 ;       ;       ; 5.361 ;
+; in1b       ; display1    ; 5.351 ;       ;       ; 5.351 ;
+; in2a       ; display2    ; 5.314 ;       ;       ; 5.314 ;
+; in2b       ; display2    ; 5.233 ;       ;       ; 5.233 ;
+; in3a       ; display3    ; 5.265 ;       ;       ; 5.265 ;
+; in3b       ; display3    ; 5.364 ;       ;       ; 5.364 ;
+; select0    ; display0    ; 5.323 ; 5.323 ; 5.323 ; 5.323 ;
+; select0    ; display1    ; 5.339 ; 5.339 ; 5.339 ; 5.339 ;
+; select0    ; display2    ; 5.218 ; 5.218 ; 5.218 ; 5.218 ;
+; select0    ; display3    ; 5.237 ; 5.237 ; 5.237 ; 5.237 ;
++------------+-------------+-------+-------+-------+-------+
 
 
-+----------------------------------------------------+
-; Minimum Propagation Delay                          ;
-+------------+-------------+-------+----+----+-------+
-; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
-+------------+-------------+-------+----+----+-------+
-; in0b       ; display0    ; 5.005 ;    ;    ; 5.005 ;
-; in1b       ; display1    ; 5.025 ;    ;    ; 5.025 ;
-; in2b       ; display2    ; 5.080 ;    ;    ; 5.080 ;
-; in3b       ; display3    ; 5.085 ;    ;    ; 5.085 ;
-+------------+-------------+-------+----+----+-------+
++----------------------------------------------------------+
+; Minimum Propagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; in0a       ; display0    ; 2.921 ;       ;       ; 2.921 ;
+; in0b       ; display0    ; 2.847 ;       ;       ; 2.847 ;
+; in1a       ; display1    ; 5.361 ;       ;       ; 5.361 ;
+; in1b       ; display1    ; 5.351 ;       ;       ; 5.351 ;
+; in2a       ; display2    ; 5.314 ;       ;       ; 5.314 ;
+; in2b       ; display2    ; 5.233 ;       ;       ; 5.233 ;
+; in3a       ; display3    ; 5.265 ;       ;       ; 5.265 ;
+; in3b       ; display3    ; 5.364 ;       ;       ; 5.364 ;
+; select0    ; display0    ; 5.323 ; 5.323 ; 5.323 ; 5.323 ;
+; select0    ; display1    ; 5.339 ; 5.339 ; 5.339 ; 5.339 ;
+; select0    ; display2    ; 5.218 ; 5.218 ; 5.218 ; 5.218 ;
+; select0    ; display3    ; 5.237 ; 5.237 ; 5.237 ; 5.237 ;
++------------+-------------+-------+-------+-------+-------+
 
 
 +----------------------------------------------------------------------------+
@@ -209,28 +241,44 @@ No paths to report.
 +------------------+-------+------+----------+---------+---------------------+
 
 
-+----------------------------------------------------+
-; Progagation Delay                                  ;
-+------------+-------------+-------+----+----+-------+
-; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
-+------------+-------------+-------+----+----+-------+
-; in0b       ; display0    ; 8.806 ;    ;    ; 8.806 ;
-; in1b       ; display1    ; 8.854 ;    ;    ; 8.854 ;
-; in2b       ; display2    ; 8.894 ;    ;    ; 8.894 ;
-; in3b       ; display3    ; 8.909 ;    ;    ; 8.909 ;
-+------------+-------------+-------+----+----+-------+
++----------------------------------------------------------+
+; Progagation Delay                                        ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; in0a       ; display0    ; 5.635 ;       ;       ; 5.635 ;
+; in0b       ; display0    ; 5.488 ;       ;       ; 5.488 ;
+; in1a       ; display1    ; 9.650 ;       ;       ; 9.650 ;
+; in1b       ; display1    ; 9.602 ;       ;       ; 9.602 ;
+; in2a       ; display2    ; 9.524 ;       ;       ; 9.524 ;
+; in2b       ; display2    ; 9.359 ;       ;       ; 9.359 ;
+; in3a       ; display3    ; 9.448 ;       ;       ; 9.448 ;
+; in3b       ; display3    ; 9.645 ;       ;       ; 9.645 ;
+; select0    ; display0    ; 9.518 ; 9.518 ; 9.518 ; 9.518 ;
+; select0    ; display1    ; 9.558 ; 9.558 ; 9.558 ; 9.558 ;
+; select0    ; display2    ; 9.315 ; 9.315 ; 9.315 ; 9.315 ;
+; select0    ; display3    ; 9.337 ; 9.337 ; 9.337 ; 9.337 ;
++------------+-------------+-------+-------+-------+-------+
 
 
-+----------------------------------------------------+
-; Minimum Progagation Delay                          ;
-+------------+-------------+-------+----+----+-------+
-; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
-+------------+-------------+-------+----+----+-------+
-; in0b       ; display0    ; 5.005 ;    ;    ; 5.005 ;
-; in1b       ; display1    ; 5.025 ;    ;    ; 5.025 ;
-; in2b       ; display2    ; 5.080 ;    ;    ; 5.080 ;
-; in3b       ; display3    ; 5.085 ;    ;    ; 5.085 ;
-+------------+-------------+-------+----+----+-------+
++----------------------------------------------------------+
+; Minimum Progagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; in0a       ; display0    ; 2.921 ;       ;       ; 2.921 ;
+; in0b       ; display0    ; 2.847 ;       ;       ; 2.847 ;
+; in1a       ; display1    ; 5.361 ;       ;       ; 5.361 ;
+; in1b       ; display1    ; 5.351 ;       ;       ; 5.351 ;
+; in2a       ; display2    ; 5.314 ;       ;       ; 5.314 ;
+; in2b       ; display2    ; 5.233 ;       ;       ; 5.233 ;
+; in3a       ; display3    ; 5.265 ;       ;       ; 5.265 ;
+; in3b       ; display3    ; 5.364 ;       ;       ; 5.364 ;
+; select0    ; display0    ; 5.323 ; 5.323 ; 5.323 ; 5.323 ;
+; select0    ; display1    ; 5.339 ; 5.339 ; 5.339 ; 5.339 ;
+; select0    ; display2    ; 5.218 ; 5.218 ; 5.218 ; 5.218 ;
+; select0    ; display3    ; 5.237 ; 5.237 ; 5.237 ; 5.237 ;
++------------+-------------+-------+-------+-------+-------+
 
 
 -------------------
@@ -258,10 +306,10 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 4     ; 4    ;
-; Unconstrained Input Port Paths  ; 4     ; 4    ;
+; Unconstrained Input Ports       ; 9     ; 9    ;
+; Unconstrained Input Port Paths  ; 12    ; 12   ;
 ; Unconstrained Output Ports      ; 4     ; 4    ;
-; Unconstrained Output Port Paths ; 4     ; 4    ;
+; Unconstrained Output Port Paths ; 12    ; 12   ;
 +---------------------------------+-------+------+
 
 
@@ -271,7 +319,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Apr 30 15:09:10 2026
+    Info: Processing started: Fri May 08 21:53:16 2026
 Info: Command: quartus_sta Mux2x1_4Bits -c Mux2x1_4Bits
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -305,8 +353,8 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 4550 megabytes
-    Info: Processing ended: Thu Apr 30 15:09:12 2026
+    Info: Processing ended: Fri May 08 21:53:18 2026
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
 
 

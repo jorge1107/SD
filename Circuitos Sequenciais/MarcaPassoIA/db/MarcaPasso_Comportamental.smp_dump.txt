@@ -1,0 +1,6 @@
+
+State Machine - |MarcaPasso_Comportamental|currentstate
+Name currentstate.Dispara currentstate.Espera currentstate.ResetTem 
+currentstate.ResetTem 0 0 0 
+currentstate.Espera 0 1 1 
+currentstate.Dispara 1 0 1 

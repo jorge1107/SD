@@ -6,8 +6,7 @@ display <= Mux2x1LogicGates:u1.d
 
 
 |MuxLogicGates|Mux2x1LogicGates:u1
-i0 => ~NO_FANOUT~
-i1 => d.IN0
+i0 => d.IN0
 i1 => d.IN0
 s0 => d.IN1
 s0 => d.IN1

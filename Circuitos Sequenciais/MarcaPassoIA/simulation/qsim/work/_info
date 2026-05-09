@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\SD\Circuitos Sequenciais\MarcaPassoIA\simulation\qsim
+vMarcaPasso_Comportamental
+Z1 IGiHOAeWGmUPzeCPaMV<b52
+Z2 VXEjo65CemnnRliI[Dm^E02
+Z3 dD:\SD\Circuitos Sequenciais\MarcaPassoIA\simulation\qsim
+Z4 w1778287015
+Z5 8MarcaPasso_Comportamental.vo
+Z6 FMarcaPasso_Comportamental.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+Z9 n@marca@passo_@comportamental
+!i10b 1
+Z10 !s100 gdN1HmZOU9W`2E=GZ[EmS1
+!s85 0
+Z11 !s108 1778287020.140000
+Z12 !s107 MarcaPasso_Comportamental.vo|
+Z13 !s90 -work|work|MarcaPasso_Comportamental.vo|
+!s101 -O0
+vMarcaPasso_Comportamental_vlg_check_tst
+!i10b 1
+!s100 ATHAcl_f^E57L?X1>1RQl3
+IDK2JSlCo`5Q=C_I:Cma``0
+V4m?W_Ka=c0R6P27FUAn6L1
+R3
+Z14 w1778287013
+Z15 8MarcaPasso_Comportamental.vt
+Z16 FMarcaPasso_Comportamental.vt
+L0 63
+R7
+r1
+!s85 0
+31
+Z17 !s108 1778287020.412000
+Z18 !s107 MarcaPasso_Comportamental.vt|
+Z19 !s90 -work|work|MarcaPasso_Comportamental.vt|
+!s101 -O0
+R8
+n@marca@passo_@comportamental_vlg_check_tst
+vMarcaPasso_Comportamental_vlg_sample_tst
+!i10b 1
+!s100 zi]>DWziNNm^:b_o65j_k2
+I7DS7AjSR8bnZ:6E57_zLc0
+VYJ13>mSj8PDT:zkjVP_zb2
+R3
+R14
+R15
+R16
+L0 29
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R8
+n@marca@passo_@comportamental_vlg_sample_tst
+vMarcaPasso_Comportamental_vlg_vec_tst
+!i10b 1
+!s100 dB@zG<D_CB?GP6YQ0ZP3l2
+IEXLzBKRiE;ej0EHOm1z:_2
+VMXHfWJFlQo24MXPmgbj;11
+R3
+R14
+R15
+R16
+L0 185
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R8
+n@marca@passo_@comportamental_vlg_vec_tst

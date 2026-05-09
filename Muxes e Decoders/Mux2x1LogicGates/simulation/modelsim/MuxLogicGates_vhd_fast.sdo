@@ -24,7 +24,7 @@
 (DELAYFILE
   (SDFVERSION "2.1")
   (DESIGN "MuxLogicGates")
-  (DATE "04/30/2026 14:16:35")
+  (DATE "05/08/2026 21:55:52")
   (VENDOR "Altera")
   (PROGRAM "Quartus II 64-Bit")
   (VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition")
@@ -33,10 +33,42 @@
 
   (CELL
     (CELLTYPE "cycloneii_asynch_io")
+    (INSTANCE \\select0\~I\\.asynch_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (465:465:465) (465:465:465))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneii_asynch_io")
     (INSTANCE \\in1\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
-        (IOPATH padio combout (495:495:495) (495:495:495))
+        (IOPATH padio combout (561:561:561) (561:561:561))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneii_asynch_io")
+    (INSTANCE \\in0\~I\\.asynch_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (561:561:561) (561:561:561))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneii_lcell_comb")
+    (INSTANCE \\u1\|d\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (2827:2827:2827) (2827:2827:2827))
+        (PORT datab (279:279:279) (279:279:279))
+        (PORT datad (276:276:276) (276:276:276))
+        (IOPATH dataa combout (180:180:180) (180:180:180))
+        (IOPATH datab combout (175:175:175) (175:175:175))
+        (IOPATH datad combout (59:59:59) (59:59:59))
       )
     )
   )
@@ -45,8 +77,8 @@
     (INSTANCE \\display\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
-        (PORT datain (3059:3059:3059) (3059:3059:3059))
-        (IOPATH datain padio (1563:1563:1563) (1563:1563:1563))
+        (PORT datain (256:256:256) (256:256:256))
+        (IOPATH datain padio (1543:1543:1543) (1543:1543:1543))
       )
     )
   )
