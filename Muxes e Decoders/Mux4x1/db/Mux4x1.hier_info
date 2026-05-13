@@ -1,17 +1,16 @@
 |Mux4x1
 in0 => Mux2x1LogicGates:u1.i0
-in1 => Mux2x1LogicGates:u1.i1
-in2 => Mux2x1LogicGates:u2.i0
+in1 => Mux2x1LogicGates:u2.i0
+in2 => Mux2x1LogicGates:u1.i1
 in3 => Mux2x1LogicGates:u2.i1
-select0 => Mux2x1LogicGates:u1.s0
-select0 => Mux2x1LogicGates:u2.s0
-select1 => Mux2x1LogicGates:u3.s0
+select0 => Mux2x1LogicGates:u3.s0
+select1 => Mux2x1LogicGates:u1.s0
+select1 => Mux2x1LogicGates:u2.s0
 display <= Mux2x1LogicGates:u3.d
 
 
 |Mux4x1|Mux2x1LogicGates:u1
-i0 => ~NO_FANOUT~
-i1 => d.IN0
+i0 => d.IN0
 i1 => d.IN0
 s0 => d.IN1
 s0 => d.IN1
@@ -19,8 +18,7 @@ d <= d.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Mux4x1|Mux2x1LogicGates:u2
-i0 => ~NO_FANOUT~
-i1 => d.IN0
+i0 => d.IN0
 i1 => d.IN0
 s0 => d.IN1
 s0 => d.IN1
@@ -28,8 +26,7 @@ d <= d.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Mux4x1|Mux2x1LogicGates:u3
-i0 => ~NO_FANOUT~
-i1 => d.IN0
+i0 => d.IN0
 i1 => d.IN0
 s0 => d.IN1
 s0 => d.IN1

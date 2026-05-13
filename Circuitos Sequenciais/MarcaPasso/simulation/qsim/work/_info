@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\SD\Circuitos Sequenciais\MarcaPasso\simulation\qsim
+vMarcaPasso
+Z1 !s100 Dl]i`98UARPUnSK>Sj8`]3
+Z2 I]0[1^fchI5:5WAB?fj]Q`0
+Z3 VRam3Gm2EI6zEBJ824;iVK0
+Z4 dC:\Users\murilo.konzen.032\Desktop\SD\Circuitos Sequenciais\MarcaPasso\simulation\qsim
+Z5 w1778709017
+Z6 8MarcaPasso.vo
+Z7 FMarcaPasso.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|MarcaPasso.vo|
+Z10 o-work work -O0
+Z11 n@marca@passo
+!i10b 1
+!s85 0
+Z12 !s108 1778709018.087000
+Z13 !s107 MarcaPasso.vo|
+!s101 -O0
+vMarcaPasso_vlg_check_tst
+!i10b 1
+Z14 !s100 5D3FeJK1eI31<h^o<:<MW1
+Z15 IZo:D0WBkTfOiGP<2A:PgV3
+Z16 V?Y6bFF^2m1HIB?Ez3Hdbi1
+R4
+R5
+Z17 8MarcaPasso.vt
+Z18 FMarcaPasso.vt
+L0 61
+R8
+r1
+!s85 0
+31
+Z19 !s108 1778709018.137000
+Z20 !s107 MarcaPasso.vt|
+Z21 !s90 -work|work|MarcaPasso.vt|
+!s101 -O0
+R10
+Z22 n@marca@passo_vlg_check_tst
+vMarcaPasso_vlg_sample_tst
+!i10b 1
+Z23 !s100 T^d2l5:ko_JT4=TPUmhk92
+Z24 I[=_zzC;0TQ;S<PPJ0f>aO3
+Z25 V4mJaeOo^Y9KP8;gcGSB1h1
+R4
+R5
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+Z26 n@marca@passo_vlg_sample_tst
+vMarcaPasso_vlg_vec_tst
+!i10b 1
+!s100 4:A>X^Y992?Z[3k98SF0^2
+I;Fj9oG=J@ODg6z]Df`bn:1
+Z27 V]odB@NzGB_FQ0[DOlnSH=2
+R4
+R5
+R17
+R18
+Z28 L0 237
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+Z29 n@marca@passo_vlg_vec_tst

@@ -1,0 +1,20 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity MarcaPassoComportamental is
+	port(
+		clk, s, z : in std_logic;
+		t, p, e1, e0: out std_logic
+	);
+end entity;
+
+architecture main of MarcaPassoComportamental is
+	type statetype is
+		(S_Reset, S_Wait, S_Pulse);
+		signal currentstate, nextstate : statetype;
+	begin
+		statereg : process(clk, s, z)
+		begin
+			if()
+
+end architecture main;

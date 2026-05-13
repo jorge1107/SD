@@ -1,0 +1,221 @@
+$comment
+	File created using the following command:
+		vcd file MarcaPassoComportamental.msim.vcd -direction
+$end
+$date
+	Wed May 13 18:55:07 2026
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module MarcaPassoComportamental_vlg_vec_tst $end
+$var reg 1 ! clk $end
+$var reg 1 " rst $end
+$var reg 1 # s $end
+$var reg 1 $ z $end
+$var wire 1 % e0 $end
+$var wire 1 & e1 $end
+$var wire 1 ' p $end
+$var wire 1 ( t $end
+$var wire 1 ) sampler $end
+$scope module i1 $end
+$var wire 1 * gnd $end
+$var wire 1 + vcc $end
+$var wire 1 , unknown $end
+$var tri1 1 - devclrn $end
+$var tri1 1 . devpor $end
+$var tri1 1 / devoe $end
+$var wire 1 0 z~combout $end
+$var wire 1 1 clk~combout $end
+$var wire 1 2 clk~clkctrl_outclk $end
+$var wire 1 3 s~combout $end
+$var wire 1 4 Selector0~0_combout $end
+$var wire 1 5 rst~combout $end
+$var wire 1 6 rst~clkctrl_outclk $end
+$var wire 1 7 currentstate.S_Wait~regout $end
+$var wire 1 8 nextstate.S_Pulse~0_combout $end
+$var wire 1 9 currentstate.S_Pulse~regout $end
+$var wire 1 : Selector2~0_combout $end
+$var wire 1 ; currentstate.S_Reset~regout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+0$
+0%
+0&
+0'
+1(
+x)
+0*
+1+
+x,
+1-
+1.
+1/
+00
+01
+02
+03
+14
+05
+06
+07
+08
+09
+1:
+0;
+$end
+#50000
+1!
+11
+12
+0)
+1;
+17
+1%
+0(
+#100000
+0!
+01
+02
+1)
+#150000
+1!
+11
+12
+0)
+#200000
+0!
+01
+02
+1)
+#240000
+1#
+13
+0)
+0:
+04
+#250000
+1!
+11
+12
+1)
+0;
+07
+14
+1:
+0%
+1(
+#300000
+0#
+0!
+03
+01
+02
+0)
+#350000
+1!
+11
+12
+1)
+1;
+17
+1%
+0(
+#400000
+0!
+01
+02
+0)
+#420000
+1$
+10
+1)
+18
+04
+#450000
+1!
+11
+12
+0)
+19
+07
+0:
+08
+1&
+1'
+0%
+#480000
+0$
+00
+1)
+#500000
+0!
+01
+02
+0)
+#550000
+1!
+11
+12
+1)
+0;
+09
+14
+1:
+0&
+0'
+1(
+#600000
+0!
+01
+02
+0)
+#650000
+1!
+11
+12
+1)
+1;
+17
+1%
+0(
+#700000
+0!
+01
+02
+0)
+#750000
+1!
+11
+12
+1)
+#800000
+0!
+01
+02
+0)
+#850000
+1!
+11
+12
+1)
+#900000
+0!
+01
+02
+0)
+#950000
+1!
+11
+12
+1)
+#1000000

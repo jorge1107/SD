@@ -1,0 +1,17 @@
+-- Biblioteca e pacotes
+library ieee;
+use ieee.std_logic_1164.all;
+
+-- Entidade
+entity and_gate is
+	port(
+	a, b : in bit;
+	c : out bit
+	);
+end and_gate;
+
+-- Arquitetura
+architecture main of and_gate is
+	begin
+	c <= a and b;
+end architecture main;

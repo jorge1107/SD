@@ -1,0 +1,6 @@
+
+State Machine - |MarcaPassoComportamental|currentstate
+Name currentstate.S_Pulse currentstate.S_Wait currentstate.S_Reset 
+currentstate.S_Reset 0 0 0 
+currentstate.S_Wait 0 1 1 
+currentstate.S_Pulse 1 0 1 

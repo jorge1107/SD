@@ -4,82 +4,82 @@ K3
 cModel Technology
 Z0 dD:\SD\Muxes e Decoders\Mux2x1LogicGates\simulation\qsim
 vMuxLogicGates
-Z1 IR9d@PcdNhNezYdH7]b_QN0
-Z2 V4YhhZkR=a:F]^;Wl6ET5Q2
-Z3 dD:\SD\Muxes e Decoders\Mux2x1LogicGates\simulation\qsim
-Z4 w1778288218
-Z5 8MuxLogicGates.vo
-Z6 FMuxLogicGates.vo
+Z1 !s100 Og^[jCg0>zRN<m57R:dK_3
+Z2 IR9d@PcdNhNezYdH7]b_QN0
+Z3 V4YhhZkR=a:F]^;Wl6ET5Q2
+Z4 dC:\Users\jorge.carvalho.140\Documents\SD\Muxes e Decoders\Mux2x1LogicGates\simulation\qsim
+Z5 w1778707445
+Z6 8MuxLogicGates.vo
+Z7 FMuxLogicGates.vo
 L0 31
-Z7 OV;L;10.1d;51
+Z8 OV;L;10.1d;51
 r1
 31
-Z8 o-work work -O0
-Z9 n@mux@logic@gates
+Z9 !s90 -work|work|MuxLogicGates.vo|
+Z10 o-work work -O0
+Z11 n@mux@logic@gates
 !i10b 1
-Z10 !s100 Og^[jCg0>zRN<m57R:dK_3
 !s85 0
-Z11 !s108 1778288219.923000
-Z12 !s107 MuxLogicGates.vo|
-Z13 !s90 -work|work|MuxLogicGates.vo|
+Z12 !s108 1778707446.144000
+Z13 !s107 MuxLogicGates.vo|
 !s101 -O0
 vMuxLogicGates_vlg_check_tst
 !i10b 1
-!s100 imR2EzO98jj:O4SWh:PSo2
-I>L>SiPgo?@>LW5W9E>HCR2
-Vj2Bj>aEWRoaUBjJdUmiI70
-R3
-Z14 w1778288216
-Z15 8MuxLogicGates.vt
-Z16 FMuxLogicGates.vt
+Z14 !s100 imR2EzO98jj:O4SWh:PSo2
+Z15 I>L>SiPgo?@>LW5W9E>HCR2
+Z16 Vj2Bj>aEWRoaUBjJdUmiI70
+R4
+R5
+Z17 8MuxLogicGates.vt
+Z18 FMuxLogicGates.vt
 L0 61
-R7
+R8
 r1
 !s85 0
 31
-Z17 !s108 1778288220.115000
-Z18 !s107 MuxLogicGates.vt|
-Z19 !s90 -work|work|MuxLogicGates.vt|
+Z19 !s108 1778707446.204000
+Z20 !s107 MuxLogicGates.vt|
+Z21 !s90 -work|work|MuxLogicGates.vt|
 !s101 -O0
-R8
-n@mux@logic@gates_vlg_check_tst
+R10
+Z22 n@mux@logic@gates_vlg_check_tst
 vMuxLogicGates_vlg_sample_tst
 !i10b 1
-!s100 @TGOVJDO>JK9ZM:775fo]0
-IRhT[ja]<35J2ZH?eEaTkg3
-VHOL?Nf9hXN]BaffCDcFl=0
-R3
-R14
-R15
-R16
+Z23 !s100 @TGOVJDO>JK9ZM:775fo]0
+Z24 IRhT[ja]<35J2ZH?eEaTkg3
+Z25 VHOL?Nf9hXN]BaffCDcFl=0
+R4
+R5
+R17
+R18
 L0 29
-R7
+R8
 r1
 !s85 0
 31
-R17
-R18
 R19
+R20
+R21
 !s101 -O0
-R8
-n@mux@logic@gates_vlg_sample_tst
+R10
+Z26 n@mux@logic@gates_vlg_sample_tst
 vMuxLogicGates_vlg_vec_tst
 !i10b 1
-!s100 Hg<k?lB^fRIidT0bAdD?j2
-I;DRzHTdo336Y<l^KLjMJf0
-VcD4[YHASP]KgDMD^>?LX61
-R3
-R14
-R15
-R16
-L0 156
-R7
+Z27 !s100 Hg<k?lB^fRIidT0bAdD?j2
+Z28 I;DRzHTdo336Y<l^KLjMJf0
+Z29 VcD4[YHASP]KgDMD^>?LX61
+R4
+R5
+R17
+R18
+Z30 L0 156
+R8
 r1
 !s85 0
 31
-R17
-R18
 R19
+R20
+R21
 !s101 -O0
-R8
-n@mux@logic@gates_vlg_vec_tst
+R10
+Z31 n@mux@logic@gates_vlg_vec_tst

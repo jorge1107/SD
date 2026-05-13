@@ -3,7 +3,7 @@ $comment
 		vcd file MuxLogicGates.msim.vcd -direction
 $end
 $date
-	Fri May 08 21:57:01 2026
+	Wed May 13 18:24:06 2026
 $end
 $version
 	ModelSim Version 10.1d

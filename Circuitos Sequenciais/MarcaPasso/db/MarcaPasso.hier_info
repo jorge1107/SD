@@ -1,0 +1,35 @@
+|MarcaPasso
+clk => Registrador2Bits:u1.clk
+s => CircuitoCombinacional:u2.s
+z => CircuitoCombinacional:u2.z
+t <= CircuitoCombinacional:u2.t
+p <= CircuitoCombinacional:u2.p
+e1 <= Registrador2Bits:u1.s1
+e0 <= Registrador2Bits:u1.s0
+
+
+|MarcaPasso|Registrador2Bits:u1
+clk => s0~reg0.CLK
+clk => s1~reg0.CLK
+n1 => s1~reg0.DATAIN
+n0 => s0~reg0.DATAIN
+s1 <= s1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+s0 <= s0~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MarcaPasso|CircuitoCombinacional:u2
+s1 => p.IN0
+s1 => t.IN0
+s1 => n1.IN0
+s0 => n1.IN1
+s0 => t.IN1
+s0 => p.IN1
+s => n1.IN1
+z => n1.IN1
+z => n0.IN1
+t <= t.DB_MAX_OUTPUT_PORT_TYPE
+p <= p.DB_MAX_OUTPUT_PORT_TYPE
+n1 <= n1.DB_MAX_OUTPUT_PORT_TYPE
+n0 <= n0.DB_MAX_OUTPUT_PORT_TYPE
+
+

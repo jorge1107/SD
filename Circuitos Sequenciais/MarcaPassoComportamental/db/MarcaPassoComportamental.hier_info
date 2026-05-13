@@ -1,0 +1,16 @@
+|MarcaPassoComportamental
+clk => currentstate~1.DATAIN
+s => nextstate.S_Wait.IN1
+s => nextstate.S_Reset.DATAA
+s => nextstate.S_Wait.DATAA
+s => comblogic.IN0
+s => comblogic.IN0
+z => comblogic.IN1
+z => comblogic.IN1
+rst => currentstate~3.DATAIN
+t <= t.DB_MAX_OUTPUT_PORT_TYPE
+p <= p.DB_MAX_OUTPUT_PORT_TYPE
+e1 <= e1.DB_MAX_OUTPUT_PORT_TYPE
+e0 <= e0.DB_MAX_OUTPUT_PORT_TYPE
+
+

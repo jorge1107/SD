@@ -1,0 +1,380 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "05/13/2026 18:30:19"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    Mux2x1_4Bits
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module Mux2x1_4Bits_vlg_sample_tst(
+	in0a,
+	in0b,
+	in1a,
+	in1b,
+	in2a,
+	in2b,
+	in3a,
+	in3b,
+	select0,
+	sampler_tx
+);
+input  in0a;
+input  in0b;
+input  in1a;
+input  in1b;
+input  in2a;
+input  in2b;
+input  in3a;
+input  in3b;
+input  select0;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(in0a or in0b or in1a or in1b or in2a or in2b or in3a or in3b or select0)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module Mux2x1_4Bits_vlg_check_tst (
+	display0,
+	display1,
+	display2,
+	display3,
+	sampler_rx
+);
+input  display0;
+input  display1;
+input  display2;
+input  display3;
+input sampler_rx;
+
+reg  display0_expected;
+reg  display1_expected;
+reg  display2_expected;
+reg  display3_expected;
+
+reg  display0_prev;
+reg  display1_prev;
+reg  display2_prev;
+reg  display3_prev;
+
+reg  display0_expected_prev;
+reg  display1_expected_prev;
+reg  display2_expected_prev;
+reg  display3_expected_prev;
+
+reg  last_display0_exp;
+reg  last_display1_exp;
+reg  last_display2_exp;
+reg  last_display3_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:4] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 4'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	display0_prev = display0;
+	display1_prev = display1;
+	display2_prev = display2;
+	display3_prev = display3;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	display0_expected_prev = display0_expected;
+	display1_expected_prev = display1_expected;
+	display2_expected_prev = display2_expected;
+	display3_expected_prev = display3_expected;
+end
+
+
+
+// expected display0
+initial
+begin
+	display0_expected = 1'bX;
+end 
+
+// expected display1
+initial
+begin
+	display1_expected = 1'bX;
+end 
+
+// expected display2
+initial
+begin
+	display2_expected = 1'bX;
+end 
+
+// expected display3
+initial
+begin
+	display3_expected = 1'bX;
+end 
+// generate trigger
+always @(display0_expected or display0 or display1_expected or display1 or display2_expected or display2 or display3_expected or display3)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected display0 = %b | expected display1 = %b | expected display2 = %b | expected display3 = %b | ",display0_expected_prev,display1_expected_prev,display2_expected_prev,display3_expected_prev);
+	$display("| real display0 = %b | real display1 = %b | real display2 = %b | real display3 = %b | ",display0_prev,display1_prev,display2_prev,display3_prev);
+`endif
+	if (
+		( display0_expected_prev !== 1'bx ) && ( display0_prev !== display0_expected_prev )
+		&& ((display0_expected_prev !== last_display0_exp) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port display0 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", display0_expected_prev);
+		$display ("     Real value = %b", display0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_display0_exp = display0_expected_prev;
+	end
+	if (
+		( display1_expected_prev !== 1'bx ) && ( display1_prev !== display1_expected_prev )
+		&& ((display1_expected_prev !== last_display1_exp) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port display1 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", display1_expected_prev);
+		$display ("     Real value = %b", display1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_display1_exp = display1_expected_prev;
+	end
+	if (
+		( display2_expected_prev !== 1'bx ) && ( display2_prev !== display2_expected_prev )
+		&& ((display2_expected_prev !== last_display2_exp) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port display2 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", display2_expected_prev);
+		$display ("     Real value = %b", display2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_display2_exp = display2_expected_prev;
+	end
+	if (
+		( display3_expected_prev !== 1'bx ) && ( display3_prev !== display3_expected_prev )
+		&& ((display3_expected_prev !== last_display3_exp) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port display3 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", display3_expected_prev);
+		$display ("     Real value = %b", display3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_display3_exp = display3_expected_prev;
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#1000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module Mux2x1_4Bits_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg in0a;
+reg in0b;
+reg in1a;
+reg in1b;
+reg in2a;
+reg in2b;
+reg in3a;
+reg in3b;
+reg select0;
+// wires                                               
+wire display0;
+wire display1;
+wire display2;
+wire display3;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+Mux2x1_4Bits i1 (
+// port map - connection between master ports and signals/registers   
+	.display0(display0),
+	.display1(display1),
+	.display2(display2),
+	.display3(display3),
+	.in0a(in0a),
+	.in0b(in0b),
+	.in1a(in1a),
+	.in1b(in1b),
+	.in2a(in2a),
+	.in2b(in2b),
+	.in3a(in3a),
+	.in3b(in3b),
+	.select0(select0)
+);
+
+// in0a
+always
+begin
+	in0a = 1'b0;
+	in0a = #50000 1'b1;
+	#50000;
+end 
+
+// in1a
+always
+begin
+	in1a = 1'b0;
+	in1a = #50000 1'b1;
+	#50000;
+end 
+
+// in2a
+always
+begin
+	in2a = 1'b0;
+	in2a = #50000 1'b1;
+	#50000;
+end 
+
+// in3a
+always
+begin
+	in3a = 1'b0;
+	in3a = #50000 1'b1;
+	#50000;
+end 
+
+// in0b
+always
+begin
+	in0b = 1'b0;
+	in0b = #25000 1'b1;
+	#25000;
+end 
+
+// in1b
+always
+begin
+	in1b = 1'b0;
+	in1b = #25000 1'b1;
+	#25000;
+end 
+
+// in2b
+always
+begin
+	in2b = 1'b0;
+	in2b = #25000 1'b1;
+	#25000;
+end 
+
+// in3b
+always
+begin
+	in3b = 1'b0;
+	in3b = #25000 1'b1;
+	#25000;
+end 
+
+// select0
+always
+begin
+	select0 = 1'b0;
+	select0 = #100000 1'b1;
+	#100000;
+end 
+
+Mux2x1_4Bits_vlg_sample_tst tb_sample (
+	.in0a(in0a),
+	.in0b(in0b),
+	.in1a(in1a),
+	.in1b(in1b),
+	.in2a(in2a),
+	.in2b(in2b),
+	.in3a(in3a),
+	.in3b(in3b),
+	.select0(select0),
+	.sampler_tx(sampler)
+);
+
+Mux2x1_4Bits_vlg_check_tst tb_out(
+	.display0(display0),
+	.display1(display1),
+	.display2(display2),
+	.display3(display3),
+	.sampler_rx(sampler)
+);
+endmodule
+

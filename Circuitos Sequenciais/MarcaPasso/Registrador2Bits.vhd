@@ -12,7 +12,7 @@ architecture behav of Registrador2Bits is
 	begin
 		process(clk)
 			begin
-				if (clk 'event and clk = '1') then
+				if (clk'event and clk = '1') then
 					s1 <= n1;
 					s0 <= n0;
 				end if;

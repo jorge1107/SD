@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\jorge.carvalho.140\Documents\SD\Muxes e Decoders\Mux2x1Comportamental\simulation\qsim
+vMuxComportamental
+Z1 !s100 oKdLBQ>CRjndn@O78>RJG2
+Z2 IP;FX:0Y5>7FjhJX:g8IT21
+Z3 VNZEI61L`_T]6oL475[ME]0
+Z4 dC:\Users\jorge.carvalho.140\Documents\SD\Muxes e Decoders\Mux2x1Comportamental\simulation\qsim
+Z5 w1778707397
+Z6 8MuxComportamental.vo
+Z7 FMuxComportamental.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|MuxComportamental.vo|
+Z10 o-work work -O0
+Z11 n@mux@comportamental
+!i10b 1
+!s85 0
+Z12 !s108 1778707398.130000
+Z13 !s107 MuxComportamental.vo|
+!s101 -O0
+vMuxComportamental_vlg_check_tst
+!i10b 1
+Z14 !s100 8cG8REWVVEnLX3XG33lWV0
+Z15 ILbMl4F;2n0Ka4KkzzKY531
+Z16 VB=L[CDGWbGC>>=c6=kHki2
+R4
+R5
+Z17 8MuxComportamental.vt
+Z18 FMuxComportamental.vt
+L0 61
+R8
+r1
+!s85 0
+31
+Z19 !s108 1778707398.211000
+Z20 !s107 MuxComportamental.vt|
+Z21 !s90 -work|work|MuxComportamental.vt|
+!s101 -O0
+R10
+Z22 n@mux@comportamental_vlg_check_tst
+vMuxComportamental_vlg_sample_tst
+!i10b 1
+Z23 !s100 ZzS1zEkN<_iKJd5Xo<;Rn2
+Z24 Ih;SLm<YA;[?Pj=]<nU]l=1
+Z25 VAHJ>c2dZm^:=_9hf8Vm[82
+R4
+R5
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+Z26 n@mux@comportamental_vlg_sample_tst
+vMuxComportamental_vlg_vec_tst
+!i10b 1
+Z27 !s100 Zf2618WCRQUcQm>^IVYcW1
+Z28 IckDR4DUfnhdSA6PSQHdPi3
+Z29 V8NYi]YnXhf`?NbO`=Nik;1
+R4
+R5
+R17
+R18
+Z30 L0 156
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+Z31 n@mux@comportamental_vlg_vec_tst

@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\jorge.carvalho.140\Documents\SD\simulation\qsim
+vand_gate
+Z1 IjmXH?=2a`3fN2>`mGDSJD0
+Z2 Veh:LPnmcXIkSU1hN5DkW@3
+Z3 dC:\Users\jorge.carvalho.140\Documents\SD\simulation\qsim
+Z4 w1776287963
+Z5 8and_gate.vo
+Z6 Fand_gate.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+!i10b 1
+Z9 !s100 R=_BNbIA1RABZ8JZO2YO52
+!s85 0
+Z10 !s108 1776287965.005000
+Z11 !s107 and_gate.vo|
+Z12 !s90 -work|work|and_gate.vo|
+!s101 -O0
+vand_gate_vlg_check_tst
+!i10b 1
+!s100 _OJS<hGVcRggjRL5e1YmJ2
+IJF=0C;kmH1T>oKYME;n7`0
+VgERLBU=j9W]:dbiiH4M:P2
+R3
+R4
+Z13 8and_gate.vt
+Z14 Fand_gate.vt
+L0 59
+R7
+r1
+!s85 0
+31
+Z15 !s108 1776287965.068000
+Z16 !s107 and_gate.vt|
+Z17 !s90 -work|work|and_gate.vt|
+!s101 -O0
+R8
+vand_gate_vlg_sample_tst
+!i10b 1
+!s100 E@e>VcolAbgMZ8LMgGoX01
+I:Afe1Cig7dUGQV?4bX7dK0
+VJAEhoV]IlzU0U;b58H?HV2
+R3
+R4
+R13
+R14
+L0 29
+R7
+r1
+!s85 0
+31
+R15
+R16
+R17
+!s101 -O0
+R8
+vand_gate_vlg_vec_tst
+!i10b 1
+!s100 Sz>hOX]Ck[8aYh@NUb1Z82
+ICJjOO3d>X87lEQemZ9R=K2
+V_RNPLgejQ4@:Jl`O1^me>1
+R3
+R4
+R13
+R14
+L0 154
+R7
+r1
+!s85 0
+31
+R15
+R16
+R17
+!s101 -O0
+R8

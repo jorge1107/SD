@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\jorge.carvalho.140\Documents\SD\Muxes e Decoders\Mux4x1\simulation\qsim
+vMux4x1
+Z1 Ii5S:olRMMPzh3S8]m^Y`m1
+Z2 VWTUbi43Lc0PNaa6k]K5Uk0
+Z3 dC:\Users\jorge.carvalho.140\Documents\SD\Muxes e Decoders\Mux4x1\simulation\qsim
+Z4 w1778707315
+Z5 8Mux4x1.vo
+Z6 FMux4x1.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|Mux4x1.vo|
+Z9 o-work work -O0
+Z10 n@mux4x1
+!i10b 1
+Z11 !s100 MC>?0efg8>cmDGB1D^0<f0
+!s85 0
+Z12 !s108 1778707316.100000
+Z13 !s107 Mux4x1.vo|
+!s101 -O0
+vMux4x1_vlg_check_tst
+!i10b 1
+Z14 !s100 :[^z9UlzF^b>[1XLDbadX0
+Z15 IPJz0[P_O0VHnZ:gF0Lh:?0
+Z16 Vdh0NATmbSeX49n<PYRO1F2
+R3
+R4
+Z17 8Mux4x1.vt
+Z18 FMux4x1.vt
+L0 67
+R7
+r1
+!s85 0
+31
+Z19 !s108 1778707316.149000
+Z20 !s107 Mux4x1.vt|
+Z21 !s90 -work|work|Mux4x1.vt|
+!s101 -O0
+R9
+Z22 n@mux4x1_vlg_check_tst
+vMux4x1_vlg_sample_tst
+!i10b 1
+Z23 !s100 Ammi`ga[AF;G@IJAmnFDg0
+Z24 I0Y>V1h`?B6fU`UkQi]V030
+Z25 VlC83VD2jM:F>B<SGaMMn_1
+R3
+R4
+R17
+R18
+L0 29
+R7
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R9
+Z26 n@mux4x1_vlg_sample_tst
+vMux4x1_vlg_vec_tst
+!i10b 1
+Z27 !s100 :MW[VkPcXbBcZOIA>]a=P1
+Z28 INF2B9z1dmTTXX`4?HeYQB3
+Z29 Vn7okR]zQCdJ`1WL5k3B2=0
+R3
+R4
+R17
+R18
+Z30 L0 162
+R7
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R9
+Z31 n@mux4x1_vlg_vec_tst

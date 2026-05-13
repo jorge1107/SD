@@ -1,0 +1,165 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\jorge.carvalho.140\Documents\SD\Muxes e Decoders\Mux2x1_4Bits\simulation\qsim
+vMux2x1_4bits
+Z1 !s100 lP]:zj<YQb:6G0E@;QlEn2
+Z2 IW;GDFFh2YbLn6g`^7mHM`2
+Z3 VFL]jNihWTWS?jkEcbPj1h3
+Z4 dC:\Users\jorge.carvalho.140\Documents\SD\Muxes e Decoders\Mux2x1_4Bits\simulation\qsim
+Z5 w1778707677
+Z6 8Mux2x1_4Bits.vo
+Z7 FMux2x1_4Bits.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|Mux2x1_4Bits.vo|
+Z10 o-work work -O0
+Z11 n@mux2x1_4bits
+Z12 !s108 1778707678.225000
+Z13 !s107 Mux2x1_4Bits.vo|
+!i10b 1
+!s85 0
+!s101 -O0
+vMux2x1_4Bits
+Z14 I>Z4lo<6[IU:0ezL=b8zRR3
+Z15 Vn4@DRe60eL8gIoe;>D:a90
+R4
+Z16 w1778707819
+R6
+R7
+L0 31
+R8
+r1
+31
+R9
+R10
+Z17 n@mux2x1_4@bits
+!i10b 1
+Z18 !s100 B_NVBEl6iYJC9Bm>SmK9_2
+!s85 0
+Z19 !s108 1778707819.867000
+R13
+!s101 -O0
+vMux2x1_4Bits_vlg_check_tst
+!i10b 1
+!s100 ZB:VAG37II<4fe59Q00OB0
+I9a9Amz9gKAF:fbiYjYMKS0
+V?W9HIB[d2Oc552WRzmT;60
+R4
+R16
+Z20 8Mux2x1_4Bits.vt
+Z21 FMux2x1_4Bits.vt
+L0 73
+R8
+r1
+!s85 0
+31
+Z22 !s108 1778707819.914000
+Z23 !s107 Mux2x1_4Bits.vt|
+Z24 !s90 -work|work|Mux2x1_4Bits.vt|
+!s101 -O0
+R10
+n@mux2x1_4@bits_vlg_check_tst
+vMux2x1_4bits_vlg_check_tst
+Z25 !s100 n[81BZ5d:[1WTlC;SEXAi0
+Z26 IYW6C8:QCkZobbJ_15]L:53
+Z27 Vj7RK^Zkaj[RJcZD@ZYdVf0
+R4
+R5
+R20
+R21
+L0 73
+R8
+r1
+31
+Z28 !s108 1778707678.288000
+Z29 !s107 Mux2x1_4Bits.vt|
+R24
+R10
+Z30 n@mux2x1_4bits_vlg_check_tst
+!i10b 1
+!s85 0
+!s101 -O0
+vMux2x1_4Bits_vlg_sample_tst
+!i10b 1
+!s100 CE`TUAJiTg5R]f1f:Ih=D0
+I1m?L7IFPM<`?FobPkR`Zo2
+VW_3je=U`:0ke7TVZbSE3:2
+R4
+R16
+R20
+R21
+L0 29
+R8
+r1
+!s85 0
+31
+R22
+R23
+R24
+!s101 -O0
+R10
+n@mux2x1_4@bits_vlg_sample_tst
+vMux2x1_4bits_vlg_sample_tst
+Z31 !s100 VFC`6MQhjfd24>2U<<@3W0
+Z32 I0@f:]KzSiA86?]KeGUK_B1
+Z33 ViKJ_d78a^fVS2V9azXmBH0
+R4
+R5
+R20
+R21
+L0 29
+R8
+r1
+31
+R28
+R29
+R24
+R10
+Z34 n@mux2x1_4bits_vlg_sample_tst
+!i10b 1
+!s85 0
+!s101 -O0
+vMux2x1_4Bits_vlg_vec_tst
+!i10b 1
+!s100 b[I^TcAfGeO7z;bK>@eKS2
+IRa;N4iik8mng:5f:d3TXZ0
+Vn[@iccHY0_=TT;ScKz^Eh1
+R4
+R16
+R20
+R21
+Z35 L0 249
+R8
+r1
+!s85 0
+31
+R22
+R23
+R24
+!s101 -O0
+R10
+n@mux2x1_4@bits_vlg_vec_tst
+vMux2x1_4bits_vlg_vec_tst
+Z36 !s100 3em?7cZHEh?BI`4<NWnMe0
+Z37 I=hZd?>^_JHA?h@_8VUJDD0
+Z38 VVh2[`i0B?]mK_mX^o^MSc3
+R4
+R5
+R20
+R21
+R35
+R8
+r1
+31
+R28
+R29
+R24
+R10
+Z39 n@mux2x1_4bits_vlg_vec_tst
+!i10b 1
+!s85 0
+!s101 -O0
