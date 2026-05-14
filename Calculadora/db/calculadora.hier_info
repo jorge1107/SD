@@ -1,0 +1,108 @@
+|calculadora
+a5 => FullAdder1Bit:u6.in1
+a4 => FullAdder1Bit:u5.in1
+a3 => FullAdder1Bit:u4.in1
+a2 => FullAdder1Bit:u3.in1
+a1 => FullAdder1Bit:u2.in1
+a0 => FullAdder1Bit:u1.in1
+b5 => FullAdder1Bit:u6.in2
+b4 => FullAdder1Bit:u5.in2
+b3 => FullAdder1Bit:u4.in2
+b2 => FullAdder1Bit:u3.in2
+b1 => FullAdder1Bit:u2.in2
+b0 => FullAdder1Bit:u1.in2
+f => ~NO_FANOUT~
+e => ~NO_FANOUT~
+clk => ~NO_FANOUT~
+s5 <= FullAdder1Bit:u6.S
+s4 <= FullAdder1Bit:u5.S
+s3 <= FullAdder1Bit:u4.S
+s2 <= FullAdder1Bit:u3.S
+s1 <= FullAdder1Bit:u2.S
+s0 <= FullAdder1Bit:u1.S
+
+
+|calculadora|FullAdder1Bit:u1
+in1 => S.IN0
+in1 => Cout.IN0
+in1 => Cout.IN0
+in2 => S.IN1
+in2 => Cout.IN1
+in2 => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calculadora|FullAdder1Bit:u2
+in1 => S.IN0
+in1 => Cout.IN0
+in1 => Cout.IN0
+in2 => S.IN1
+in2 => Cout.IN1
+in2 => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calculadora|FullAdder1Bit:u3
+in1 => S.IN0
+in1 => Cout.IN0
+in1 => Cout.IN0
+in2 => S.IN1
+in2 => Cout.IN1
+in2 => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calculadora|FullAdder1Bit:u4
+in1 => S.IN0
+in1 => Cout.IN0
+in1 => Cout.IN0
+in2 => S.IN1
+in2 => Cout.IN1
+in2 => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calculadora|FullAdder1Bit:u5
+in1 => S.IN0
+in1 => Cout.IN0
+in1 => Cout.IN0
+in2 => S.IN1
+in2 => Cout.IN1
+in2 => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calculadora|FullAdder1Bit:u6
+in1 => S.IN0
+in1 => Cout.IN0
+in1 => Cout.IN0
+in2 => S.IN1
+in2 => Cout.IN1
+in2 => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
