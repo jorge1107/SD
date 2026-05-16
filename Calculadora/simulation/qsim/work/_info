@@ -4,78 +4,78 @@ K3
 cModel Technology
 Z0 dD:\SD\Calculadora\simulation\qsim
 vcalculadora
-Z1 IJ]fN^D_h7^^AziDEfh?d40
-Z2 VoZ;39?5S`7SiLg]FjiaYo1
+Z1 ILOKb;?1HheL^92HXoA<W20
+Z2 VRggbRMGNARUDRM9Qen:fE0
 Z3 dD:\SD\Calculadora\simulation\qsim
-Z4 w1778709326
+Z4 w1778942525
 Z5 8calculadora.vo
 Z6 Fcalculadora.vo
 L0 31
 Z7 OV;L;10.1d;51
 r1
 31
-Z8 o-work work -O0
+Z8 !s90 -work|work|calculadora.vo|
+Z9 o-work work -O0
 !i10b 1
-Z9 !s100 5IkfB<Rf6n1VGRC`EBl8d2
+Z10 !s100 [j6c2hBli9haNg:JSYoB01
 !s85 0
-Z10 !s108 1778709329.448000
-Z11 !s107 calculadora.vo|
-Z12 !s90 -work|work|calculadora.vo|
+Z11 !s108 1778942527.060000
+Z12 !s107 calculadora.vo|
 !s101 -O0
 vcalculadora_vlg_check_tst
 !i10b 1
-!s100 D8aL`zLg_Y6?^:RzF3VQP3
-IF7g?>QQ9?Kb0KYzGBaPKS0
-VGN4<fkYdP<kfJ>?:@9JLa3
+!s100 dGad<j3Do]oafLanVGVHU0
+Id;a[YnnIPY7Z^m`47TA223
+VoojW8:C0=W_^2mMY:eL;S2
 R3
-R4
-Z13 8calculadora.vt
-Z14 Fcalculadora.vt
+Z13 w1778942524
+Z14 8calculadora.vt
+Z15 Fcalculadora.vt
 L0 85
 R7
 r1
 !s85 0
 31
-Z15 !s108 1778709329.664000
-Z16 !s107 calculadora.vt|
-Z17 !s90 -work|work|calculadora.vt|
+Z16 !s108 1778942527.164000
+Z17 !s107 calculadora.vt|
+Z18 !s90 -work|work|calculadora.vt|
 !s101 -O0
-R8
+R9
 vcalculadora_vlg_sample_tst
 !i10b 1
-!s100 :kA@3zPd^3=4k`@Nc[kzj2
-I9JCn`[eN<WGToCZDIoeXK0
-VHE`Pg0<<=ZcdHPzR?O2Pc3
+Z19 !s100 :kA@3zPd^3=4k`@Nc[kzj2
+Z20 I9JCn`[eN<WGToCZDIoeXK0
+Z21 VHE`Pg0<<=ZcdHPzR?O2Pc3
 R3
-R4
 R13
 R14
+R15
 L0 29
 R7
 r1
 !s85 0
 31
-R15
 R16
 R17
+R18
 !s101 -O0
-R8
+R9
 vcalculadora_vlg_vec_tst
 !i10b 1
-!s100 LBj[N?Gbia4PL=6fQSloH2
-I;MJ:R8D1YVF8@^fEojk6V2
-V7e6::2V0=KmA]@S8K<zNJ3
+!s100 KzHVA6`[i<nHRSQ_YYj6o3
+IAg5K0;g^EFgcJBZS9N[Of1
+Z22 V7e6::2V0=KmA]@S8K<zNJ3
 R3
-R4
 R13
 R14
-L0 315
+R15
+Z23 L0 315
 R7
 r1
 !s85 0
 31
-R15
 R16
 R17
+R18
 !s101 -O0
-R8
+R9

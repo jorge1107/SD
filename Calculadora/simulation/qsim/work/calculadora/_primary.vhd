@@ -17,11 +17,11 @@ entity calculadora is
         f               : in     vl_logic;
         e               : in     vl_logic;
         clk             : in     vl_logic;
-        s5              : out    vl_logic;
-        s4              : out    vl_logic;
-        s3              : out    vl_logic;
-        s2              : out    vl_logic;
-        s1              : out    vl_logic;
-        s0              : out    vl_logic
+        o5              : out    vl_logic;
+        o4              : out    vl_logic;
+        o3              : out    vl_logic;
+        o2              : out    vl_logic;
+        o1              : out    vl_logic;
+        o0              : out    vl_logic
     );
 end calculadora;

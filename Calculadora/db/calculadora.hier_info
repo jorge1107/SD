@@ -1,25 +1,42 @@
 |calculadora
 a5 => FullAdder1Bit:u6.in1
+a5 => FullSubtractor1Bit:v6.in1
 a4 => FullAdder1Bit:u5.in1
+a4 => FullSubtractor1Bit:v5.in1
 a3 => FullAdder1Bit:u4.in1
+a3 => FullSubtractor1Bit:v4.in1
 a2 => FullAdder1Bit:u3.in1
+a2 => FullSubtractor1Bit:v3.in1
 a1 => FullAdder1Bit:u2.in1
+a1 => FullSubtractor1Bit:v2.in1
 a0 => FullAdder1Bit:u1.in1
+a0 => FullSubtractor1Bit:v1.in1
 b5 => FullAdder1Bit:u6.in2
+b5 => FullSubtractor1Bit:v6.in2
 b4 => FullAdder1Bit:u5.in2
+b4 => FullSubtractor1Bit:v5.in2
 b3 => FullAdder1Bit:u4.in2
+b3 => FullSubtractor1Bit:v4.in2
 b2 => FullAdder1Bit:u3.in2
+b2 => FullSubtractor1Bit:v3.in2
 b1 => FullAdder1Bit:u2.in2
+b1 => FullSubtractor1Bit:v2.in2
 b0 => FullAdder1Bit:u1.in2
-f => ~NO_FANOUT~
-e => ~NO_FANOUT~
-clk => ~NO_FANOUT~
-s5 <= FullAdder1Bit:u6.S
-s4 <= FullAdder1Bit:u5.S
-s3 <= FullAdder1Bit:u4.S
-s2 <= FullAdder1Bit:u3.S
-s1 <= FullAdder1Bit:u2.S
-s0 <= FullAdder1Bit:u1.S
+b0 => FullSubtractor1Bit:v1.in2
+f => Mux2x1LogicGates:x1.s0
+f => Mux2x1LogicGates:x2.s0
+f => Mux2x1LogicGates:x3.s0
+f => Mux2x1LogicGates:x4.s0
+f => Mux2x1LogicGates:x5.s0
+f => Mux2x1LogicGates:x6.s0
+e => Registrador6Bits:y1.e
+clk => Registrador6Bits:y1.clk
+o5 <= Registrador6Bits:y1.s5
+o4 <= Registrador6Bits:y1.s4
+o3 <= Registrador6Bits:y1.s3
+o2 <= Registrador6Bits:y1.s2
+o1 <= Registrador6Bits:y1.s1
+o0 <= Registrador6Bits:y1.s0
 
 
 |calculadora|FullAdder1Bit:u1
@@ -104,5 +121,164 @@ Cin => Cout.IN1
 Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calculadora|FullSubtractor1Bit:v1
+in1 => S.IN0
+in1 => Wout.IN0
+in1 => Wout.IN0
+in2 => S.IN1
+in2 => Wout.IN1
+in2 => Wout.IN0
+Win => S.IN1
+Win => Wout.IN1
+Win => Wout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Wout <= Wout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calculadora|FullSubtractor1Bit:v2
+in1 => S.IN0
+in1 => Wout.IN0
+in1 => Wout.IN0
+in2 => S.IN1
+in2 => Wout.IN1
+in2 => Wout.IN0
+Win => S.IN1
+Win => Wout.IN1
+Win => Wout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Wout <= Wout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calculadora|FullSubtractor1Bit:v3
+in1 => S.IN0
+in1 => Wout.IN0
+in1 => Wout.IN0
+in2 => S.IN1
+in2 => Wout.IN1
+in2 => Wout.IN0
+Win => S.IN1
+Win => Wout.IN1
+Win => Wout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Wout <= Wout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calculadora|FullSubtractor1Bit:v4
+in1 => S.IN0
+in1 => Wout.IN0
+in1 => Wout.IN0
+in2 => S.IN1
+in2 => Wout.IN1
+in2 => Wout.IN0
+Win => S.IN1
+Win => Wout.IN1
+Win => Wout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Wout <= Wout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calculadora|FullSubtractor1Bit:v5
+in1 => S.IN0
+in1 => Wout.IN0
+in1 => Wout.IN0
+in2 => S.IN1
+in2 => Wout.IN1
+in2 => Wout.IN0
+Win => S.IN1
+Win => Wout.IN1
+Win => Wout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Wout <= Wout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calculadora|FullSubtractor1Bit:v6
+in1 => S.IN0
+in1 => Wout.IN0
+in1 => Wout.IN0
+in2 => S.IN1
+in2 => Wout.IN1
+in2 => Wout.IN0
+Win => S.IN1
+Win => Wout.IN1
+Win => Wout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Wout <= Wout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calculadora|Mux2x1LogicGates:x1
+i0 => d.IN0
+i1 => d.IN0
+s0 => d.IN1
+s0 => d.IN1
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calculadora|Mux2x1LogicGates:x2
+i0 => d.IN0
+i1 => d.IN0
+s0 => d.IN1
+s0 => d.IN1
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calculadora|Mux2x1LogicGates:x3
+i0 => d.IN0
+i1 => d.IN0
+s0 => d.IN1
+s0 => d.IN1
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calculadora|Mux2x1LogicGates:x4
+i0 => d.IN0
+i1 => d.IN0
+s0 => d.IN1
+s0 => d.IN1
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calculadora|Mux2x1LogicGates:x5
+i0 => d.IN0
+i1 => d.IN0
+s0 => d.IN1
+s0 => d.IN1
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calculadora|Mux2x1LogicGates:x6
+i0 => d.IN0
+i1 => d.IN0
+s0 => d.IN1
+s0 => d.IN1
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calculadora|Registrador6Bits:y1
+clk => s0~reg0.CLK
+clk => s1~reg0.CLK
+clk => s2~reg0.CLK
+clk => s3~reg0.CLK
+clk => s4~reg0.CLK
+clk => s5~reg0.CLK
+e => s0~reg0.ENA
+e => s1~reg0.ENA
+e => s2~reg0.ENA
+e => s3~reg0.ENA
+e => s4~reg0.ENA
+e => s5~reg0.ENA
+n5 => s5~reg0.DATAIN
+n4 => s4~reg0.DATAIN
+n3 => s3~reg0.DATAIN
+n2 => s2~reg0.DATAIN
+n1 => s1~reg0.DATAIN
+n0 => s0~reg0.DATAIN
+s5 <= s5~reg0.DB_MAX_OUTPUT_PORT_TYPE
+s4 <= s4~reg0.DB_MAX_OUTPUT_PORT_TYPE
+s3 <= s3~reg0.DB_MAX_OUTPUT_PORT_TYPE
+s2 <= s2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+s1 <= s1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+s0 <= s0~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

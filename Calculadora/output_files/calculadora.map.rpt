@@ -1,5 +1,5 @@
 Analysis & Synthesis report for calculadora
-Wed May 13 18:51:20 2026
+Sat May 16 11:34:05 2026
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -14,10 +14,12 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Port Connectivity Checks: "FullAdder1Bit:u6"
- 10. Port Connectivity Checks: "FullAdder1Bit:u1"
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  9. Port Connectivity Checks: "FullSubtractor1Bit:v6"
+ 10. Port Connectivity Checks: "FullSubtractor1Bit:v1"
+ 11. Port Connectivity Checks: "FullAdder1Bit:u6"
+ 12. Port Connectivity Checks: "FullAdder1Bit:u1"
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -43,15 +45,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 13 18:51:20 2026           ;
+; Analysis & Synthesis Status        ; Successful - Sat May 16 11:34:05 2026           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; calculadora                                     ;
 ; Top-level Entity Name              ; calculadora                                     ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 10                                              ;
-;     Total combinational functions  ; 10                                              ;
-;     Dedicated logic registers      ; 0                                               ;
-; Total registers                    ; 0                                               ;
+; Total logic elements               ; 19                                              ;
+;     Total combinational functions  ; 19                                              ;
+;     Dedicated logic registers      ; 6                                               ;
+; Total registers                    ; 6                                               ;
 ; Total pins                         ; 21                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -151,19 +153,22 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 8      ;
+; Number detected on machine ; 4      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                     ;
-+----------------------------------+-----------------+-----------------------+-------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path        ; Library ;
-+----------------------------------+-----------------+-----------------------+-------------------------------------+---------+
-; calculadora.vhd                  ; yes             ; User VHDL File        ; D:/SD/Calculadora/calculadora.vhd   ;         ;
-; fulladder1bit.vhd                ; yes             ; Auto-Found VHDL File  ; D:/SD/Calculadora/fulladder1bit.vhd ;         ;
-+----------------------------------+-----------------+-----------------------+-------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                          ;
++----------------------------------+-----------------+-----------------------+------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path             ; Library ;
++----------------------------------+-----------------+-----------------------+------------------------------------------+---------+
+; calculadora.vhd                  ; yes             ; User VHDL File        ; D:/SD/Calculadora/calculadora.vhd        ;         ;
+; fulladder1bit.vhd                ; yes             ; Auto-Found VHDL File  ; D:/SD/Calculadora/fulladder1bit.vhd      ;         ;
+; fullsubtractor1bit.vhd           ; yes             ; Auto-Found VHDL File  ; D:/SD/Calculadora/fullsubtractor1bit.vhd ;         ;
+; mux2x1logicgates.vhd             ; yes             ; Auto-Found VHDL File  ; D:/SD/Calculadora/mux2x1logicgates.vhd   ;         ;
+; registrador6bits.vhd             ; yes             ; Auto-Found VHDL File  ; D:/SD/Calculadora/registrador6bits.vhd   ;         ;
++----------------------------------+-----------------+-----------------------+------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -171,44 +176,54 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 10    ;
+; Estimated Total logic elements              ; 19    ;
 ;                                             ;       ;
-; Total combinational functions               ; 10    ;
+; Total combinational functions               ; 19    ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 3     ;
+;     -- 4 input functions                    ; 8     ;
 ;     -- 3 input functions                    ; 5     ;
-;     -- <=2 input functions                  ; 2     ;
+;     -- <=2 input functions                  ; 6     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 10    ;
+;     -- normal mode                          ; 19    ;
 ;     -- arithmetic mode                      ; 0     ;
 ;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
+; Total registers                             ; 6     ;
+;     -- Dedicated logic registers            ; 6     ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 21    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out node                        ; b0    ;
-; Maximum fan-out                             ; 3     ;
-; Total fan-out                               ; 37    ;
-; Average fan-out                             ; 1.19  ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 6     ;
+; Total fan-out                               ; 83    ;
+; Average fan-out                             ; 1.80  ;
 +---------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                   ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name           ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+--------------+
-; |calculadora               ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 21   ; 0            ; |calculadora                  ; work         ;
-;    |FullAdder1Bit:u1|      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|FullAdder1Bit:u1 ; work         ;
-;    |FullAdder1Bit:u2|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|FullAdder1Bit:u2 ; work         ;
-;    |FullAdder1Bit:u3|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|FullAdder1Bit:u3 ; work         ;
-;    |FullAdder1Bit:u4|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|FullAdder1Bit:u4 ; work         ;
-;    |FullAdder1Bit:u5|      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|FullAdder1Bit:u5 ; work         ;
-;    |FullAdder1Bit:u6|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|FullAdder1Bit:u6 ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                        ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------+--------------+
+; |calculadora               ; 19 (0)            ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 21   ; 0            ; |calculadora                       ; work         ;
+;    |FullAdder1Bit:u2|      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|FullAdder1Bit:u2      ; work         ;
+;    |FullAdder1Bit:u3|      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|FullAdder1Bit:u3      ; work         ;
+;    |FullAdder1Bit:u4|      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|FullAdder1Bit:u4      ; work         ;
+;    |FullAdder1Bit:u6|      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|FullAdder1Bit:u6      ; work         ;
+;    |FullSubtractor1Bit:v2| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|FullSubtractor1Bit:v2 ; work         ;
+;    |FullSubtractor1Bit:v3| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|FullSubtractor1Bit:v3 ; work         ;
+;    |FullSubtractor1Bit:v4| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|FullSubtractor1Bit:v4 ; work         ;
+;    |FullSubtractor1Bit:v5| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|FullSubtractor1Bit:v5 ; work         ;
+;    |FullSubtractor1Bit:v6| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|FullSubtractor1Bit:v6 ; work         ;
+;    |Mux2x1LogicGates:x1|   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|Mux2x1LogicGates:x1   ; work         ;
+;    |Mux2x1LogicGates:x2|   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|Mux2x1LogicGates:x2   ; work         ;
+;    |Mux2x1LogicGates:x3|   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|Mux2x1LogicGates:x3   ; work         ;
+;    |Mux2x1LogicGates:x4|   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|Mux2x1LogicGates:x4   ; work         ;
+;    |Mux2x1LogicGates:x5|   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|Mux2x1LogicGates:x5   ; work         ;
+;    |Mux2x1LogicGates:x6|   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|Mux2x1LogicGates:x6   ; work         ;
+;    |Registrador6Bits:y1|   ; 0 (0)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|Registrador6Bits:y1   ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -217,14 +232,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 6     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 6     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FullSubtractor1Bit:v6"                                                              ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; wout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------+
+; Port Connectivity Checks: "FullSubtractor1Bit:v1" ;
++------+-------+----------+-------------------------+
+; Port ; Type  ; Severity ; Details                 ;
++------+-------+----------+-------------------------+
+; win  ; Input ; Info     ; Stuck at GND            ;
++------+-------+----------+-------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------+
@@ -260,31 +293,41 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed May 13 18:51:18 2026
+    Info: Processing started: Sat May 16 11:34:03 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off calculadora -c calculadora
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file calculadora.vhd
     Info (12022): Found design unit 1: calculadora-main
     Info (12023): Found entity 1: calculadora
 Info (12127): Elaborating entity "calculadora" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at calculadora.vhd(15): object "c6" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at calculadora.vhd(25): object "c6" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at calculadora.vhd(26): object "w6" assigned a value but never read
 Warning (12125): Using design file fulladder1bit.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: FullAdder1Bit-behav
     Info (12023): Found entity 1: FullAdder1Bit
 Info (12128): Elaborating entity "FullAdder1Bit" for hierarchy "FullAdder1Bit:u1"
+Warning (12125): Using design file fullsubtractor1bit.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: FullSubtractor1Bit-behav
+    Info (12023): Found entity 1: FullSubtractor1Bit
+Info (12128): Elaborating entity "FullSubtractor1Bit" for hierarchy "FullSubtractor1Bit:v1"
+Warning (12125): Using design file mux2x1logicgates.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Mux2x1LogicGates-behav
+    Info (12023): Found entity 1: Mux2x1LogicGates
+Info (12128): Elaborating entity "Mux2x1LogicGates" for hierarchy "Mux2x1LogicGates:x1"
+Warning (12125): Using design file registrador6bits.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Registrador6Bits-behav
+    Info (12023): Found entity 1: Registrador6Bits
+Info (12128): Elaborating entity "Registrador6Bits" for hierarchy "Registrador6Bits:y1"
+Warning (10492): VHDL Process Statement warning at registrador6bits.vhd(15): signal "e" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 3 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "f"
-    Warning (15610): No output dependent on input pin "e"
-    Warning (15610): No output dependent on input pin "clk"
-Info (21057): Implemented 31 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 40 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 6 output pins
-    Info (21061): Implemented 10 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4638 megabytes
-    Info: Processing ended: Wed May 13 18:51:20 2026
+    Info (21061): Implemented 19 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 4670 megabytes
+    Info: Processing ended: Sat May 16 11:34:05 2026
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
