@@ -1,0 +1,446 @@
+$comment
+	File created using the following command:
+		vcd file calculadora.msim.vcd -direction
+$end
+$date
+	Sat May 16 17:33:35 2026
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module calculadora_vlg_vec_tst $end
+$var reg 1 ! a0 $end
+$var reg 1 " a1 $end
+$var reg 1 # a2 $end
+$var reg 1 $ a3 $end
+$var reg 1 % a4 $end
+$var reg 1 & a5 $end
+$var reg 1 ' b0 $end
+$var reg 1 ( b1 $end
+$var reg 1 ) b2 $end
+$var reg 1 * b3 $end
+$var reg 1 + b4 $end
+$var reg 1 , b5 $end
+$var reg 1 - clk $end
+$var reg 1 . e $end
+$var reg 1 / f $end
+$var wire 1 0 s0 $end
+$var wire 1 1 s1 $end
+$var wire 1 2 s2 $end
+$var wire 1 3 s3 $end
+$var wire 1 4 s4 $end
+$var wire 1 5 s5 $end
+$var wire 1 6 sampler $end
+$scope module i1 $end
+$var wire 1 7 gnd $end
+$var wire 1 8 vcc $end
+$var wire 1 9 unknown $end
+$var tri1 1 : devclrn $end
+$var tri1 1 ; devpor $end
+$var tri1 1 < devoe $end
+$var wire 1 = v1|Cout~0_combout $end
+$var wire 1 > v3|Cout~0_combout $end
+$var wire 1 ? v4|Cout~0_combout $end
+$var wire 1 @ b5~combout $end
+$var wire 1 A b2~combout $end
+$var wire 1 B clk~combout $end
+$var wire 1 C clk~clkctrl_outclk $end
+$var wire 1 D f~combout $end
+$var wire 1 E b4~combout $end
+$var wire 1 F a4~combout $end
+$var wire 1 G v5|Cout~0_combout $end
+$var wire 1 H a5~combout $end
+$var wire 1 I v6|S~0_combout $end
+$var wire 1 J e~combout $end
+$var wire 1 K y1|s5~regout $end
+$var wire 1 L v5|S~0_combout $end
+$var wire 1 M y1|s4~regout $end
+$var wire 1 N a3~combout $end
+$var wire 1 O b3~combout $end
+$var wire 1 P v4|S~0_combout $end
+$var wire 1 Q y1|s3~regout $end
+$var wire 1 R a2~combout $end
+$var wire 1 S a1~combout $end
+$var wire 1 T b1~combout $end
+$var wire 1 U v2|Cout~0_combout $end
+$var wire 1 V v3|S~0_combout $end
+$var wire 1 W y1|s2~regout $end
+$var wire 1 X v2|S~combout $end
+$var wire 1 Y y1|s1~regout $end
+$var wire 1 Z a0~combout $end
+$var wire 1 [ b0~combout $end
+$var wire 1 \ v1|S~combout $end
+$var wire 1 ] y1|s0~regout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1!
+0"
+1#
+0$
+0%
+1&
+1'
+0(
+0)
+1*
+1+
+0,
+0-
+1.
+0/
+00
+01
+02
+03
+04
+05
+x6
+07
+18
+x9
+1:
+1;
+1<
+1=
+0>
+0?
+0@
+0A
+0B
+0C
+0D
+1E
+0F
+0G
+1H
+1I
+1J
+0K
+1L
+0M
+0N
+1O
+1P
+0Q
+1R
+0S
+0T
+0U
+1V
+0W
+1X
+0Y
+1Z
+1[
+0\
+0]
+$end
+#10000
+1-
+1B
+1C
+06
+1Y
+1W
+1Q
+1M
+1K
+11
+12
+13
+14
+15
+#30000
+0-
+0B
+0C
+16
+#50000
+1-
+1B
+1C
+06
+#70000
+0-
+0B
+0C
+16
+#80000
+1/
+1D
+06
+0X
+0V
+1U
+0P
+0L
+0I
+1>
+1V
+1P
+#90000
+1-
+1B
+1C
+16
+0Y
+0M
+0K
+01
+04
+05
+#110000
+0-
+0B
+0C
+06
+#130000
+1-
+1B
+1C
+16
+#150000
+0-
+0B
+0C
+06
+#160000
+0.
+0/
+0J
+0D
+16
+1X
+0V
+0U
+0P
+1L
+1I
+1?
+1V
+0>
+0L
+1G
+1P
+0?
+0I
+1L
+0G
+1I
+#170000
+1-
+1B
+1C
+06
+#190000
+0-
+0B
+0C
+16
+#210000
+1-
+1B
+1C
+06
+#230000
+0-
+0B
+0C
+16
+#250000
+1-
+1B
+1C
+06
+#270000
+0-
+0B
+0C
+16
+#290000
+1-
+1B
+1C
+06
+#310000
+0-
+0B
+0C
+16
+#330000
+1-
+1B
+1C
+06
+#350000
+0-
+0B
+0C
+16
+#370000
+1-
+1B
+1C
+06
+#390000
+0-
+0B
+0C
+16
+#410000
+1-
+1B
+1C
+06
+#430000
+0-
+0B
+0C
+16
+#450000
+1-
+1B
+1C
+06
+#470000
+0-
+0B
+0C
+16
+#490000
+1-
+1B
+1C
+06
+#510000
+0-
+0B
+0C
+16
+#530000
+1-
+1B
+1C
+06
+#550000
+0-
+0B
+0C
+16
+#570000
+1-
+1B
+1C
+06
+#590000
+0-
+0B
+0C
+16
+#610000
+1-
+1B
+1C
+06
+#630000
+0-
+0B
+0C
+16
+#650000
+1-
+1B
+1C
+06
+#670000
+0-
+0B
+0C
+16
+#690000
+1-
+1B
+1C
+06
+#710000
+0-
+0B
+0C
+16
+#730000
+1-
+1B
+1C
+06
+#750000
+0-
+0B
+0C
+16
+#770000
+1-
+1B
+1C
+06
+#790000
+0-
+0B
+0C
+16
+#810000
+1-
+1B
+1C
+06
+#830000
+0-
+0B
+0C
+16
+#850000
+1-
+1B
+1C
+06
+#870000
+0-
+0B
+0C
+16
+#890000
+1-
+1B
+1C
+06
+#910000
+0-
+0B
+0C
+16
+#930000
+1-
+1B
+1C
+06
+#950000
+0-
+0B
+0C
+16
+#970000
+1-
+1B
+1C
+06
+#990000
+0-
+0B
+0C
+16
+#1000000

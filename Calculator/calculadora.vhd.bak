@@ -1,0 +1,23 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity calculadora is
+	port(
+		a5, a4, a3, a2, a1, a0, b5, b4, b3, b2, b1, b0, f, e, clk : in bit;
+		o5, o4, o3, o2, o1, o0 : out bit
+	);
+end entity;
+
+architecture main of calculadora is
+	component FullAdder1Bit
+		port(in1, in2, Cin : in bit; S, Cout : out bit);
+	end component;
+	component Mux2x1LogicGates
+		port(i0, i1, s0: in bit; d : out bit);
+	end component;
+	component Registrador6Bits
+		port(clk, e, n5, n4, n3, n2, n1, n0 : in bit; s5, s4, s3, s2, s1, s0 : out bit);
+	end component;
+	begin
+
+end architecture;
