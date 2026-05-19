@@ -1,5 +1,5 @@
 Fitter report for ULA
-Sat May 16 19:57:17 2026
+Tue May 19 16:58:48 2026
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -62,7 +62,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Sat May 16 19:57:17 2026           ;
+; Fitter Status                      ; Successful - Tue May 19 16:58:48 2026           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; ULA                                             ;
 ; Top-level Entity Name              ; ULA                                             ;
@@ -194,8 +194,8 @@ The pin-out file can be found in D:/SD/ALU/ULA/output_files/ULA.pin.
 ;     -- Combinational with a register        ; 6                     ;
 ;                                             ;                       ;
 ; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 19                    ;
-;     -- 3 input functions                    ; 4                     ;
+;     -- 4 input functions                    ; 18                    ;
+;     -- 3 input functions                    ; 5                     ;
 ;     -- <=2 input functions                  ; 6                     ;
 ;     -- Register only                        ; 0                     ;
 ;                                             ;                       ;
@@ -226,8 +226,8 @@ The pin-out file can be found in D:/SD/ALU/ULA/output_files/ULA.pin.
 ; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%          ;
 ; Maximum fan-out                             ; 13                    ;
 ; Highest non-global fan-out                  ; 13                    ;
-; Total fan-out                               ; 125                   ;
-; Average fan-out                             ; 2.02                  ;
+; Total fan-out                               ; 124                   ;
+; Average fan-out                             ; 2.00                  ;
 +---------------------------------------------+-----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -246,8 +246,8 @@ The pin-out file can be found in D:/SD/ALU/ULA/output_files/ULA.pin.
 ;     -- Combinational with a register        ; 6                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic element usage by number of LUT inputs ;                      ;                                ;
-;     -- 4 input functions                    ; 19                   ; 0                              ;
-;     -- 3 input functions                    ; 4                    ; 0                              ;
+;     -- 4 input functions                    ; 18                   ; 0                              ;
+;     -- 3 input functions                    ; 5                    ; 0                              ;
 ;     -- <=2 input functions                  ; 6                    ; 0                              ;
 ;     -- Register only                        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
@@ -274,7 +274,7 @@ The pin-out file can be found in D:/SD/ALU/ULA/output_files/ULA.pin.
 ;     -- Registered Output Connections        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Internal Connections                        ;                      ;                                ;
-;     -- Total Connections                    ; 125                  ; 0                              ;
+;     -- Total Connections                    ; 124                  ; 0                              ;
 ;     -- Registered Connections               ; 6                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; External Connections                        ;                      ;                                ;
@@ -307,23 +307,23 @@ The pin-out file can be found in D:/SD/ALU/ULA/output_files/ULA.pin.
 +------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 ; Name ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
 +------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
-; a0   ; Y13   ; 7        ; 37           ; 0            ; 3           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; a1   ; AD12  ; 8        ; 31           ; 0            ; 3           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; a2   ; F18   ; 4        ; 50           ; 36           ; 3           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; a3   ; U3    ; 1        ; 0            ; 12           ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; a4   ; U9    ; 1        ; 0            ; 13           ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; a5   ; AC8   ; 8        ; 9            ; 0            ; 1           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; b0   ; AF21  ; 7        ; 55           ; 0            ; 1           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; b1   ; V20   ; 6        ; 65           ; 3            ; 1           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; b2   ; AD17  ; 7        ; 44           ; 0            ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; b3   ; U4    ; 1        ; 0            ; 12           ; 1           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; b4   ; AA3   ; 1        ; 0            ; 5            ; 1           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; a0   ; B14   ; 4        ; 33           ; 36           ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; a1   ; Y13   ; 7        ; 37           ; 0            ; 3           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; a2   ; AE15  ; 7        ; 35           ; 0            ; 3           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; a3   ; AC14  ; 7        ; 35           ; 0            ; 1           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; a4   ; AE12  ; 8        ; 31           ; 0            ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; a5   ; AF13  ; 8        ; 31           ; 0            ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; b0   ; AD15  ; 7        ; 35           ; 0            ; 2           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; b1   ; D14   ; 4        ; 33           ; 36           ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; b2   ; AA14  ; 7        ; 37           ; 0            ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; b3   ; Y12   ; 8        ; 29           ; 0            ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; b4   ; U12   ; 8        ; 29           ; 0            ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 ; b5   ; C13   ; 3        ; 31           ; 36           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 ; clk  ; P2    ; 1        ; 0            ; 18           ; 2           ; 1                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; e    ; W26   ; 6        ; 65           ; 10           ; 2           ; 6                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; x    ; D13   ; 3        ; 31           ; 36           ; 3           ; 10                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; y    ; AA13  ; 7        ; 35           ; 0            ; 0           ; 10                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; z    ; W11   ; 8        ; 18           ; 0            ; 1           ; 13                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; e    ; AD12  ; 8        ; 31           ; 0            ; 3           ; 6                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; x    ; AE13  ; 8        ; 31           ; 0            ; 1           ; 10                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; y    ; V11   ; 8        ; 29           ; 0            ; 3           ; 10                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; z    ; D13   ; 3        ; 31           ; 36           ; 3           ; 13                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 +------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
 
@@ -332,12 +332,12 @@ The pin-out file can be found in D:/SD/ALU/ULA/output_files/ULA.pin.
 +------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 ; Name ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Output Enable Register ; Power Up High ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Location assigned by ; Load ; Output Enable Source ; Output Enable Group ;
 +------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
-; s0   ; Y15   ; 7        ; 37           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; s1   ; Y16   ; 7        ; 46           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; s2   ; Y12   ; 8        ; 29           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; s3   ; V1    ; 1        ; 0            ; 12           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; s4   ; AF4   ; 8        ; 1            ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; s5   ; G10   ; 3        ; 14           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; s0   ; A14   ; 4        ; 33           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; s1   ; AA13  ; 7        ; 35           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; s2   ; AA15  ; 7        ; 40           ; 0            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; s3   ; V13   ; 8        ; 27           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; s4   ; AA12  ; 8        ; 29           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; s5   ; C12   ; 3        ; 29           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
 +------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 
 
@@ -346,14 +346,14 @@ The pin-out file can be found in D:/SD/ALU/ULA/output_files/ULA.pin.
 +----------+-----------------+---------------+--------------+
 ; I/O Bank ; Usage           ; VCCIO Voltage ; VREF Voltage ;
 +----------+-----------------+---------------+--------------+
-; 1        ; 6 / 64 ( 9 % )  ; 3.3V          ; --           ;
+; 1        ; 1 / 64 ( 2 % )  ; 3.3V          ; --           ;
 ; 2        ; 2 / 59 ( 3 % )  ; 3.3V          ; --           ;
 ; 3        ; 3 / 56 ( 5 % )  ; 3.3V          ; --           ;
-; 4        ; 1 / 58 ( 2 % )  ; 3.3V          ; --           ;
+; 4        ; 3 / 58 ( 5 % )  ; 3.3V          ; --           ;
 ; 5        ; 0 / 65 ( 0 % )  ; 3.3V          ; --           ;
-; 6        ; 3 / 59 ( 5 % )  ; 3.3V          ; --           ;
-; 7        ; 6 / 58 ( 10 % ) ; 3.3V          ; --           ;
-; 8        ; 5 / 56 ( 9 % )  ; 3.3V          ; --           ;
+; 6        ; 1 / 59 ( 2 % )  ; 3.3V          ; --           ;
+; 7        ; 7 / 58 ( 12 % ) ; 3.3V          ; --           ;
+; 8        ; 9 / 56 ( 16 % ) ; 3.3V          ; --           ;
 +----------+-----------------+---------------+--------------+
 
 
@@ -374,7 +374,7 @@ The pin-out file can be found in D:/SD/ALU/ULA/output_files/ULA.pin.
 ; A11      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; A12      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; A13      ; 430        ; 4        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; A14      ; 427        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; A14      ; 427        ; 4        ; s0                                       ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; A15      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; A16      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; A17      ; 412        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -388,7 +388,7 @@ The pin-out file can be found in D:/SD/ALU/ULA/output_files/ULA.pin.
 ; A25      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AA1      ; 107        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AA2      ; 106        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; AA3      ; 117        ; 1        ; b4                                       ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; AA3      ; 117        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AA4      ; 116        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AA5      ; 120        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AA6      ; 130        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -397,10 +397,10 @@ The pin-out file can be found in D:/SD/ALU/ULA/output_files/ULA.pin.
 ; AA9      ; 152        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AA10     ; 153        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AA11     ; 155        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AA12     ; 179        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AA13     ; 192        ; 7        ; y                                        ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; AA14     ; 194        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AA15     ; 197        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AA12     ; 179        ; 8        ; s4                                       ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AA13     ; 192        ; 7        ; s1                                       ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AA14     ; 194        ; 7        ; b2                                       ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AA15     ; 197        ; 7        ; s2                                       ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AA16     ; 209        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AA17     ; 219        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AA18     ; 220        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -445,13 +445,13 @@ The pin-out file can be found in D:/SD/ALU/ULA/output_files/ULA.pin.
 ; AC5      ; 133        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC6      ; 134        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC7      ; 143        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; AC8      ; 148        ; 8        ; a5                                       ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AC8      ; 148        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC9      ; 163        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC10     ; 164        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC11     ; 168        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC12     ; 172        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; AC13     ; 185        ; 8        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; AC14     ; 191        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AC14     ; 191        ; 7        ; a3                                       ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AC15     ; 199        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC16     ; 202        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; AC17     ; 207        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -475,12 +475,12 @@ The pin-out file can be found in D:/SD/ALU/ULA/output_files/ULA.pin.
 ; AD9      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AD10     ; 167        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AD11     ; 173        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AD12     ; 181        ; 8        ; a1                                       ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AD12     ; 181        ; 8        ; e                                        ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AD13     ; 186        ; 8        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; AD14     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; AD15     ; 190        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AD15     ; 190        ; 7        ; b0                                       ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AD16     ; 201        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AD17     ; 208        ; 7        ; b2                                       ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AD17     ; 208        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AD18     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AD19     ; 221        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AD20     ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -501,10 +501,10 @@ The pin-out file can be found in D:/SD/ALU/ULA/output_files/ULA.pin.
 ; AE9      ; 165        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE10     ; 169        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE11     ; 174        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AE12     ; 182        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AE13     ; 183        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AE12     ; 182        ; 8        ; a4                                       ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AE13     ; 183        ; 8        ; x                                        ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AE14     ; 188        ; 7        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; AE15     ; 189        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AE15     ; 189        ; 7        ; a2                                       ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AE16     ; 200        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE17     ; 206        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE18     ; 212        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -518,7 +518,7 @@ The pin-out file can be found in D:/SD/ALU/ULA/output_files/ULA.pin.
 ; AE26     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AF2      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AF3      ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; AF4      ; 132        ; 8        ; s4                                       ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AF4      ; 132        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF5      ; 138        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF6      ; 151        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF7      ; 158        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -527,7 +527,7 @@ The pin-out file can be found in D:/SD/ALU/ULA/output_files/ULA.pin.
 ; AF10     ; 170        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF11     ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AF12     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; AF13     ; 184        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AF13     ; 184        ; 8        ; a5                                       ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AF14     ; 187        ; 7        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; AF15     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AF16     ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -535,7 +535,7 @@ The pin-out file can be found in D:/SD/ALU/ULA/output_files/ULA.pin.
 ; AF18     ; 211        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF19     ; 213        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF20     ; 223        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AF21     ; 227        ; 7        ; b0                                       ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AF21     ; 227        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF22     ; 235        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF23     ; 243        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF24     ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -553,7 +553,7 @@ The pin-out file can be found in D:/SD/ALU/ULA/output_files/ULA.pin.
 ; B11      ; 435        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B12      ; 433        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B13      ; 429        ; 4        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; B14      ; 428        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; B14      ; 428        ; 4        ; a0                                       ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; B15      ; 420        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B16      ; 419        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B17      ; 411        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -577,7 +577,7 @@ The pin-out file can be found in D:/SD/ALU/ULA/output_files/ULA.pin.
 ; C9       ; 459        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C10      ; 450        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C11      ; 436        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; C12      ; 434        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; C12      ; 434        ; 3        ; s5                                       ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C13      ; 431        ; 3        ; b5                                       ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C14      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; C15      ; 421        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -604,8 +604,8 @@ The pin-out file can be found in D:/SD/ALU/ULA/output_files/ULA.pin.
 ; D10      ; 449        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D11      ; 445        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; D12      ; 443        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; D13      ; 432        ; 3        ; x                                        ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; D14      ; 426        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; D13      ; 432        ; 3        ; z                                        ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D14      ; 426        ; 4        ; b1                                       ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; D15      ; 417        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D16      ; 415        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; D17      ; 403        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -661,7 +661,7 @@ The pin-out file can be found in D:/SD/ALU/ULA/output_files/ULA.pin.
 ; F15      ; 409        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F16      ; 408        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F17      ; 401        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; F18      ; 398        ; 4        ; a2                                       ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; F18      ; 398        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F19      ;            ;          ; GNDA_PLL2                                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; F20      ; 372        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F21      ; 371        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -679,7 +679,7 @@ The pin-out file can be found in D:/SD/ALU/ULA/output_files/ULA.pin.
 ; G7       ;            ;          ; GND_PLL3                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; G8       ;            ;          ; VCCA_PLL3                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; G9       ; 471        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; G10      ; 461        ; 3        ; s5                                       ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; G10      ; 461        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G11      ; 446        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G12      ; 439        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G13      ; 422        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -932,16 +932,16 @@ The pin-out file can be found in D:/SD/ALU/ULA/output_files/ULA.pin.
 ; T26      ;            ; 6        ; VCCIO6                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; U1       ; 85         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U2       ; 84         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; U3       ; 88         ; 1        ; a3                                       ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; U4       ; 89         ; 1        ; b3                                       ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; U3       ; 88         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; U4       ; 89         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U5       ; 100        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U6       ; 98         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U7       ; 99         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U8       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; U9       ; 86         ; 1        ; a4                                       ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; U9       ; 86         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U10      ; 87         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U11      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; U12      ; 178        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; U12      ; 178        ; 8        ; b4                                       ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; U13      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; U14      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; U15      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -956,7 +956,7 @@ The pin-out file can be found in D:/SD/ALU/ULA/output_files/ULA.pin.
 ; U24      ; 283        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U25      ; 285        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U26      ; 286        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; V1       ; 90         ; 1        ; s3                                       ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; V1       ; 90         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V2       ; 91         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V3       ; 95         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V4       ; 94         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -966,16 +966,16 @@ The pin-out file can be found in D:/SD/ALU/ULA/output_files/ULA.pin.
 ; V8       ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; V9       ; 142        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; V10      ; 141        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; V11      ; 177        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; V11      ; 177        ; 8        ; y                                        ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; V12      ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; V13      ; 176        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; V13      ; 176        ; 8        ; s3                                       ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; V14      ; 175        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; V15      ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; V16      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; V17      ; 218        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; V18      ; 233        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; V19      ;            ; 6        ; VCCIO6                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; V20      ; 251        ; 6        ; b1                                       ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; V20      ; 251        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V21      ; 252        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V22      ; 259        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; V23      ; 275        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -992,7 +992,7 @@ The pin-out file can be found in D:/SD/ALU/ULA/output_files/ULA.pin.
 ; W8       ; 144        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; W9       ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; W10      ; 145        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; W11      ; 161        ; 8        ; z                                        ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; W11      ; 161        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; W12      ; 162        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; W13      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; W14      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -1007,7 +1007,7 @@ The pin-out file can be found in D:/SD/ALU/ULA/output_files/ULA.pin.
 ; W23      ; 272        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; W24      ; 271        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; W25      ; 273        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; W26      ; 274        ; 6        ; e                                        ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; W26      ; 274        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; Y1       ; 103        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; Y2       ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; Y3       ; 108        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -1019,11 +1019,11 @@ The pin-out file can be found in D:/SD/ALU/ULA/output_files/ULA.pin.
 ; Y9       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; Y10      ; 146        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; Y11      ; 156        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; Y12      ; 180        ; 8        ; s2                                       ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; Y13      ; 193        ; 7        ; a0                                       ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; Y12      ; 180        ; 8        ; b3                                       ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; Y13      ; 193        ; 7        ; a1                                       ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; Y14      ; 195        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; Y15      ; 196        ; 7        ; s0                                       ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; Y16      ; 210        ; 7        ; s1                                       ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; Y15      ; 196        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; Y16      ; 210        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; Y17      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; Y18      ; 229        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; Y19      ;            ;          ; GNDA_PLL4                                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -1081,8 +1081,8 @@ Note: User assignments will override these defaults. The user specified values a
 ; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name      ; Library Name ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------+--------------+
 ; |ULA                       ; 29 (0)      ; 6 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 23   ; 0            ; 23 (0)       ; 0 (0)             ; 6 (0)            ; |ULA                     ; work         ;
-;    |ExtensorLA:t1|         ; 14 (14)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 14 (14)      ; 0 (0)             ; 0 (0)            ; |ULA|ExtensorLA:t1       ; work         ;
-;    |FullAdder1Bit:u1|      ; 4 (4)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 1 (1)            ; |ULA|FullAdder1Bit:u1    ; work         ;
+;    |ExtensorLA:t1|         ; 13 (13)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 0 (0)            ; |ULA|ExtensorLA:t1       ; work         ;
+;    |FullAdder1Bit:u1|      ; 5 (5)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 1 (1)            ; |ULA|FullAdder1Bit:u1    ; work         ;
 ;    |FullAdder1Bit:u2|      ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; |ULA|FullAdder1Bit:u2    ; work         ;
 ;    |FullAdder1Bit:u3|      ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; |ULA|FullAdder1Bit:u3    ; work         ;
 ;    |FullAdder1Bit:u4|      ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; |ULA|FullAdder1Bit:u4    ; work         ;
@@ -1105,101 +1105,97 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; s1   ; Output   ; --            ; --            ; --                    ; --  ;
 ; s0   ; Output   ; --            ; --            ; --                    ; --  ;
 ; b5   ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
-; x    ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
+; z    ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
+; b4   ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
+; x    ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
 ; y    ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
-; z    ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
-; b4   ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; a4   ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; b3   ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; a3   ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; a4   ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
+; b3   ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
+; a3   ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
 ; b2   ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
 ; a2   ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
-; b1   ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; b1   ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
 ; a1   ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
-; a0   ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
 ; b0   ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
+; a0   ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
 ; a5   ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
 ; clk  ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
-; e    ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; e    ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
 +------+----------+---------------+---------------+-----------------------+-----+
 
 
-+----------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                 ;
-+----------------------------------+-------------------+---------+
-; Source Pin / Fanout              ; Pad To Core Index ; Setting ;
-+----------------------------------+-------------------+---------+
-; b5                               ;                   ;         ;
-; x                                ;                   ;         ;
-; y                                ;                   ;         ;
-;      - ExtensorLA:t1|process_0~0 ; 0                 ; 6       ;
-;      - ExtensorLA:t1|ia4~0       ; 0                 ; 6       ;
-;      - ExtensorLA:t1|ia3~0       ; 0                 ; 6       ;
-;      - ExtensorLA:t1|ia2~0       ; 0                 ; 6       ;
-;      - ExtensorLA:t1|ia1~0       ; 0                 ; 6       ;
-;      - FullAdder1Bit:u1|Cout~0   ; 0                 ; 6       ;
-;      - FullAdder1Bit:u6|S~0      ; 0                 ; 6       ;
-;      - FullAdder1Bit:u6|S~1      ; 0                 ; 6       ;
-;      - ExtensorLA:t1|ia0~0       ; 0                 ; 6       ;
-;      - FullAdder1Bit:u1|S~0      ; 0                 ; 6       ;
-; z                                ;                   ;         ;
-;      - ExtensorLA:t1|ib4~0       ; 1                 ; 6       ;
-;      - ExtensorLA:t1|ia4~0       ; 1                 ; 6       ;
-;      - ExtensorLA:t1|ib3~0       ; 1                 ; 6       ;
-;      - ExtensorLA:t1|ia3~0       ; 1                 ; 6       ;
-;      - ExtensorLA:t1|ib2~0       ; 1                 ; 6       ;
-;      - ExtensorLA:t1|ia2~0       ; 1                 ; 6       ;
-;      - ExtensorLA:t1|ib1~0       ; 1                 ; 6       ;
-;      - ExtensorLA:t1|ia1~0       ; 1                 ; 6       ;
-;      - FullAdder1Bit:u1|Cout~0   ; 1                 ; 6       ;
-;      - FullAdder1Bit:u6|S~0      ; 1                 ; 6       ;
-;      - FullAdder1Bit:u6|S~1      ; 1                 ; 6       ;
-;      - ExtensorLA:t1|ia0~0       ; 1                 ; 6       ;
-;      - FullAdder1Bit:u1|S~0      ; 1                 ; 6       ;
-; b4                               ;                   ;         ;
-;      - ExtensorLA:t1|ib4~0       ; 1                 ; 6       ;
-;      - ExtensorLA:t1|ia4~0       ; 1                 ; 6       ;
-; a4                               ;                   ;         ;
-;      - ExtensorLA:t1|ia4~0       ; 0                 ; 6       ;
-;      - ExtensorLA:t1|ia4~1       ; 0                 ; 6       ;
-; b3                               ;                   ;         ;
-;      - ExtensorLA:t1|ib3~0       ; 1                 ; 6       ;
-;      - ExtensorLA:t1|ia3~0       ; 1                 ; 6       ;
-; a3                               ;                   ;         ;
-;      - ExtensorLA:t1|ia3~0       ; 1                 ; 6       ;
-;      - ExtensorLA:t1|ia3~1       ; 1                 ; 6       ;
-; b2                               ;                   ;         ;
-;      - ExtensorLA:t1|ib2~0       ; 0                 ; 6       ;
-;      - ExtensorLA:t1|ia2~0       ; 0                 ; 6       ;
-; a2                               ;                   ;         ;
-;      - ExtensorLA:t1|ia2~0       ; 0                 ; 6       ;
-;      - ExtensorLA:t1|ia2~1       ; 0                 ; 6       ;
-; b1                               ;                   ;         ;
-;      - ExtensorLA:t1|ib1~0       ; 0                 ; 6       ;
-;      - ExtensorLA:t1|ia1~0       ; 0                 ; 6       ;
-; a1                               ;                   ;         ;
-;      - ExtensorLA:t1|ia1~0       ; 0                 ; 6       ;
-;      - ExtensorLA:t1|ia1~1       ; 0                 ; 6       ;
-; a0                               ;                   ;         ;
-;      - FullAdder1Bit:u1|Cout~0   ; 0                 ; 6       ;
-;      - ExtensorLA:t1|ia0~0       ; 0                 ; 6       ;
-;      - FullAdder1Bit:u1|S        ; 0                 ; 6       ;
-; b0                               ;                   ;         ;
-;      - FullAdder1Bit:u1|Cout~0   ; 0                 ; 6       ;
-;      - ExtensorLA:t1|ia0~0       ; 0                 ; 6       ;
-;      - FullAdder1Bit:u1|S~0      ; 0                 ; 6       ;
-; a5                               ;                   ;         ;
-;      - FullAdder1Bit:u6|S~0      ; 0                 ; 6       ;
-;      - FullAdder1Bit:u6|S~1      ; 0                 ; 6       ;
-; clk                              ;                   ;         ;
-; e                                ;                   ;         ;
-;      - Registrador6Bits:r1|s0    ; 0                 ; 6       ;
-;      - Registrador6Bits:r1|s1    ; 0                 ; 6       ;
-;      - Registrador6Bits:r1|s2    ; 0                 ; 6       ;
-;      - Registrador6Bits:r1|s3    ; 0                 ; 6       ;
-;      - Registrador6Bits:r1|s4    ; 0                 ; 6       ;
-;      - Registrador6Bits:r1|s5    ; 0                 ; 6       ;
-+----------------------------------+-------------------+---------+
++--------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                               ;
++--------------------------------+-------------------+---------+
+; Source Pin / Fanout            ; Pad To Core Index ; Setting ;
++--------------------------------+-------------------+---------+
+; b5                             ;                   ;         ;
+; z                              ;                   ;         ;
+; b4                             ;                   ;         ;
+;      - ExtensorLA:t1|ib4~0     ; 0                 ; 6       ;
+;      - ExtensorLA:t1|ia4~0     ; 0                 ; 6       ;
+; x                              ;                   ;         ;
+;      - ExtensorLA:t1|ib5~0     ; 0                 ; 6       ;
+;      - ExtensorLA:t1|ia4~1     ; 0                 ; 6       ;
+;      - ExtensorLA:t1|ia3~1     ; 0                 ; 6       ;
+;      - ExtensorLA:t1|ia2~1     ; 0                 ; 6       ;
+;      - ExtensorLA:t1|ia1~1     ; 0                 ; 6       ;
+;      - FullAdder1Bit:u6|S~0    ; 0                 ; 6       ;
+;      - FullAdder1Bit:u6|S~1    ; 0                 ; 6       ;
+;      - FullAdder1Bit:u1|Cout~3 ; 0                 ; 6       ;
+;      - FullAdder1Bit:u1|S~2    ; 0                 ; 6       ;
+;      - FullAdder1Bit:u1|S~3    ; 0                 ; 6       ;
+; y                              ;                   ;         ;
+;      - ExtensorLA:t1|ib5~0     ; 0                 ; 6       ;
+;      - ExtensorLA:t1|ia4~0     ; 0                 ; 6       ;
+;      - ExtensorLA:t1|ia3~0     ; 0                 ; 6       ;
+;      - ExtensorLA:t1|ia2~0     ; 0                 ; 6       ;
+;      - ExtensorLA:t1|ia1~0     ; 0                 ; 6       ;
+;      - FullAdder1Bit:u6|S~0    ; 0                 ; 6       ;
+;      - FullAdder1Bit:u6|S~1    ; 0                 ; 6       ;
+;      - FullAdder1Bit:u1|Cout~2 ; 0                 ; 6       ;
+;      - FullAdder1Bit:u1|S~2    ; 0                 ; 6       ;
+;      - FullAdder1Bit:u1|S~3    ; 0                 ; 6       ;
+; a4                             ;                   ;         ;
+;      - ExtensorLA:t1|ia4~0     ; 0                 ; 6       ;
+;      - ExtensorLA:t1|ia4~1     ; 0                 ; 6       ;
+; b3                             ;                   ;         ;
+;      - ExtensorLA:t1|ib3~0     ; 0                 ; 6       ;
+;      - ExtensorLA:t1|ia3~0     ; 0                 ; 6       ;
+; a3                             ;                   ;         ;
+;      - ExtensorLA:t1|ia3~0     ; 0                 ; 6       ;
+;      - ExtensorLA:t1|ia3~1     ; 0                 ; 6       ;
+; b2                             ;                   ;         ;
+;      - ExtensorLA:t1|ib2~0     ; 0                 ; 6       ;
+;      - ExtensorLA:t1|ia2~0     ; 0                 ; 6       ;
+; a2                             ;                   ;         ;
+;      - ExtensorLA:t1|ia2~0     ; 0                 ; 6       ;
+;      - ExtensorLA:t1|ia2~1     ; 0                 ; 6       ;
+; b1                             ;                   ;         ;
+;      - ExtensorLA:t1|ib1~0     ; 0                 ; 6       ;
+;      - ExtensorLA:t1|ia1~0     ; 0                 ; 6       ;
+; a1                             ;                   ;         ;
+;      - ExtensorLA:t1|ia1~0     ; 0                 ; 6       ;
+;      - ExtensorLA:t1|ia1~1     ; 0                 ; 6       ;
+; b0                             ;                   ;         ;
+;      - FullAdder1Bit:u1|Cout~2 ; 0                 ; 6       ;
+;      - FullAdder1Bit:u1|S~2    ; 0                 ; 6       ;
+;      - FullAdder1Bit:u1|S~3    ; 0                 ; 6       ;
+; a0                             ;                   ;         ;
+;      - FullAdder1Bit:u1|Cout~2 ; 1                 ; 6       ;
+;      - FullAdder1Bit:u1|S      ; 1                 ; 6       ;
+; a5                             ;                   ;         ;
+;      - FullAdder1Bit:u6|S~0    ; 0                 ; 6       ;
+;      - FullAdder1Bit:u6|S~1    ; 0                 ; 6       ;
+; clk                            ;                   ;         ;
+; e                              ;                   ;         ;
+;      - Registrador6Bits:r1|s0  ; 0                 ; 6       ;
+;      - Registrador6Bits:r1|s1  ; 0                 ; 6       ;
+;      - Registrador6Bits:r1|s2  ; 0                 ; 6       ;
+;      - Registrador6Bits:r1|s3  ; 0                 ; 6       ;
+;      - Registrador6Bits:r1|s4  ; 0                 ; 6       ;
+;      - Registrador6Bits:r1|s5  ; 0                 ; 6       ;
++--------------------------------+-------------------+---------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------+
@@ -1208,7 +1204,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name ; Location ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------+----------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; clk  ; PIN_P2   ; 6       ; Clock        ; yes    ; Global Clock         ; GCLK3            ; --                        ;
-; e    ; PIN_W26  ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; e    ; PIN_AD12 ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 +------+----------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1221,63 +1217,63 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+----------+---------+----------------------+------------------+---------------------------+
 
 
-+-------------------------------------+
-; Non-Global High Fan-Out Signals     ;
-+---------------------------+---------+
-; Name                      ; Fan-Out ;
-+---------------------------+---------+
-; z                         ; 13      ;
-; y                         ; 10      ;
-; x                         ; 10      ;
-; ExtensorLA:t1|process_0~0 ; 8       ;
-; e                         ; 6       ;
-; b0                        ; 3       ;
-; a0                        ; 3       ;
-; a5                        ; 2       ;
-; a1                        ; 2       ;
-; b1                        ; 2       ;
-; a2                        ; 2       ;
-; b2                        ; 2       ;
-; a3                        ; 2       ;
-; b3                        ; 2       ;
-; a4                        ; 2       ;
-; b4                        ; 2       ;
-; FullAdder1Bit:u4|Cout~0   ; 2       ;
-; FullAdder1Bit:u3|Cout~0   ; 2       ;
-; FullAdder1Bit:u2|Cout~0   ; 2       ;
-; FullAdder1Bit:u1|Cout~1   ; 2       ;
-; ExtensorLA:t1|ia1~1       ; 2       ;
-; ExtensorLA:t1|ib1~0       ; 2       ;
-; ExtensorLA:t1|ia2~1       ; 2       ;
-; ExtensorLA:t1|ib2~0       ; 2       ;
-; ExtensorLA:t1|ia3~1       ; 2       ;
-; ExtensorLA:t1|ib3~0       ; 2       ;
-; ExtensorLA:t1|ia4~1       ; 2       ;
-; ExtensorLA:t1|ib4~0       ; 2       ;
-; b5                        ; 1       ;
-; FullAdder1Bit:u1|S        ; 1       ;
-; FullAdder1Bit:u1|S~0      ; 1       ;
-; ExtensorLA:t1|ia0~0       ; 1       ;
-; FullAdder1Bit:u2|S        ; 1       ;
-; FullAdder1Bit:u3|S        ; 1       ;
-; FullAdder1Bit:u4|S        ; 1       ;
-; FullAdder1Bit:u5|S        ; 1       ;
-; FullAdder1Bit:u6|S~2      ; 1       ;
-; FullAdder1Bit:u6|S~1      ; 1       ;
-; FullAdder1Bit:u6|S~0      ; 1       ;
-; FullAdder1Bit:u5|Cout~0   ; 1       ;
-; FullAdder1Bit:u1|Cout~0   ; 1       ;
-; ExtensorLA:t1|ia1~0       ; 1       ;
-; ExtensorLA:t1|ia2~0       ; 1       ;
-; ExtensorLA:t1|ia3~0       ; 1       ;
-; ExtensorLA:t1|ia4~0       ; 1       ;
-; Registrador6Bits:r1|s0    ; 1       ;
-; Registrador6Bits:r1|s1    ; 1       ;
-; Registrador6Bits:r1|s2    ; 1       ;
-; Registrador6Bits:r1|s3    ; 1       ;
-; Registrador6Bits:r1|s4    ; 1       ;
-; Registrador6Bits:r1|s5    ; 1       ;
-+---------------------------+---------+
++-----------------------------------+
+; Non-Global High Fan-Out Signals   ;
++-------------------------+---------+
+; Name                    ; Fan-Out ;
++-------------------------+---------+
+; z                       ; 13      ;
+; y                       ; 10      ;
+; x                       ; 10      ;
+; ExtensorLA:t1|ib5~0     ; 8       ;
+; e                       ; 6       ;
+; b0                      ; 3       ;
+; a5                      ; 2       ;
+; a0                      ; 2       ;
+; a1                      ; 2       ;
+; b1                      ; 2       ;
+; a2                      ; 2       ;
+; b2                      ; 2       ;
+; a3                      ; 2       ;
+; b3                      ; 2       ;
+; a4                      ; 2       ;
+; b4                      ; 2       ;
+; FullAdder1Bit:u1|Cout~3 ; 2       ;
+; FullAdder1Bit:u4|Cout~0 ; 2       ;
+; FullAdder1Bit:u3|Cout~0 ; 2       ;
+; FullAdder1Bit:u2|Cout~0 ; 2       ;
+; ExtensorLA:t1|ia1~1     ; 2       ;
+; ExtensorLA:t1|ib1~0     ; 2       ;
+; ExtensorLA:t1|ia2~1     ; 2       ;
+; ExtensorLA:t1|ib2~0     ; 2       ;
+; ExtensorLA:t1|ia3~1     ; 2       ;
+; ExtensorLA:t1|ib3~0     ; 2       ;
+; ExtensorLA:t1|ia4~1     ; 2       ;
+; ExtensorLA:t1|ib4~0     ; 2       ;
+; b5                      ; 1       ;
+; FullAdder1Bit:u1|S      ; 1       ;
+; FullAdder1Bit:u1|S~3    ; 1       ;
+; FullAdder1Bit:u1|S~2    ; 1       ;
+; FullAdder1Bit:u1|Cout~2 ; 1       ;
+; FullAdder1Bit:u2|S      ; 1       ;
+; FullAdder1Bit:u3|S      ; 1       ;
+; FullAdder1Bit:u4|S      ; 1       ;
+; FullAdder1Bit:u5|S      ; 1       ;
+; FullAdder1Bit:u6|S~2    ; 1       ;
+; FullAdder1Bit:u6|S~1    ; 1       ;
+; FullAdder1Bit:u6|S~0    ; 1       ;
+; FullAdder1Bit:u5|Cout~0 ; 1       ;
+; ExtensorLA:t1|ia1~0     ; 1       ;
+; ExtensorLA:t1|ia2~0     ; 1       ;
+; ExtensorLA:t1|ia3~0     ; 1       ;
+; ExtensorLA:t1|ia4~0     ; 1       ;
+; Registrador6Bits:r1|s0  ; 1       ;
+; Registrador6Bits:r1|s1  ; 1       ;
+; Registrador6Bits:r1|s2  ; 1       ;
+; Registrador6Bits:r1|s3  ; 1       ;
+; Registrador6Bits:r1|s4  ; 1       ;
+; Registrador6Bits:r1|s5  ; 1       ;
++-------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -1285,14 +1281,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+-----------------------+
 ; Other Routing Resource Type ; Usage                 ;
 +-----------------------------+-----------------------+
-; Block interconnects         ; 32 / 94,460 ( < 1 % ) ;
-; C16 interconnects           ; 15 / 3,315 ( < 1 % )  ;
-; C4 interconnects            ; 33 / 60,840 ( < 1 % ) ;
-; Direct links                ; 2 / 94,460 ( < 1 % )  ;
+; Block interconnects         ; 31 / 94,460 ( < 1 % ) ;
+; C16 interconnects           ; 11 / 3,315 ( < 1 % )  ;
+; C4 interconnects            ; 38 / 60,840 ( < 1 % ) ;
+; Direct links                ; 4 / 94,460 ( < 1 % )  ;
 ; Global clocks               ; 1 / 16 ( 6 % )        ;
 ; Local interconnects         ; 20 / 33,216 ( < 1 % ) ;
-; R24 interconnects           ; 14 / 3,091 ( < 1 % )  ;
-; R4 interconnects            ; 39 / 81,294 ( < 1 % ) ;
+; R24 interconnects           ; 0 / 3,091 ( 0 % )     ;
+; R4 interconnects            ; 16 / 81,294 ( < 1 % ) ;
 +-----------------------------+-----------------------+
 
 
@@ -1313,10 +1309,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 10                                          ; 0                           ;
 ; 11                                          ; 0                           ;
 ; 12                                          ; 0                           ;
-; 13                                          ; 0                           ;
-; 14                                          ; 1                           ;
-; 15                                          ; 1                           ;
-; 16                                          ; 0                           ;
+; 13                                          ; 1                           ;
+; 14                                          ; 0                           ;
+; 15                                          ; 0                           ;
+; 16                                          ; 1                           ;
 +---------------------------------------------+-----------------------------+
 
 
@@ -1351,9 +1347,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 13                                           ; 0                           ;
 ; 14                                           ; 0                           ;
 ; 15                                           ; 0                           ;
-; 16                                           ; 0                           ;
-; 17                                           ; 1                           ;
-; 18                                           ; 1                           ;
+; 16                                           ; 1                           ;
+; 17                                           ; 0                           ;
+; 18                                           ; 0                           ;
+; 19                                           ; 1                           ;
 +----------------------------------------------+-----------------------------+
 
 
@@ -1365,8 +1362,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 0                                               ; 0                           ;
 ; 1                                               ; 0                           ;
 ; 2                                               ; 0                           ;
-; 3                                               ; 0                           ;
-; 4                                               ; 2                           ;
+; 3                                               ; 1                           ;
+; 4                                               ; 0                           ;
+; 5                                               ; 1                           ;
 +-------------------------------------------------+-----------------------------+
 
 
@@ -1386,8 +1384,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 8                                            ; 0                           ;
 ; 9                                            ; 0                           ;
 ; 10                                           ; 0                           ;
-; 11                                           ; 0                           ;
-; 12                                           ; 2                           ;
+; 11                                           ; 1                           ;
+; 12                                           ; 0                           ;
+; 13                                           ; 1                           ;
 +----------------------------------------------+-----------------------------+
 
 
@@ -1444,10 +1443,10 @@ Critical Warning (169085): No exact pin location assignment(s) for 23 pins of 23
     Info (169086): Pin s1 not assigned to an exact location on the device
     Info (169086): Pin s0 not assigned to an exact location on the device
     Info (169086): Pin b5 not assigned to an exact location on the device
-    Info (169086): Pin x not assigned to an exact location on the device
-    Info (169086): Pin y not assigned to an exact location on the device
     Info (169086): Pin z not assigned to an exact location on the device
     Info (169086): Pin b4 not assigned to an exact location on the device
+    Info (169086): Pin x not assigned to an exact location on the device
+    Info (169086): Pin y not assigned to an exact location on the device
     Info (169086): Pin a4 not assigned to an exact location on the device
     Info (169086): Pin b3 not assigned to an exact location on the device
     Info (169086): Pin a3 not assigned to an exact location on the device
@@ -1455,8 +1454,8 @@ Critical Warning (169085): No exact pin location assignment(s) for 23 pins of 23
     Info (169086): Pin a2 not assigned to an exact location on the device
     Info (169086): Pin b1 not assigned to an exact location on the device
     Info (169086): Pin a1 not assigned to an exact location on the device
-    Info (169086): Pin a0 not assigned to an exact location on the device
     Info (169086): Pin b0 not assigned to an exact location on the device
+    Info (169086): Pin a0 not assigned to an exact location on the device
     Info (169086): Pin a5 not assigned to an exact location on the device
     Info (169086): Pin clk not assigned to an exact location on the device
     Info (169086): Pin e not assigned to an exact location on the device
@@ -1489,7 +1488,7 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X33_Y0 to location X43_Y11
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X22_Y0 to location X32_Y11
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
@@ -1510,8 +1509,8 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file D:/SD/ALU/ULA/output_files/ULA.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4889 megabytes
-    Info: Processing ended: Sat May 16 19:57:17 2026
+    Info: Peak virtual memory: 4883 megabytes
+    Info: Processing ended: Tue May 19 16:58:48 2026
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:05
 
