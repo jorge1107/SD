@@ -1,0 +1,36 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Comparador is
+    port(a,b, in_gt, in_eq, in_lt: in bit;
+         out_gt, out_eq, out_lt: out bit);
+end;
+architecture behav of Comparador is
+    signal eq_bit: bit;
+begin
+    eq_bit <= a xnor b; -- XNOR = (a and b) or (not a and not b)
+    out_eq <= in_eq and eq_bit;
+    out_gt <= in_gt or (in_eq and a and not b);
+    out_lt <= in_lt or (in_eq and not a and b);
+end architecture;
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Comparador16Bits is
+    port(a,b: in bit_vector(15 downto 0);
+         AgtB, AeqB, AltB: out bit);
+end;
+architecture behav of Comparador16Bits is
+    signal gt, eq, lt: bit_vector(15 downto 0);
+    component Comparador is port(a,b,in_gt,in_eq,in_lt: in bit; out_gt,out_eq,out_lt: out bit); end component;
+begin
+    -- Estágio mais significativo (15) inicializa com in_eq=1, in_gt=0, in_lt=0
+    st15: Comparador port map(a=>a(15), b=>b(15), in_gt=>'0', in_eq=>'1', in_lt=>'0',
+                             out_gt=>gt(15), out_eq=>eq(15), out_lt=>lt(15));
+    gen_cmp: for i in 14 downto 0 generate
+        st: Comparador port map(a=>a(i), b=>b(i), in_gt=>gt(i+1), in_eq=>eq(i+1), in_lt=>lt(i+1),
+                               out_gt=>gt(i), out_eq=>eq(i), out_lt=>lt(i));
+    end generate;
+    AgtB <= gt(0); AeqB <= eq(0); AltB <= lt(0);
+end architecture;

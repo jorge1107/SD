@@ -1,0 +1,22 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Shifter16Bits is
+    port(a: in bit_vector(15 downto 0);
+         shl, shr: in bit; -- shl=1: <<1, shr=1: >>1
+         s: out bit_vector(15 downto 0));
+end;
+architecture behav of Shifter16Bits is
+    signal sel: bit_vector(1 downto 0);
+begin
+    sel <= shl & shr;
+    -- MUL2: desloca esquerda, LSB=0
+    -- DIV2: desloca direita, MSB=0
+    -- Se ambos 0, passa A direto (s=A)
+    -- Implementado via MUX por bit (equações booleanas simplificadas)
+    s(0) <= (a(1) and shl) or (a(0) and not shl and not shr);
+    gen_sh: for i in 1 to 14 generate
+        s(i) <= (a(i-1) and shl) or (a(i+1) and shr) or (a(i) and not shl and not shr);
+    end generate;
+    s(15) <= (a(14) and shl) or (a(15) and not shl and not shr);
+end;
