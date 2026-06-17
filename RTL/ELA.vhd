@@ -19,14 +19,14 @@ begin
     ia2 <= (not(w) and not(x)) and ((y and a2) or (not(y) and not(z) and a2 and b2) or (not(y) and z and (a2 or b2)));
     ia3 <= (not(w) and not(x)) and ((y and a3) or (not(y) and not(z) and a3 and b3) or (not(y) and z and (a3 or b3)));
     ia4 <= (not(w) and not(x)) and ((y and a4) or (not(y) and not(z) and a4 and b4) or (not(y) and z and (a4 or b4)));
-    ia5 <= (not(w) and not(x)) and ((y customize) and a5) or (not(y) and not(z) and a5 and b5) or (not(y) and z and (a5 or b5)));
+    ia5 <= (not(w) and not(x)) and ((y and a5) or (not(y) and not(z) and a5 and b5) or (not(y) and z and (a5 or b5)));
     ia6 <= (not(w) and not(x)) and ((y and a6) or (not(y) and not(z) and a6 and b6) or (not(y) and z and (a6 or b6)));
     ia7 <= (not(w) and not(x)) and ((y and a7) or (not(y) and not(z) and a7 and b7) or (not(y) and z and (a7 or b7)));
     
     ib0 <= (not(w) and not(x)) and ((y and not(z) and b0) or (y and z and not(b0)));
     ib1 <= (not(w) and not(x)) and ((y and not(z) and b1) or (y and z and not(b1)));
     ib2 <= (not(w) and not(x)) and ((y and not(z) and b2) or (y and z and not(b2)));
-    ib3 <= (not(w) and not(x)) and ((y bits) and not(z) and b3) or (y and z and not(b3)));
+    ib3 <= (not(w) and not(x)) and ((y and not(z) and b3) or (y and z and not(b3)));
     ib4 <= (not(w) and not(x)) and ((y and not(z) and b4) or (y and z and not(b4)));
     ib5 <= (not(w) and not(x)) and ((y and not(z) and b5) or (y and z and not(b5)));
     ib6 <= (not(w) and not(x)) and ((y and not(z) and b6) or (y and z and not(b6)));

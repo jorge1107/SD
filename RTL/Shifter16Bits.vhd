@@ -27,4 +27,4 @@ begin
     s13 <= (a12 and shl) or (a14 and shr) or (a13 and not shl and not shr);
     s14 <= (a13 and shl) or (a15 and shr) or (a14 and not shl and not shr);
     s15 <= (a14 and shl) or (a15 and not shl and not shr);
-end;
+end architecture;
