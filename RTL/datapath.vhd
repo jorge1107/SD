@@ -54,7 +54,7 @@ architecture structural of datapath is
         ); 
     end component;
     
-    component alu16 is 
+    component ULA is 
         port(
             a15, a14, a13, a12, a11, a10, a9, a8, a7, a6, a5, a4, a3, a2, a1, a0: in bit;
             b15, b14, b13, b12, b11, b10, b9, b8, b7, b6, b5, b4, b3, b2, b1, b0: in bit;
@@ -83,7 +83,7 @@ begin
     rf_ra3 <= ir7;  rf_ra2 <= ir6;  rf_ra1 <= ir5; rf_ra0 <= ir4;
     rf_rb3 <= ir3;  rf_rb2 <= ir2;  rf_rb1 <= ir1; rf_rb0 <= ir0;
     
-    u_alu: alu16 port map(
+    u_alu: ULA port map(
         a15=>rf_rdata_a15, a14=>rf_rdata_a14, a13=>rf_rdata_a13, a12=>rf_rdata_a12, a11=>rf_rdata_a11, a10=>rf_rdata_a10, a9=>rf_rdata_a9, a8=>rf_rdata_a8,
         a7=>rf_rdata_a7, a6=>rf_rdata_a6, a5=>rf_rdata_a5, a4=>rf_rdata_a4, a3=>rf_rdata_a3, a2=>rf_rdata_a2, a1=>rf_rdata_a1, a0=>rf_rdata_a0,
         b15=>rf_rdata_b15, b14=>rf_rdata_b14, b13=>rf_rdata_b13, b12=>rf_rdata_b12, b11=>rf_rdata_b11, b10=>rf_rdata_b10, b9=>rf_rdata_b9, b8=>rf_rdata_b8,

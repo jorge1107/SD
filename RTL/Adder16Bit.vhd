@@ -3,15 +3,15 @@ use ieee.std_logic_1164.all;
 
 entity Adder16Bit is
     port (
-        A7, A6, A5, A4, A3, A2, A1, A0 : in bit;
-        B7, B6, B5, B4, B3, B2, B1, B0 : in bit;
+        A15, A14, A13, A12, A11, A10, A9, A8, A7, A6, A5, A4, A3, A2, A1, A0 : in bit;
+        B15, B14, B13, B12, B11, B10, B9, B8, B7, B6, B5, B4, B3, B2, B1, B0 : in bit;
         Op : in bit;
-        S7, S6, S5, S4, S3, S2, S1, S0 : out bit;
+        S15, S14, S13, S12, S11, S10, S9, S8, S7, S6, S5, S4, S3, S2, S1, S0 : out bit;
         Cout : out bit
     );
 end entity;
 
-architecture behav of Adder16Bit is
+architecture comportamento of Adder16Bit is
     component FullAdder is
         port (
             A : in bit;
@@ -21,7 +21,7 @@ architecture behav of Adder16Bit is
             Cout : out bit
         );
     end component;
-    signal C8, C7, C6, C5, C4, C3, C2, C1, C0 : in bit;
+    signal C8, C7, C6, C5, C4, C3, C2, C1, C0 : bit;
 begin
     C0 <= Op;
     U0 : FullAdder port map(A0, B0, C0, S0, C1);
