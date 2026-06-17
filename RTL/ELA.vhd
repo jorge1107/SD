@@ -31,8 +31,6 @@ begin
     ia14 <= (not(w) and not(x)) and ((y and a14) or (not(y) and not(z) and a14 and b14) or (not(y) and z and (a14 or b14)));
     ia15 <= (not(w) and not(x)) and ((y and a15) or (not(y) and not(z) and a15 and b15) or (not(y) and z and (a15 or b15)));
 
-
-
     ib0 <= (not(w) and not(x)) and ((y and not(z) and b0) or (y and z and not(b0)));
     ib1 <= (not(w) and not(x)) and ((y and not(z) and b1) or (y and z and not(b1)));
     ib2 <= (not(w) and not(x)) and ((y and not(z) and b2) or (y and z and not(b2)));
@@ -52,5 +50,4 @@ begin
     
     cin <= (not(w) and not(x) and y and z);
 
-    
 end architecture;

@@ -8,7 +8,7 @@ end;
 architecture behav of Comparador is
     signal eq_bit: bit;
 begin
-    eq_bit <= a xnor b; -- XNOR = (a and b) or (not a and not b)
+    eq_bit <= a xnor b;
     out_eq <= in_eq and eq_bit;
     out_gt <= in_gt or (in_eq and a and not b);
     out_lt <= in_lt or (in_eq and not a and b);

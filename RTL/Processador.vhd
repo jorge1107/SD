@@ -1,3 +1,6 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
 entity Processador is
     port(
         clk, rst: in bit;
@@ -41,7 +44,7 @@ architecture structural of Processador is
         );
     end component;
 
-    component ctrl_unit is
+    component ControlUnit is
         port(
             clk, rst: in bit;
             opcode3, opcode2, opcode1, opcode0: in bit;
@@ -76,7 +79,7 @@ begin
         data_out3=>data_mem_data_out3, data_out2=>data_mem_data_out2, data_out1=>data_mem_data_out1, data_out0=>data_mem_data_out0
     );
 
-    u_ctrl: ctrl_unit port map(
+    u_ctrl: ControlUnit port map(
         clk=>clk, rst=>rst, 
         opcode3=>ir_out15, opcode2=>ir_out14, opcode1=>ir_out13, opcode0=>ir_out12,
         pc_inc=>pc_inc, ir_ld=>ir_ld, rf_wr=>rf_wr, mem_rd=>ctrl_mem_rd, mem_wr=>ctrl_mem_wr,

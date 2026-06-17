@@ -18,7 +18,7 @@ architecture behav of Comparador16Bits is
         port(a, b, in_gt, in_eq, in_lt: in bit; out_gt, out_eq, out_lt: out bit); 
     end component;
 begin
-    st15: Comparador port map(a=>a15, b=>b15, in_gt=>'0', in_eq=>'1', in_lt=>'0', out_gt=>gt15, out_eq=>eq15, out_lt=>lt15);
+    st15: Comparador port map(a=>a15, b=>b15, in_gt=>'0', in_eq=>'1', in_lt=>'0', out_gt=>gt15, out_eq=>eq15, out_lt=>lt15); --(0,1,0)
     st14: Comparador port map(a=>a14, b=>b14, in_gt=>gt15, in_eq=>eq15, in_lt=>lt15, out_gt=>gt14, out_eq=>eq14, out_lt=>lt14);
     st13: Comparador port map(a=>a13, b=>b13, in_gt=>gt14, in_eq=>eq14, in_lt=>lt14, out_gt=>gt13, out_eq=>eq13, out_lt=>lt13);
     st12: Comparador port map(a=>a12, b=>b12, in_gt=>gt13, in_eq=>eq13, in_lt=>lt13, out_gt=>gt12, out_eq=>eq12, out_lt=>lt12);

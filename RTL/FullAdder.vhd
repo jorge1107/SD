@@ -3,11 +3,11 @@ use ieee.std_logic_1164.all;
 
 entity FullAdder is
     port (
-        A : in std_logic;
-        B : in std_logic;
-        Cin : in std_logic;
-        Sum : out std_logic;
-        Cout : out std_logic
+        A : in bit;
+        B : in bit;
+        Cin : in bit;
+        Sum : out bit;
+        Cout : out bit
     );
 end entity;
 

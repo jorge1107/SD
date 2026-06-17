@@ -1,22 +1,25 @@
-entity ctrl_unit is
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity ControlUnit is
     port(
         clk, rst: in bit;
         opcode3, opcode2, opcode1, opcode0: in bit;
         pc_inc, ir_ld, rf_wr, mem_rd, mem_wr: out bit;
-        alu_x, alu_y, alu_z: out bit;
+        ULAX, ULAY, ULAZ: out bit;
         wb_sel1, wb_sel0: out bit
     );
 end;
 
-architecture structural of ctrl_unit is
+architecture behav of ControlUnit is
     signal s2, s1, s0, n2, n1, n0: bit;
     signal op3, op2, op1, op0: bit;
     signal is_alu, is_load, is_store, is_immed: bit;
     component FlipFlopD is port(d, clk, rst: in bit; q: out bit); end component;
 begin
-    u_s0: FlipFlopD port map(d=>n0, clk=>clk, rst=>rst, q=>s0);
-    u_s1: FlipFlopD port map(d=>n1, clk=>clk, rst=>rst, q=>s1);
-    u_s2: FlipFlopD port map(d=>n2, clk=>clk, rst=>rst, q=>s2);
+    u0: FlipFlopD port map(d=>n0, clk=>clk, rst=>rst, q=>s0);
+    u1: FlipFlopD port map(d=>n1, clk=>clk, rst=>rst, q=>s1);
+    u2: FlipFlopD port map(d=>n2, clk=>clk, rst=>rst, q=>s2);
     
     op3 <= opcode3; op2 <= opcode2; op1 <= opcode1; op0 <= opcode0;
     
@@ -30,7 +33,7 @@ begin
     rf_wr   <= s2 and not s1 and not s0;
     mem_rd  <= not s2 and s1 and s0 and is_load;
     mem_wr  <= not s2 and s1 and s0 and is_store;
-    alu_x   <= op3; alu_y <= op2; alu_z <= op1;
+    ULAX   <= op3; ULAY <= op2; ULAZ <= op1;
     
     wb_sel1 <= '0' when (s2='1' and is_alu='1') else
                '0' when (s2='1' and is_load='1') else
