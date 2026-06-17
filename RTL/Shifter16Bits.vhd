@@ -11,7 +11,7 @@ end;
 
 architecture behav of Shifter16Bits is
 begin
-    s0  <= (a1 and shl)  or (a0 and not shl and not shr);
+    s0  <= (a1 and shr)  or (a0 and not shl and not shr);
     s1  <= (a0 and shl)  or (a2 and shr)  or (a1 and not shl and not shr);
     s2  <= (a1 and shl)  or (a3 and shr)  or (a2 and not shl and not shr);
     s3  <= (a2 and shl)  or (a4 and shr)  or (a3 and not shl and not shr);

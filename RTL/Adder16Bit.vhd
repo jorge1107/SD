@@ -17,7 +17,7 @@ architecture structural of Adder16Bit is
     end component;
     signal C0, C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12, C13, C14, C15 : bit;
 begin
-    C0 <= Op;  -- Cin global = Op (0=add, 1=sub)
+    C0 <= Op;
     U0:  FullAdder port map(A0,  B0,  C0,  S0,  C1);
     U1:  FullAdder port map(A1,  B1,  C1,  S1,  C2);
     U2:  FullAdder port map(A2,  B2,  C2,  S2,  C3);

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Processador
-Wed Jun 17 19:13:05 2026
+Wed Jun 17 20:49:15 2026
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,16 +10,17 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Port Connectivity Checks: "ControlUnit:u_ctrl|FlipFlopD:u2"
-  6. Port Connectivity Checks: "ControlUnit:u_ctrl|FlipFlopD:u1"
-  7. Port Connectivity Checks: "ControlUnit:u_ctrl|FlipFlopD:u0"
-  8. Port Connectivity Checks: "ControlUnit:u_ctrl"
-  9. Port Connectivity Checks: "datapath:u_dp|Comparador16Bits:u_cmp|Comparador:st15"
- 10. Port Connectivity Checks: "datapath:u_dp|Comparador16Bits:u_cmp"
- 11. Port Connectivity Checks: "datapath:u_dp|ULA:u_alu|Adder16Bit:u_add|FullAdder:U7"
- 12. Port Connectivity Checks: "datapath:u_dp|ULA:u_alu"
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Port Connectivity Checks: "datapath:u_dp|Comparador16Bits:u_cmp|Comparador:st15"
+ 11. Port Connectivity Checks: "datapath:u_dp|ULA:u_ula"
+ 12. Port Connectivity Checks: "datapath:u_dp|Adder16Bit:u_pc_add"
  13. Port Connectivity Checks: "datapath:u_dp"
- 14. Analysis & Synthesis Messages
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -45,20 +46,20 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Wed Jun 17 19:13:05 2026               ;
+; Analysis & Synthesis Status        ; Successful - Wed Jun 17 20:49:15 2026           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Processador                                     ;
 ; Top-level Entity Name              ; Processador                                     ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; N/A until Partition Merge                       ;
-;     Total combinational functions  ; N/A until Partition Merge                       ;
-;     Dedicated logic registers      ; N/A until Partition Merge                       ;
-; Total registers                    ; N/A until Partition Merge                       ;
-; Total pins                         ; N/A until Partition Merge                       ;
-; Total virtual pins                 ; N/A until Partition Merge                       ;
-; Total memory bits                  ; N/A until Partition Merge                       ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
-; Total PLLs                         ; N/A until Partition Merge                       ;
+; Total logic elements               ; 828                                             ;
+;     Total combinational functions  ; 572                                             ;
+;     Dedicated logic registers      ; 283                                             ;
+; Total registers                    ; 283                                             ;
+; Total pins                         ; 68                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
 +------------------------------------+-------------------------------------------------+
 
 
@@ -158,45 +159,484 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------+
-; Port Connectivity Checks: "ControlUnit:u_ctrl|FlipFlopD:u2" ;
-+------+-------+----------+-----------------------------------+
-; Port ; Type  ; Severity ; Details                           ;
-+------+-------+----------+-----------------------------------+
-; d    ; Input ; Info     ; Stuck at GND                      ;
-+------+-------+----------+-----------------------------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                ;
++----------------------------------+-----------------+-----------------------+--------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path   ; Library ;
++----------------------------------+-----------------+-----------------------+--------------------------------+---------+
+; Processador.vhd                  ; yes             ; User VHDL File        ; D:/SD/RTL/Processador.vhd      ;         ;
+; Mux2x1.vhd                       ; yes             ; User VHDL File        ; D:/SD/RTL/Mux2x1.vhd           ;         ;
+; FlipFlopD.vhd                    ; yes             ; User VHDL File        ; D:/SD/RTL/FlipFlopD.vhd        ;         ;
+; Reg16Bits.vhd                    ; yes             ; User VHDL File        ; D:/SD/RTL/Reg16Bits.vhd        ;         ;
+; Shifter16Bits.vhd                ; yes             ; User VHDL File        ; D:/SD/RTL/Shifter16Bits.vhd    ;         ;
+; Comparador.vhd                   ; yes             ; User VHDL File        ; D:/SD/RTL/Comparador.vhd       ;         ;
+; Comparador16Bits.vhd             ; yes             ; User VHDL File        ; D:/SD/RTL/Comparador16Bits.vhd ;         ;
+; ULA.vhd                          ; yes             ; User VHDL File        ; D:/SD/RTL/ULA.vhd              ;         ;
+; datapath.vhd                     ; yes             ; User VHDL File        ; D:/SD/RTL/datapath.vhd         ;         ;
+; adder16bit.vhd                   ; yes             ; Auto-Found VHDL File  ; D:/SD/RTL/adder16bit.vhd       ;         ;
+; fulladder.vhd                    ; yes             ; Auto-Found VHDL File  ; D:/SD/RTL/fulladder.vhd        ;         ;
+; registerfile.vhd                 ; yes             ; Auto-Found VHDL File  ; D:/SD/RTL/registerfile.vhd     ;         ;
+; mux16x1.vhd                      ; yes             ; Auto-Found VHDL File  ; D:/SD/RTL/mux16x1.vhd          ;         ;
+; ela.vhd                          ; yes             ; Auto-Found VHDL File  ; D:/SD/RTL/ela.vhd              ;         ;
+; controlunit.vhd                  ; yes             ; Auto-Found VHDL File  ; D:/SD/RTL/controlunit.vhd      ;         ;
++----------------------------------+-----------------+-----------------------+--------------------------------+---------+
 
 
-+-------------------------------------------------------------+
-; Port Connectivity Checks: "ControlUnit:u_ctrl|FlipFlopD:u1" ;
-+------+-------+----------+-----------------------------------+
-; Port ; Type  ; Severity ; Details                           ;
-+------+-------+----------+-----------------------------------+
-; d    ; Input ; Info     ; Stuck at GND                      ;
-+------+-------+----------+-----------------------------------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 828   ;
+;                                             ;       ;
+; Total combinational functions               ; 572   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 514   ;
+;     -- 3 input functions                    ; 50    ;
+;     -- <=2 input functions                  ; 8     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 572   ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 283   ;
+;     -- Dedicated logic registers            ; 283   ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 68    ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 283   ;
+; Total fan-out                               ; 3377  ;
+; Average fan-out                             ; 3.66  ;
++---------------------------------------------+-------+
 
 
-+-------------------------------------------------------------+
-; Port Connectivity Checks: "ControlUnit:u_ctrl|FlipFlopD:u0" ;
-+------+-------+----------+-----------------------------------+
-; Port ; Type  ; Severity ; Details                           ;
-+------+-------+----------+-----------------------------------+
-; d    ; Input ; Info     ; Stuck at GND                      ;
-+------+-------+----------+-----------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                           ;
++-----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node              ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                      ; Library Name ;
++-----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------+--------------+
+; |Processador                            ; 572 (0)           ; 283 (0)      ; 0           ; 0            ; 0       ; 0         ; 68   ; 0            ; |Processador                                                                             ; work         ;
+;    |ControlUnit:u_ctrl|                 ; 16 (16)           ; 3 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|ControlUnit:u_ctrl                                                          ; work         ;
+;       |FlipFlopD:u0|                    ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|ControlUnit:u_ctrl|FlipFlopD:u0                                             ; work         ;
+;       |FlipFlopD:u1|                    ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|ControlUnit:u_ctrl|FlipFlopD:u1                                             ; work         ;
+;       |FlipFlopD:u2|                    ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|ControlUnit:u_ctrl|FlipFlopD:u2                                             ; work         ;
+;    |datapath:u_dp|                      ; 556 (86)          ; 280 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp                                                               ; work         ;
+;       |Comparador16Bits:u_cmp|          ; 21 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|Comparador16Bits:u_cmp                                        ; work         ;
+;          |Comparador:st0|               ; 12 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|Comparador16Bits:u_cmp|Comparador:st0                         ; work         ;
+;          |Comparador:st11|              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|Comparador16Bits:u_cmp|Comparador:st11                        ; work         ;
+;          |Comparador:st3|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|Comparador16Bits:u_cmp|Comparador:st3                         ; work         ;
+;          |Comparador:st7|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|Comparador16Bits:u_cmp|Comparador:st7                         ; work         ;
+;       |Reg16Bits:u_ir|                  ; 0 (0)             ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|Reg16Bits:u_ir                                                ; work         ;
+;          |FlipFlopD:ff0|                ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|Reg16Bits:u_ir|FlipFlopD:ff0                                  ; work         ;
+;          |FlipFlopD:ff10|               ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|Reg16Bits:u_ir|FlipFlopD:ff10                                 ; work         ;
+;          |FlipFlopD:ff11|               ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|Reg16Bits:u_ir|FlipFlopD:ff11                                 ; work         ;
+;          |FlipFlopD:ff12|               ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|Reg16Bits:u_ir|FlipFlopD:ff12                                 ; work         ;
+;          |FlipFlopD:ff13|               ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|Reg16Bits:u_ir|FlipFlopD:ff13                                 ; work         ;
+;          |FlipFlopD:ff14|               ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|Reg16Bits:u_ir|FlipFlopD:ff14                                 ; work         ;
+;          |FlipFlopD:ff15|               ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|Reg16Bits:u_ir|FlipFlopD:ff15                                 ; work         ;
+;          |FlipFlopD:ff1|                ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|Reg16Bits:u_ir|FlipFlopD:ff1                                  ; work         ;
+;          |FlipFlopD:ff2|                ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|Reg16Bits:u_ir|FlipFlopD:ff2                                  ; work         ;
+;          |FlipFlopD:ff3|                ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|Reg16Bits:u_ir|FlipFlopD:ff3                                  ; work         ;
+;          |FlipFlopD:ff4|                ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|Reg16Bits:u_ir|FlipFlopD:ff4                                  ; work         ;
+;          |FlipFlopD:ff5|                ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|Reg16Bits:u_ir|FlipFlopD:ff5                                  ; work         ;
+;          |FlipFlopD:ff6|                ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|Reg16Bits:u_ir|FlipFlopD:ff6                                  ; work         ;
+;          |FlipFlopD:ff7|                ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|Reg16Bits:u_ir|FlipFlopD:ff7                                  ; work         ;
+;          |FlipFlopD:ff8|                ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|Reg16Bits:u_ir|FlipFlopD:ff8                                  ; work         ;
+;          |FlipFlopD:ff9|                ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|Reg16Bits:u_ir|FlipFlopD:ff9                                  ; work         ;
+;       |Reg16Bits:u_pc|                  ; 10 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|Reg16Bits:u_pc                                                ; work         ;
+;          |FlipFlopD:ff0|                ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|Reg16Bits:u_pc|FlipFlopD:ff0                                  ; work         ;
+;          |FlipFlopD:ff1|                ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|Reg16Bits:u_pc|FlipFlopD:ff1                                  ; work         ;
+;          |FlipFlopD:ff2|                ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|Reg16Bits:u_pc|FlipFlopD:ff2                                  ; work         ;
+;          |FlipFlopD:ff3|                ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|Reg16Bits:u_pc|FlipFlopD:ff3                                  ; work         ;
+;          |FlipFlopD:ff4|                ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|Reg16Bits:u_pc|FlipFlopD:ff4                                  ; work         ;
+;          |FlipFlopD:ff5|                ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|Reg16Bits:u_pc|FlipFlopD:ff5                                  ; work         ;
+;          |FlipFlopD:ff6|                ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|Reg16Bits:u_pc|FlipFlopD:ff6                                  ; work         ;
+;          |FlipFlopD:ff7|                ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|Reg16Bits:u_pc|FlipFlopD:ff7                                  ; work         ;
+;          |Mux2x1:mu0|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|Reg16Bits:u_pc|Mux2x1:mu0                                     ; work         ;
+;       |RegisterFile:u_rf|               ; 340 (20)          ; 256 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf                                             ; work         ;
+;          |Mux16x1:\gen_rda:0:u_mux_a|   ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rda:0:u_mux_a                  ; work         ;
+;             |Mux2x1:m30|                ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rda:0:u_mux_a|Mux2x1:m30       ; work         ;
+;          |Mux16x1:\gen_rda:10:u_mux_a|  ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rda:10:u_mux_a                 ; work         ;
+;             |Mux2x1:m30|                ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rda:10:u_mux_a|Mux2x1:m30      ; work         ;
+;          |Mux16x1:\gen_rda:11:u_mux_a|  ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rda:11:u_mux_a                 ; work         ;
+;             |Mux2x1:m30|                ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rda:11:u_mux_a|Mux2x1:m30      ; work         ;
+;          |Mux16x1:\gen_rda:12:u_mux_a|  ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rda:12:u_mux_a                 ; work         ;
+;             |Mux2x1:m30|                ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rda:12:u_mux_a|Mux2x1:m30      ; work         ;
+;          |Mux16x1:\gen_rda:13:u_mux_a|  ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rda:13:u_mux_a                 ; work         ;
+;             |Mux2x1:m30|                ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rda:13:u_mux_a|Mux2x1:m30      ; work         ;
+;          |Mux16x1:\gen_rda:14:u_mux_a|  ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rda:14:u_mux_a                 ; work         ;
+;             |Mux2x1:m30|                ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rda:14:u_mux_a|Mux2x1:m30      ; work         ;
+;          |Mux16x1:\gen_rda:15:u_mux_a|  ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rda:15:u_mux_a                 ; work         ;
+;             |Mux2x1:m30|                ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rda:15:u_mux_a|Mux2x1:m30      ; work         ;
+;          |Mux16x1:\gen_rda:1:u_mux_a|   ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rda:1:u_mux_a                  ; work         ;
+;             |Mux2x1:m30|                ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rda:1:u_mux_a|Mux2x1:m30       ; work         ;
+;          |Mux16x1:\gen_rda:2:u_mux_a|   ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rda:2:u_mux_a                  ; work         ;
+;             |Mux2x1:m30|                ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rda:2:u_mux_a|Mux2x1:m30       ; work         ;
+;          |Mux16x1:\gen_rda:3:u_mux_a|   ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rda:3:u_mux_a                  ; work         ;
+;             |Mux2x1:m30|                ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rda:3:u_mux_a|Mux2x1:m30       ; work         ;
+;          |Mux16x1:\gen_rda:4:u_mux_a|   ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rda:4:u_mux_a                  ; work         ;
+;             |Mux2x1:m30|                ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rda:4:u_mux_a|Mux2x1:m30       ; work         ;
+;          |Mux16x1:\gen_rda:5:u_mux_a|   ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rda:5:u_mux_a                  ; work         ;
+;             |Mux2x1:m30|                ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rda:5:u_mux_a|Mux2x1:m30       ; work         ;
+;          |Mux16x1:\gen_rda:6:u_mux_a|   ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rda:6:u_mux_a                  ; work         ;
+;             |Mux2x1:m30|                ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rda:6:u_mux_a|Mux2x1:m30       ; work         ;
+;          |Mux16x1:\gen_rda:7:u_mux_a|   ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rda:7:u_mux_a                  ; work         ;
+;             |Mux2x1:m30|                ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rda:7:u_mux_a|Mux2x1:m30       ; work         ;
+;          |Mux16x1:\gen_rda:8:u_mux_a|   ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rda:8:u_mux_a                  ; work         ;
+;             |Mux2x1:m30|                ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rda:8:u_mux_a|Mux2x1:m30       ; work         ;
+;          |Mux16x1:\gen_rda:9:u_mux_a|   ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rda:9:u_mux_a                  ; work         ;
+;             |Mux2x1:m30|                ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rda:9:u_mux_a|Mux2x1:m30       ; work         ;
+;          |Mux16x1:\gen_rdb:0:u_mux_b|   ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rdb:0:u_mux_b                  ; work         ;
+;             |Mux2x1:m30|                ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rdb:0:u_mux_b|Mux2x1:m30       ; work         ;
+;          |Mux16x1:\gen_rdb:10:u_mux_b|  ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rdb:10:u_mux_b                 ; work         ;
+;             |Mux2x1:m30|                ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rdb:10:u_mux_b|Mux2x1:m30      ; work         ;
+;          |Mux16x1:\gen_rdb:11:u_mux_b|  ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rdb:11:u_mux_b                 ; work         ;
+;             |Mux2x1:m30|                ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rdb:11:u_mux_b|Mux2x1:m30      ; work         ;
+;          |Mux16x1:\gen_rdb:12:u_mux_b|  ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rdb:12:u_mux_b                 ; work         ;
+;             |Mux2x1:m30|                ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rdb:12:u_mux_b|Mux2x1:m30      ; work         ;
+;          |Mux16x1:\gen_rdb:13:u_mux_b|  ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rdb:13:u_mux_b                 ; work         ;
+;             |Mux2x1:m30|                ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rdb:13:u_mux_b|Mux2x1:m30      ; work         ;
+;          |Mux16x1:\gen_rdb:14:u_mux_b|  ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rdb:14:u_mux_b                 ; work         ;
+;             |Mux2x1:m30|                ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rdb:14:u_mux_b|Mux2x1:m30      ; work         ;
+;          |Mux16x1:\gen_rdb:15:u_mux_b|  ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rdb:15:u_mux_b                 ; work         ;
+;             |Mux2x1:m30|                ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rdb:15:u_mux_b|Mux2x1:m30      ; work         ;
+;          |Mux16x1:\gen_rdb:1:u_mux_b|   ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rdb:1:u_mux_b                  ; work         ;
+;             |Mux2x1:m30|                ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rdb:1:u_mux_b|Mux2x1:m30       ; work         ;
+;          |Mux16x1:\gen_rdb:2:u_mux_b|   ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rdb:2:u_mux_b                  ; work         ;
+;             |Mux2x1:m30|                ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rdb:2:u_mux_b|Mux2x1:m30       ; work         ;
+;          |Mux16x1:\gen_rdb:3:u_mux_b|   ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rdb:3:u_mux_b                  ; work         ;
+;             |Mux2x1:m30|                ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rdb:3:u_mux_b|Mux2x1:m30       ; work         ;
+;          |Mux16x1:\gen_rdb:4:u_mux_b|   ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rdb:4:u_mux_b                  ; work         ;
+;             |Mux2x1:m30|                ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rdb:4:u_mux_b|Mux2x1:m30       ; work         ;
+;          |Mux16x1:\gen_rdb:5:u_mux_b|   ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rdb:5:u_mux_b                  ; work         ;
+;             |Mux2x1:m30|                ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rdb:5:u_mux_b|Mux2x1:m30       ; work         ;
+;          |Mux16x1:\gen_rdb:6:u_mux_b|   ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rdb:6:u_mux_b                  ; work         ;
+;             |Mux2x1:m30|                ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rdb:6:u_mux_b|Mux2x1:m30       ; work         ;
+;          |Mux16x1:\gen_rdb:7:u_mux_b|   ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rdb:7:u_mux_b                  ; work         ;
+;             |Mux2x1:m30|                ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rdb:7:u_mux_b|Mux2x1:m30       ; work         ;
+;          |Mux16x1:\gen_rdb:8:u_mux_b|   ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rdb:8:u_mux_b                  ; work         ;
+;             |Mux2x1:m30|                ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rdb:8:u_mux_b|Mux2x1:m30       ; work         ;
+;          |Mux16x1:\gen_rdb:9:u_mux_b|   ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rdb:9:u_mux_b                  ; work         ;
+;             |Mux2x1:m30|                ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rdb:9:u_mux_b|Mux2x1:m30       ; work         ;
+;          |Reg16Bits:\gen_regs:0:u_reg|  ; 0 (0)             ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:0:u_reg                 ; work         ;
+;             |FlipFlopD:ff0|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:0:u_reg|FlipFlopD:ff0   ; work         ;
+;             |FlipFlopD:ff10|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:0:u_reg|FlipFlopD:ff10  ; work         ;
+;             |FlipFlopD:ff11|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:0:u_reg|FlipFlopD:ff11  ; work         ;
+;             |FlipFlopD:ff12|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:0:u_reg|FlipFlopD:ff12  ; work         ;
+;             |FlipFlopD:ff13|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:0:u_reg|FlipFlopD:ff13  ; work         ;
+;             |FlipFlopD:ff14|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:0:u_reg|FlipFlopD:ff14  ; work         ;
+;             |FlipFlopD:ff15|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:0:u_reg|FlipFlopD:ff15  ; work         ;
+;             |FlipFlopD:ff1|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:0:u_reg|FlipFlopD:ff1   ; work         ;
+;             |FlipFlopD:ff2|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:0:u_reg|FlipFlopD:ff2   ; work         ;
+;             |FlipFlopD:ff3|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:0:u_reg|FlipFlopD:ff3   ; work         ;
+;             |FlipFlopD:ff4|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:0:u_reg|FlipFlopD:ff4   ; work         ;
+;             |FlipFlopD:ff5|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:0:u_reg|FlipFlopD:ff5   ; work         ;
+;             |FlipFlopD:ff6|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:0:u_reg|FlipFlopD:ff6   ; work         ;
+;             |FlipFlopD:ff7|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:0:u_reg|FlipFlopD:ff7   ; work         ;
+;             |FlipFlopD:ff8|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:0:u_reg|FlipFlopD:ff8   ; work         ;
+;             |FlipFlopD:ff9|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:0:u_reg|FlipFlopD:ff9   ; work         ;
+;          |Reg16Bits:\gen_regs:10:u_reg| ; 0 (0)             ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:10:u_reg                ; work         ;
+;             |FlipFlopD:ff0|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:10:u_reg|FlipFlopD:ff0  ; work         ;
+;             |FlipFlopD:ff10|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:10:u_reg|FlipFlopD:ff10 ; work         ;
+;             |FlipFlopD:ff11|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:10:u_reg|FlipFlopD:ff11 ; work         ;
+;             |FlipFlopD:ff12|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:10:u_reg|FlipFlopD:ff12 ; work         ;
+;             |FlipFlopD:ff13|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:10:u_reg|FlipFlopD:ff13 ; work         ;
+;             |FlipFlopD:ff14|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:10:u_reg|FlipFlopD:ff14 ; work         ;
+;             |FlipFlopD:ff15|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:10:u_reg|FlipFlopD:ff15 ; work         ;
+;             |FlipFlopD:ff1|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:10:u_reg|FlipFlopD:ff1  ; work         ;
+;             |FlipFlopD:ff2|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:10:u_reg|FlipFlopD:ff2  ; work         ;
+;             |FlipFlopD:ff3|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:10:u_reg|FlipFlopD:ff3  ; work         ;
+;             |FlipFlopD:ff4|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:10:u_reg|FlipFlopD:ff4  ; work         ;
+;             |FlipFlopD:ff5|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:10:u_reg|FlipFlopD:ff5  ; work         ;
+;             |FlipFlopD:ff6|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:10:u_reg|FlipFlopD:ff6  ; work         ;
+;             |FlipFlopD:ff7|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:10:u_reg|FlipFlopD:ff7  ; work         ;
+;             |FlipFlopD:ff8|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:10:u_reg|FlipFlopD:ff8  ; work         ;
+;             |FlipFlopD:ff9|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:10:u_reg|FlipFlopD:ff9  ; work         ;
+;          |Reg16Bits:\gen_regs:11:u_reg| ; 0 (0)             ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:11:u_reg                ; work         ;
+;             |FlipFlopD:ff0|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:11:u_reg|FlipFlopD:ff0  ; work         ;
+;             |FlipFlopD:ff10|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:11:u_reg|FlipFlopD:ff10 ; work         ;
+;             |FlipFlopD:ff11|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:11:u_reg|FlipFlopD:ff11 ; work         ;
+;             |FlipFlopD:ff12|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:11:u_reg|FlipFlopD:ff12 ; work         ;
+;             |FlipFlopD:ff13|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:11:u_reg|FlipFlopD:ff13 ; work         ;
+;             |FlipFlopD:ff14|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:11:u_reg|FlipFlopD:ff14 ; work         ;
+;             |FlipFlopD:ff15|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:11:u_reg|FlipFlopD:ff15 ; work         ;
+;             |FlipFlopD:ff1|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:11:u_reg|FlipFlopD:ff1  ; work         ;
+;             |FlipFlopD:ff2|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:11:u_reg|FlipFlopD:ff2  ; work         ;
+;             |FlipFlopD:ff3|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:11:u_reg|FlipFlopD:ff3  ; work         ;
+;             |FlipFlopD:ff4|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:11:u_reg|FlipFlopD:ff4  ; work         ;
+;             |FlipFlopD:ff5|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:11:u_reg|FlipFlopD:ff5  ; work         ;
+;             |FlipFlopD:ff6|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:11:u_reg|FlipFlopD:ff6  ; work         ;
+;             |FlipFlopD:ff7|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:11:u_reg|FlipFlopD:ff7  ; work         ;
+;             |FlipFlopD:ff8|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:11:u_reg|FlipFlopD:ff8  ; work         ;
+;             |FlipFlopD:ff9|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:11:u_reg|FlipFlopD:ff9  ; work         ;
+;          |Reg16Bits:\gen_regs:12:u_reg| ; 0 (0)             ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:12:u_reg                ; work         ;
+;             |FlipFlopD:ff0|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:12:u_reg|FlipFlopD:ff0  ; work         ;
+;             |FlipFlopD:ff10|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:12:u_reg|FlipFlopD:ff10 ; work         ;
+;             |FlipFlopD:ff11|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:12:u_reg|FlipFlopD:ff11 ; work         ;
+;             |FlipFlopD:ff12|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:12:u_reg|FlipFlopD:ff12 ; work         ;
+;             |FlipFlopD:ff13|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:12:u_reg|FlipFlopD:ff13 ; work         ;
+;             |FlipFlopD:ff14|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:12:u_reg|FlipFlopD:ff14 ; work         ;
+;             |FlipFlopD:ff15|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:12:u_reg|FlipFlopD:ff15 ; work         ;
+;             |FlipFlopD:ff1|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:12:u_reg|FlipFlopD:ff1  ; work         ;
+;             |FlipFlopD:ff2|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:12:u_reg|FlipFlopD:ff2  ; work         ;
+;             |FlipFlopD:ff3|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:12:u_reg|FlipFlopD:ff3  ; work         ;
+;             |FlipFlopD:ff4|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:12:u_reg|FlipFlopD:ff4  ; work         ;
+;             |FlipFlopD:ff5|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:12:u_reg|FlipFlopD:ff5  ; work         ;
+;             |FlipFlopD:ff6|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:12:u_reg|FlipFlopD:ff6  ; work         ;
+;             |FlipFlopD:ff7|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:12:u_reg|FlipFlopD:ff7  ; work         ;
+;             |FlipFlopD:ff8|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:12:u_reg|FlipFlopD:ff8  ; work         ;
+;             |FlipFlopD:ff9|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:12:u_reg|FlipFlopD:ff9  ; work         ;
+;          |Reg16Bits:\gen_regs:13:u_reg| ; 0 (0)             ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:13:u_reg                ; work         ;
+;             |FlipFlopD:ff0|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:13:u_reg|FlipFlopD:ff0  ; work         ;
+;             |FlipFlopD:ff10|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:13:u_reg|FlipFlopD:ff10 ; work         ;
+;             |FlipFlopD:ff11|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:13:u_reg|FlipFlopD:ff11 ; work         ;
+;             |FlipFlopD:ff12|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:13:u_reg|FlipFlopD:ff12 ; work         ;
+;             |FlipFlopD:ff13|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:13:u_reg|FlipFlopD:ff13 ; work         ;
+;             |FlipFlopD:ff14|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:13:u_reg|FlipFlopD:ff14 ; work         ;
+;             |FlipFlopD:ff15|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:13:u_reg|FlipFlopD:ff15 ; work         ;
+;             |FlipFlopD:ff1|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:13:u_reg|FlipFlopD:ff1  ; work         ;
+;             |FlipFlopD:ff2|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:13:u_reg|FlipFlopD:ff2  ; work         ;
+;             |FlipFlopD:ff3|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:13:u_reg|FlipFlopD:ff3  ; work         ;
+;             |FlipFlopD:ff4|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:13:u_reg|FlipFlopD:ff4  ; work         ;
+;             |FlipFlopD:ff5|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:13:u_reg|FlipFlopD:ff5  ; work         ;
+;             |FlipFlopD:ff6|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:13:u_reg|FlipFlopD:ff6  ; work         ;
+;             |FlipFlopD:ff7|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:13:u_reg|FlipFlopD:ff7  ; work         ;
+;             |FlipFlopD:ff8|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:13:u_reg|FlipFlopD:ff8  ; work         ;
+;             |FlipFlopD:ff9|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:13:u_reg|FlipFlopD:ff9  ; work         ;
+;          |Reg16Bits:\gen_regs:14:u_reg| ; 0 (0)             ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:14:u_reg                ; work         ;
+;             |FlipFlopD:ff0|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:14:u_reg|FlipFlopD:ff0  ; work         ;
+;             |FlipFlopD:ff10|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:14:u_reg|FlipFlopD:ff10 ; work         ;
+;             |FlipFlopD:ff11|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:14:u_reg|FlipFlopD:ff11 ; work         ;
+;             |FlipFlopD:ff12|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:14:u_reg|FlipFlopD:ff12 ; work         ;
+;             |FlipFlopD:ff13|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:14:u_reg|FlipFlopD:ff13 ; work         ;
+;             |FlipFlopD:ff14|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:14:u_reg|FlipFlopD:ff14 ; work         ;
+;             |FlipFlopD:ff15|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:14:u_reg|FlipFlopD:ff15 ; work         ;
+;             |FlipFlopD:ff1|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:14:u_reg|FlipFlopD:ff1  ; work         ;
+;             |FlipFlopD:ff2|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:14:u_reg|FlipFlopD:ff2  ; work         ;
+;             |FlipFlopD:ff3|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:14:u_reg|FlipFlopD:ff3  ; work         ;
+;             |FlipFlopD:ff4|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:14:u_reg|FlipFlopD:ff4  ; work         ;
+;             |FlipFlopD:ff5|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:14:u_reg|FlipFlopD:ff5  ; work         ;
+;             |FlipFlopD:ff6|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:14:u_reg|FlipFlopD:ff6  ; work         ;
+;             |FlipFlopD:ff7|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:14:u_reg|FlipFlopD:ff7  ; work         ;
+;             |FlipFlopD:ff8|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:14:u_reg|FlipFlopD:ff8  ; work         ;
+;             |FlipFlopD:ff9|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:14:u_reg|FlipFlopD:ff9  ; work         ;
+;          |Reg16Bits:\gen_regs:15:u_reg| ; 0 (0)             ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:15:u_reg                ; work         ;
+;             |FlipFlopD:ff0|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:15:u_reg|FlipFlopD:ff0  ; work         ;
+;             |FlipFlopD:ff10|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:15:u_reg|FlipFlopD:ff10 ; work         ;
+;             |FlipFlopD:ff11|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:15:u_reg|FlipFlopD:ff11 ; work         ;
+;             |FlipFlopD:ff12|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:15:u_reg|FlipFlopD:ff12 ; work         ;
+;             |FlipFlopD:ff13|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:15:u_reg|FlipFlopD:ff13 ; work         ;
+;             |FlipFlopD:ff14|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:15:u_reg|FlipFlopD:ff14 ; work         ;
+;             |FlipFlopD:ff15|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:15:u_reg|FlipFlopD:ff15 ; work         ;
+;             |FlipFlopD:ff1|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:15:u_reg|FlipFlopD:ff1  ; work         ;
+;             |FlipFlopD:ff2|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:15:u_reg|FlipFlopD:ff2  ; work         ;
+;             |FlipFlopD:ff3|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:15:u_reg|FlipFlopD:ff3  ; work         ;
+;             |FlipFlopD:ff4|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:15:u_reg|FlipFlopD:ff4  ; work         ;
+;             |FlipFlopD:ff5|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:15:u_reg|FlipFlopD:ff5  ; work         ;
+;             |FlipFlopD:ff6|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:15:u_reg|FlipFlopD:ff6  ; work         ;
+;             |FlipFlopD:ff7|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:15:u_reg|FlipFlopD:ff7  ; work         ;
+;             |FlipFlopD:ff8|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:15:u_reg|FlipFlopD:ff8  ; work         ;
+;             |FlipFlopD:ff9|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:15:u_reg|FlipFlopD:ff9  ; work         ;
+;          |Reg16Bits:\gen_regs:1:u_reg|  ; 0 (0)             ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:1:u_reg                 ; work         ;
+;             |FlipFlopD:ff0|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:1:u_reg|FlipFlopD:ff0   ; work         ;
+;             |FlipFlopD:ff10|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:1:u_reg|FlipFlopD:ff10  ; work         ;
+;             |FlipFlopD:ff11|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:1:u_reg|FlipFlopD:ff11  ; work         ;
+;             |FlipFlopD:ff12|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:1:u_reg|FlipFlopD:ff12  ; work         ;
+;             |FlipFlopD:ff13|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:1:u_reg|FlipFlopD:ff13  ; work         ;
+;             |FlipFlopD:ff14|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:1:u_reg|FlipFlopD:ff14  ; work         ;
+;             |FlipFlopD:ff15|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:1:u_reg|FlipFlopD:ff15  ; work         ;
+;             |FlipFlopD:ff1|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:1:u_reg|FlipFlopD:ff1   ; work         ;
+;             |FlipFlopD:ff2|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:1:u_reg|FlipFlopD:ff2   ; work         ;
+;             |FlipFlopD:ff3|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:1:u_reg|FlipFlopD:ff3   ; work         ;
+;             |FlipFlopD:ff4|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:1:u_reg|FlipFlopD:ff4   ; work         ;
+;             |FlipFlopD:ff5|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:1:u_reg|FlipFlopD:ff5   ; work         ;
+;             |FlipFlopD:ff6|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:1:u_reg|FlipFlopD:ff6   ; work         ;
+;             |FlipFlopD:ff7|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:1:u_reg|FlipFlopD:ff7   ; work         ;
+;             |FlipFlopD:ff8|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:1:u_reg|FlipFlopD:ff8   ; work         ;
+;             |FlipFlopD:ff9|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:1:u_reg|FlipFlopD:ff9   ; work         ;
+;          |Reg16Bits:\gen_regs:2:u_reg|  ; 0 (0)             ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:2:u_reg                 ; work         ;
+;             |FlipFlopD:ff0|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:2:u_reg|FlipFlopD:ff0   ; work         ;
+;             |FlipFlopD:ff10|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:2:u_reg|FlipFlopD:ff10  ; work         ;
+;             |FlipFlopD:ff11|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:2:u_reg|FlipFlopD:ff11  ; work         ;
+;             |FlipFlopD:ff12|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:2:u_reg|FlipFlopD:ff12  ; work         ;
+;             |FlipFlopD:ff13|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:2:u_reg|FlipFlopD:ff13  ; work         ;
+;             |FlipFlopD:ff14|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:2:u_reg|FlipFlopD:ff14  ; work         ;
+;             |FlipFlopD:ff15|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:2:u_reg|FlipFlopD:ff15  ; work         ;
+;             |FlipFlopD:ff1|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:2:u_reg|FlipFlopD:ff1   ; work         ;
+;             |FlipFlopD:ff2|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:2:u_reg|FlipFlopD:ff2   ; work         ;
+;             |FlipFlopD:ff3|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:2:u_reg|FlipFlopD:ff3   ; work         ;
+;             |FlipFlopD:ff4|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:2:u_reg|FlipFlopD:ff4   ; work         ;
+;             |FlipFlopD:ff5|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:2:u_reg|FlipFlopD:ff5   ; work         ;
+;             |FlipFlopD:ff6|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:2:u_reg|FlipFlopD:ff6   ; work         ;
+;             |FlipFlopD:ff7|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:2:u_reg|FlipFlopD:ff7   ; work         ;
+;             |FlipFlopD:ff8|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:2:u_reg|FlipFlopD:ff8   ; work         ;
+;             |FlipFlopD:ff9|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:2:u_reg|FlipFlopD:ff9   ; work         ;
+;          |Reg16Bits:\gen_regs:3:u_reg|  ; 0 (0)             ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:3:u_reg                 ; work         ;
+;             |FlipFlopD:ff0|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:3:u_reg|FlipFlopD:ff0   ; work         ;
+;             |FlipFlopD:ff10|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:3:u_reg|FlipFlopD:ff10  ; work         ;
+;             |FlipFlopD:ff11|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:3:u_reg|FlipFlopD:ff11  ; work         ;
+;             |FlipFlopD:ff12|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:3:u_reg|FlipFlopD:ff12  ; work         ;
+;             |FlipFlopD:ff13|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:3:u_reg|FlipFlopD:ff13  ; work         ;
+;             |FlipFlopD:ff14|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:3:u_reg|FlipFlopD:ff14  ; work         ;
+;             |FlipFlopD:ff15|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:3:u_reg|FlipFlopD:ff15  ; work         ;
+;             |FlipFlopD:ff1|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:3:u_reg|FlipFlopD:ff1   ; work         ;
+;             |FlipFlopD:ff2|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:3:u_reg|FlipFlopD:ff2   ; work         ;
+;             |FlipFlopD:ff3|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:3:u_reg|FlipFlopD:ff3   ; work         ;
+;             |FlipFlopD:ff4|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:3:u_reg|FlipFlopD:ff4   ; work         ;
+;             |FlipFlopD:ff5|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:3:u_reg|FlipFlopD:ff5   ; work         ;
+;             |FlipFlopD:ff6|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:3:u_reg|FlipFlopD:ff6   ; work         ;
+;             |FlipFlopD:ff7|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:3:u_reg|FlipFlopD:ff7   ; work         ;
+;             |FlipFlopD:ff8|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:3:u_reg|FlipFlopD:ff8   ; work         ;
+;             |FlipFlopD:ff9|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:3:u_reg|FlipFlopD:ff9   ; work         ;
+;          |Reg16Bits:\gen_regs:4:u_reg|  ; 0 (0)             ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:4:u_reg                 ; work         ;
+;             |FlipFlopD:ff0|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:4:u_reg|FlipFlopD:ff0   ; work         ;
+;             |FlipFlopD:ff10|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:4:u_reg|FlipFlopD:ff10  ; work         ;
+;             |FlipFlopD:ff11|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:4:u_reg|FlipFlopD:ff11  ; work         ;
+;             |FlipFlopD:ff12|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:4:u_reg|FlipFlopD:ff12  ; work         ;
+;             |FlipFlopD:ff13|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:4:u_reg|FlipFlopD:ff13  ; work         ;
+;             |FlipFlopD:ff14|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:4:u_reg|FlipFlopD:ff14  ; work         ;
+;             |FlipFlopD:ff15|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:4:u_reg|FlipFlopD:ff15  ; work         ;
+;             |FlipFlopD:ff1|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:4:u_reg|FlipFlopD:ff1   ; work         ;
+;             |FlipFlopD:ff2|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:4:u_reg|FlipFlopD:ff2   ; work         ;
+;             |FlipFlopD:ff3|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:4:u_reg|FlipFlopD:ff3   ; work         ;
+;             |FlipFlopD:ff4|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:4:u_reg|FlipFlopD:ff4   ; work         ;
+;             |FlipFlopD:ff5|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:4:u_reg|FlipFlopD:ff5   ; work         ;
+;             |FlipFlopD:ff6|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:4:u_reg|FlipFlopD:ff6   ; work         ;
+;             |FlipFlopD:ff7|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:4:u_reg|FlipFlopD:ff7   ; work         ;
+;             |FlipFlopD:ff8|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:4:u_reg|FlipFlopD:ff8   ; work         ;
+;             |FlipFlopD:ff9|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:4:u_reg|FlipFlopD:ff9   ; work         ;
+;          |Reg16Bits:\gen_regs:5:u_reg|  ; 0 (0)             ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:5:u_reg                 ; work         ;
+;             |FlipFlopD:ff0|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:5:u_reg|FlipFlopD:ff0   ; work         ;
+;             |FlipFlopD:ff10|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:5:u_reg|FlipFlopD:ff10  ; work         ;
+;             |FlipFlopD:ff11|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:5:u_reg|FlipFlopD:ff11  ; work         ;
+;             |FlipFlopD:ff12|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:5:u_reg|FlipFlopD:ff12  ; work         ;
+;             |FlipFlopD:ff13|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:5:u_reg|FlipFlopD:ff13  ; work         ;
+;             |FlipFlopD:ff14|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:5:u_reg|FlipFlopD:ff14  ; work         ;
+;             |FlipFlopD:ff15|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:5:u_reg|FlipFlopD:ff15  ; work         ;
+;             |FlipFlopD:ff1|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:5:u_reg|FlipFlopD:ff1   ; work         ;
+;             |FlipFlopD:ff2|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:5:u_reg|FlipFlopD:ff2   ; work         ;
+;             |FlipFlopD:ff3|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:5:u_reg|FlipFlopD:ff3   ; work         ;
+;             |FlipFlopD:ff4|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:5:u_reg|FlipFlopD:ff4   ; work         ;
+;             |FlipFlopD:ff5|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:5:u_reg|FlipFlopD:ff5   ; work         ;
+;             |FlipFlopD:ff6|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:5:u_reg|FlipFlopD:ff6   ; work         ;
+;             |FlipFlopD:ff7|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:5:u_reg|FlipFlopD:ff7   ; work         ;
+;             |FlipFlopD:ff8|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:5:u_reg|FlipFlopD:ff8   ; work         ;
+;             |FlipFlopD:ff9|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:5:u_reg|FlipFlopD:ff9   ; work         ;
+;          |Reg16Bits:\gen_regs:6:u_reg|  ; 0 (0)             ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:6:u_reg                 ; work         ;
+;             |FlipFlopD:ff0|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:6:u_reg|FlipFlopD:ff0   ; work         ;
+;             |FlipFlopD:ff10|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:6:u_reg|FlipFlopD:ff10  ; work         ;
+;             |FlipFlopD:ff11|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:6:u_reg|FlipFlopD:ff11  ; work         ;
+;             |FlipFlopD:ff12|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:6:u_reg|FlipFlopD:ff12  ; work         ;
+;             |FlipFlopD:ff13|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:6:u_reg|FlipFlopD:ff13  ; work         ;
+;             |FlipFlopD:ff14|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:6:u_reg|FlipFlopD:ff14  ; work         ;
+;             |FlipFlopD:ff15|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:6:u_reg|FlipFlopD:ff15  ; work         ;
+;             |FlipFlopD:ff1|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:6:u_reg|FlipFlopD:ff1   ; work         ;
+;             |FlipFlopD:ff2|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:6:u_reg|FlipFlopD:ff2   ; work         ;
+;             |FlipFlopD:ff3|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:6:u_reg|FlipFlopD:ff3   ; work         ;
+;             |FlipFlopD:ff4|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:6:u_reg|FlipFlopD:ff4   ; work         ;
+;             |FlipFlopD:ff5|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:6:u_reg|FlipFlopD:ff5   ; work         ;
+;             |FlipFlopD:ff6|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:6:u_reg|FlipFlopD:ff6   ; work         ;
+;             |FlipFlopD:ff7|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:6:u_reg|FlipFlopD:ff7   ; work         ;
+;             |FlipFlopD:ff8|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:6:u_reg|FlipFlopD:ff8   ; work         ;
+;             |FlipFlopD:ff9|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:6:u_reg|FlipFlopD:ff9   ; work         ;
+;          |Reg16Bits:\gen_regs:7:u_reg|  ; 0 (0)             ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:7:u_reg                 ; work         ;
+;             |FlipFlopD:ff0|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:7:u_reg|FlipFlopD:ff0   ; work         ;
+;             |FlipFlopD:ff10|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:7:u_reg|FlipFlopD:ff10  ; work         ;
+;             |FlipFlopD:ff11|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:7:u_reg|FlipFlopD:ff11  ; work         ;
+;             |FlipFlopD:ff12|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:7:u_reg|FlipFlopD:ff12  ; work         ;
+;             |FlipFlopD:ff13|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:7:u_reg|FlipFlopD:ff13  ; work         ;
+;             |FlipFlopD:ff14|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:7:u_reg|FlipFlopD:ff14  ; work         ;
+;             |FlipFlopD:ff15|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:7:u_reg|FlipFlopD:ff15  ; work         ;
+;             |FlipFlopD:ff1|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:7:u_reg|FlipFlopD:ff1   ; work         ;
+;             |FlipFlopD:ff2|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:7:u_reg|FlipFlopD:ff2   ; work         ;
+;             |FlipFlopD:ff3|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:7:u_reg|FlipFlopD:ff3   ; work         ;
+;             |FlipFlopD:ff4|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:7:u_reg|FlipFlopD:ff4   ; work         ;
+;             |FlipFlopD:ff5|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:7:u_reg|FlipFlopD:ff5   ; work         ;
+;             |FlipFlopD:ff6|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:7:u_reg|FlipFlopD:ff6   ; work         ;
+;             |FlipFlopD:ff7|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:7:u_reg|FlipFlopD:ff7   ; work         ;
+;             |FlipFlopD:ff8|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:7:u_reg|FlipFlopD:ff8   ; work         ;
+;             |FlipFlopD:ff9|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:7:u_reg|FlipFlopD:ff9   ; work         ;
+;          |Reg16Bits:\gen_regs:8:u_reg|  ; 0 (0)             ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:8:u_reg                 ; work         ;
+;             |FlipFlopD:ff0|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:8:u_reg|FlipFlopD:ff0   ; work         ;
+;             |FlipFlopD:ff10|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:8:u_reg|FlipFlopD:ff10  ; work         ;
+;             |FlipFlopD:ff11|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:8:u_reg|FlipFlopD:ff11  ; work         ;
+;             |FlipFlopD:ff12|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:8:u_reg|FlipFlopD:ff12  ; work         ;
+;             |FlipFlopD:ff13|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:8:u_reg|FlipFlopD:ff13  ; work         ;
+;             |FlipFlopD:ff14|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:8:u_reg|FlipFlopD:ff14  ; work         ;
+;             |FlipFlopD:ff15|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:8:u_reg|FlipFlopD:ff15  ; work         ;
+;             |FlipFlopD:ff1|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:8:u_reg|FlipFlopD:ff1   ; work         ;
+;             |FlipFlopD:ff2|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:8:u_reg|FlipFlopD:ff2   ; work         ;
+;             |FlipFlopD:ff3|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:8:u_reg|FlipFlopD:ff3   ; work         ;
+;             |FlipFlopD:ff4|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:8:u_reg|FlipFlopD:ff4   ; work         ;
+;             |FlipFlopD:ff5|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:8:u_reg|FlipFlopD:ff5   ; work         ;
+;             |FlipFlopD:ff6|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:8:u_reg|FlipFlopD:ff6   ; work         ;
+;             |FlipFlopD:ff7|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:8:u_reg|FlipFlopD:ff7   ; work         ;
+;             |FlipFlopD:ff8|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:8:u_reg|FlipFlopD:ff8   ; work         ;
+;             |FlipFlopD:ff9|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:8:u_reg|FlipFlopD:ff9   ; work         ;
+;          |Reg16Bits:\gen_regs:9:u_reg|  ; 0 (0)             ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:9:u_reg                 ; work         ;
+;             |FlipFlopD:ff0|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:9:u_reg|FlipFlopD:ff0   ; work         ;
+;             |FlipFlopD:ff10|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:9:u_reg|FlipFlopD:ff10  ; work         ;
+;             |FlipFlopD:ff11|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:9:u_reg|FlipFlopD:ff11  ; work         ;
+;             |FlipFlopD:ff12|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:9:u_reg|FlipFlopD:ff12  ; work         ;
+;             |FlipFlopD:ff13|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:9:u_reg|FlipFlopD:ff13  ; work         ;
+;             |FlipFlopD:ff14|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:9:u_reg|FlipFlopD:ff14  ; work         ;
+;             |FlipFlopD:ff15|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:9:u_reg|FlipFlopD:ff15  ; work         ;
+;             |FlipFlopD:ff1|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:9:u_reg|FlipFlopD:ff1   ; work         ;
+;             |FlipFlopD:ff2|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:9:u_reg|FlipFlopD:ff2   ; work         ;
+;             |FlipFlopD:ff3|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:9:u_reg|FlipFlopD:ff3   ; work         ;
+;             |FlipFlopD:ff4|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:9:u_reg|FlipFlopD:ff4   ; work         ;
+;             |FlipFlopD:ff5|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:9:u_reg|FlipFlopD:ff5   ; work         ;
+;             |FlipFlopD:ff6|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:9:u_reg|FlipFlopD:ff6   ; work         ;
+;             |FlipFlopD:ff7|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:9:u_reg|FlipFlopD:ff7   ; work         ;
+;             |FlipFlopD:ff8|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:9:u_reg|FlipFlopD:ff8   ; work         ;
+;             |FlipFlopD:ff9|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:\gen_regs:9:u_reg|FlipFlopD:ff9   ; work         ;
+;       |ULA:u_ula|                       ; 99 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|ULA:u_ula                                                     ; work         ;
+;          |Adder16Bit:u_add|             ; 28 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|ULA:u_ula|Adder16Bit:u_add                                    ; work         ;
+;             |FullAdder:U0|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|ULA:u_ula|Adder16Bit:u_add|FullAdder:U0                       ; work         ;
+;             |FullAdder:U10|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|ULA:u_ula|Adder16Bit:u_add|FullAdder:U10                      ; work         ;
+;             |FullAdder:U11|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|ULA:u_ula|Adder16Bit:u_add|FullAdder:U11                      ; work         ;
+;             |FullAdder:U12|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|ULA:u_ula|Adder16Bit:u_add|FullAdder:U12                      ; work         ;
+;             |FullAdder:U13|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|ULA:u_ula|Adder16Bit:u_add|FullAdder:U13                      ; work         ;
+;             |FullAdder:U14|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|ULA:u_ula|Adder16Bit:u_add|FullAdder:U14                      ; work         ;
+;             |FullAdder:U1|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|ULA:u_ula|Adder16Bit:u_add|FullAdder:U1                       ; work         ;
+;             |FullAdder:U2|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|ULA:u_ula|Adder16Bit:u_add|FullAdder:U2                       ; work         ;
+;             |FullAdder:U3|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|ULA:u_ula|Adder16Bit:u_add|FullAdder:U3                       ; work         ;
+;             |FullAdder:U4|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|ULA:u_ula|Adder16Bit:u_add|FullAdder:U4                       ; work         ;
+;             |FullAdder:U5|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|ULA:u_ula|Adder16Bit:u_add|FullAdder:U5                       ; work         ;
+;             |FullAdder:U6|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|ULA:u_ula|Adder16Bit:u_add|FullAdder:U6                       ; work         ;
+;             |FullAdder:U7|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|ULA:u_ula|Adder16Bit:u_add|FullAdder:U7                       ; work         ;
+;             |FullAdder:U8|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|ULA:u_ula|Adder16Bit:u_add|FullAdder:U8                       ; work         ;
+;             |FullAdder:U9|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|ULA:u_ula|Adder16Bit:u_add|FullAdder:U9                       ; work         ;
+;          |ELA:u_ela|                    ; 71 (71)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|ULA:u_ula|ELA:u_ela                                           ; work         ;
++-----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ControlUnit:u_ctrl"                                                                                                ;
-+-------+---------+------------------+----------------------------------------------------------------------------------------------------------+
-; Port  ; Type    ; Severity         ; Details                                                                                                  ;
-+-------+---------+------------------+----------------------------------------------------------------------------------------------------------+
-; alu_x ; Unknown ; Critical Warning ; Named port was not declared by the instantiated entity                                                   ;
-; alu_y ; Unknown ; Critical Warning ; Named port was not declared by the instantiated entity                                                   ;
-; alu_z ; Unknown ; Critical Warning ; Named port was not declared by the instantiated entity                                                   ;
-; ulax  ; Output  ; Warning          ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-; ulay  ; Output  ; Warning          ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-; ulaz  ; Output  ; Warning          ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+-------+---------+------------------+----------------------------------------------------------------------------------------------------------+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 283   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 283   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 272   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------+
+; 16:1               ; 16 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; No         ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rda:6:u_mux_a|Mux2x1:m30|d ;
+; 16:1               ; 16 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; No         ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rdb:4:u_mux_b|Mux2x1:m30|d ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------+
@@ -211,26 +651,19 @@ Parallel compilation was disabled, but you have multiple processors available. E
 
 
 +----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "datapath:u_dp|Comparador16Bits:u_cmp"                                               ;
+; Port Connectivity Checks: "datapath:u_dp|ULA:u_ula"                                                            ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
-; a15  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; a14  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; a13  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; a12  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; a11  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; a10  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; a9   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; a8   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; a7   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; a6   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; a5   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; a4   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; a3   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; a2   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; a1   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; a0   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:u_dp|Adder16Bit:u_pc_add"                                                  ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 ; b15  ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; b14  ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; b13  ; Input  ; Info     ; Stuck at GND                                                                        ;
@@ -246,105 +679,39 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; b3   ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; b2   ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; b1   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; b0   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; agtb ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; aeqb ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; altb ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "datapath:u_dp|ULA:u_alu|Adder16Bit:u_add|FullAdder:U7"                              ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
+; b0   ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; op   ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "datapath:u_dp|ULA:u_alu"                                                                                                                     ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                                      ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; a15  ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; a14  ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; a13  ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; a12  ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; a11  ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; a10  ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; a9   ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; a8   ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; a7   ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; a6   ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; a5   ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; a4   ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; a3   ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; a2   ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; a1   ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; a0   ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; b15  ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; b14  ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; b13  ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; b12  ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; b11  ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; b10  ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; b9   ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; b8   ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; b7   ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; b6   ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; b5   ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; b4   ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; b3   ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; b2   ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; b1   ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; b0   ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; s15  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; s14  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; s13  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; s12  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; s11  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; s10  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; s9   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; s8   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; s7   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; s6   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; s5   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; s4   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; s3   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; s2   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; s1   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; s0   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; w    ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-; cout ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:u_dp"                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; instr_out11 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; instr_out10 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; instr_out9  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; instr_out8  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; instr_out7  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; instr_out6  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; instr_out5  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; instr_out4  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; instr_out3  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; instr_out2  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; instr_out1  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; instr_out0  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "datapath:u_dp"                                                                                                                                               ;
-+-------------+---------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port        ; Type    ; Severity         ; Details                                                                                                                                      ;
-+-------------+---------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; pc_ld       ; Input   ; Info             ; Stuck at GND                                                                                                                                 ;
-; alu_x       ; Unknown ; Critical Warning ; Named port was not declared by the instantiated entity                                                                                       ;
-; alu_y       ; Unknown ; Critical Warning ; Named port was not declared by the instantiated entity                                                                                       ;
-; alu_z       ; Unknown ; Critical Warning ; Named port was not declared by the instantiated entity                                                                                       ;
-; instr_out11 ; Output  ; Info             ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; instr_out10 ; Output  ; Info             ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; instr_out9  ; Output  ; Info             ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; instr_out8  ; Output  ; Info             ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; instr_out7  ; Output  ; Info             ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; instr_out6  ; Output  ; Info             ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; instr_out5  ; Output  ; Info             ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; instr_out4  ; Output  ; Info             ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; instr_out3  ; Output  ; Info             ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; instr_out2  ; Output  ; Info             ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; instr_out1  ; Output  ; Info             ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; instr_out0  ; Output  ; Info             ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; ulax        ; Input   ; Warning          ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-; ulay        ; Input   ; Warning          ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-; ulaz        ; Input   ; Warning          ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------------+---------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:40     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -353,11 +720,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Jun 17 19:13:03 2026
+    Info: Processing started: Wed Jun 17 20:48:27 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Processador -c Processador
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file processador.vhd
-    Info (12022): Found design unit 1: Processador-structural
+    Info (12022): Found design unit 1: Processador-behav
     Info (12023): Found entity 1: Processador
 Info (12021): Found 2 design units, including 1 entities, in source file mux2x1.vhd
     Info (12022): Found design unit 1: Mux2x1-behav
@@ -378,143 +745,67 @@ Info (12021): Found 2 design units, including 1 entities, in source file compara
     Info (12022): Found design unit 1: Comparador16Bits-behav
     Info (12023): Found entity 1: Comparador16Bits
 Info (12021): Found 2 design units, including 1 entities, in source file ula.vhd
-    Info (12022): Found design unit 1: ULA-behav
+    Info (12022): Found design unit 1: ULA-structural
     Info (12023): Found entity 1: ULA
 Info (12021): Found 2 design units, including 1 entities, in source file datapath.vhd
     Info (12022): Found design unit 1: datapath-structural
     Info (12023): Found entity 1: datapath
 Warning (12019): Can't analyze file -- file ctrl_unit.vhd is missing
 Info (12127): Elaborating entity "Processador" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at Processador.vhd(57): object "ir_out11" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at Processador.vhd(57): object "ir_out10" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at Processador.vhd(57): object "ir_out9" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at Processador.vhd(57): object "ir_out8" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at Processador.vhd(58): object "ir_out7" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at Processador.vhd(58): object "ir_out6" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at Processador.vhd(58): object "ir_out5" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at Processador.vhd(58): object "ir_out4" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at Processador.vhd(58): object "ir_out3" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at Processador.vhd(58): object "ir_out2" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at Processador.vhd(58): object "ir_out1" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at Processador.vhd(58): object "ir_out0" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Processador.vhd(29): object "ir_out11" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Processador.vhd(29): object "ir_out10" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Processador.vhd(29): object "ir_out9" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Processador.vhd(29): object "ir_out8" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Processador.vhd(30): object "ir_out7" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Processador.vhd(30): object "ir_out6" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Processador.vhd(30): object "ir_out5" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Processador.vhd(30): object "ir_out4" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Processador.vhd(30): object "ir_out3" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Processador.vhd(30): object "ir_out2" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Processador.vhd(30): object "ir_out1" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Processador.vhd(30): object "ir_out0" assigned a value but never read
 Info (12128): Elaborating entity "datapath" for hierarchy "datapath:u_dp"
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(20): used implicit default value for signal "pc_out7" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(20): used implicit default value for signal "pc_out6" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(20): used implicit default value for signal "pc_out5" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(20): used implicit default value for signal "pc_out4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(20): used implicit default value for signal "pc_out3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(20): used implicit default value for signal "pc_out2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(20): used implicit default value for signal "pc_out1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(20): used implicit default value for signal "pc_out0" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(37): object "rf_rd3" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(37): object "rf_rd2" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(37): object "rf_rd1" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(37): object "rf_rd0" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(38): object "rf_ra3" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(38): object "rf_ra2" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(38): object "rf_ra1" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(38): object "rf_ra0" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(39): object "rf_rb3" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(39): object "rf_rb2" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(39): object "rf_rb1" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(39): object "rf_rb0" assigned a value but never read
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(41): used implicit default value for signal "rf_rdata_a15" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(41): used implicit default value for signal "rf_rdata_a14" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(41): used implicit default value for signal "rf_rdata_a13" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(41): used implicit default value for signal "rf_rdata_a12" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(41): used implicit default value for signal "rf_rdata_a11" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(41): used implicit default value for signal "rf_rdata_a10" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(41): used implicit default value for signal "rf_rdata_a9" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(41): used implicit default value for signal "rf_rdata_a8" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(41): used implicit default value for signal "rf_rdata_a7" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(41): used implicit default value for signal "rf_rdata_a6" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(41): used implicit default value for signal "rf_rdata_a5" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(41): used implicit default value for signal "rf_rdata_a4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(41): used implicit default value for signal "rf_rdata_a3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(41): used implicit default value for signal "rf_rdata_a2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(41): used implicit default value for signal "rf_rdata_a1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(41): used implicit default value for signal "rf_rdata_a0" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(44): used implicit default value for signal "rf_rdata_b15" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(44): used implicit default value for signal "rf_rdata_b14" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(44): used implicit default value for signal "rf_rdata_b13" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(44): used implicit default value for signal "rf_rdata_b12" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(44): used implicit default value for signal "rf_rdata_b11" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(44): used implicit default value for signal "rf_rdata_b10" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(44): used implicit default value for signal "rf_rdata_b9" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(44): used implicit default value for signal "rf_rdata_b8" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(44): used implicit default value for signal "rf_rdata_b7" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(44): used implicit default value for signal "rf_rdata_b6" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(44): used implicit default value for signal "rf_rdata_b5" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(44): used implicit default value for signal "rf_rdata_b4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(44): used implicit default value for signal "rf_rdata_b3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(44): used implicit default value for signal "rf_rdata_b2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(44): used implicit default value for signal "rf_rdata_b1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(44): used implicit default value for signal "rf_rdata_b0" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(47): object "alu_s15" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(47): object "alu_s14" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(47): object "alu_s13" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(47): object "alu_s12" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(47): object "alu_s11" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(47): object "alu_s10" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(47): object "alu_s9" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(47): object "alu_s8" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(48): object "alu_s7" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(48): object "alu_s6" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(48): object "alu_s5" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(48): object "alu_s4" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(48): object "alu_s3" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(48): object "alu_s2" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(48): object "alu_s1" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(48): object "alu_s0" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(50): object "cmp_gt" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(50): object "cmp_eq" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(50): object "cmp_lt" assigned a value but never read
-Info (12128): Elaborating entity "Reg16Bits" for hierarchy "datapath:u_dp|Reg16Bits:u_ir"
-Info (12128): Elaborating entity "Mux2x1" for hierarchy "datapath:u_dp|Reg16Bits:u_ir|Mux2x1:mu0"
-Info (12128): Elaborating entity "FlipFlopD" for hierarchy "datapath:u_dp|Reg16Bits:u_ir|FlipFlopD:ff0"
-Info (12128): Elaborating entity "ULA" for hierarchy "datapath:u_dp|ULA:u_alu"
-Warning (12125): Using design file ela.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: ELA-rtl
-    Info (12023): Found entity 1: ELA
-Info (12128): Elaborating entity "ELA" for hierarchy "datapath:u_dp|ULA:u_alu|ELA:u_signal"
+Info (12128): Elaborating entity "Reg16Bits" for hierarchy "datapath:u_dp|Reg16Bits:u_pc"
+Info (12128): Elaborating entity "Mux2x1" for hierarchy "datapath:u_dp|Reg16Bits:u_pc|Mux2x1:mu0"
+Info (12128): Elaborating entity "FlipFlopD" for hierarchy "datapath:u_dp|Reg16Bits:u_pc|FlipFlopD:ff0"
 Warning (12125): Using design file adder16bit.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: Adder16Bit-comportamento
+    Info (12022): Found design unit 1: Adder16Bit-structural
     Info (12023): Found entity 1: Adder16Bit
-Info (12128): Elaborating entity "Adder16Bit" for hierarchy "datapath:u_dp|ULA:u_alu|Adder16Bit:u_add"
-Warning (10541): VHDL Signal Declaration warning at adder16bit.vhd(9): used implicit default value for signal "S15" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at adder16bit.vhd(9): used implicit default value for signal "S14" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at adder16bit.vhd(9): used implicit default value for signal "S13" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at adder16bit.vhd(9): used implicit default value for signal "S12" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at adder16bit.vhd(9): used implicit default value for signal "S11" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at adder16bit.vhd(9): used implicit default value for signal "S10" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at adder16bit.vhd(9): used implicit default value for signal "S9" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at adder16bit.vhd(9): used implicit default value for signal "S8" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at adder16bit.vhd(10): used implicit default value for signal "Cout" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10036): Verilog HDL or VHDL warning at adder16bit.vhd(24): object "C8" assigned a value but never read
+Info (12128): Elaborating entity "Adder16Bit" for hierarchy "datapath:u_dp|Adder16Bit:u_pc_add"
 Warning (12125): Using design file fulladder.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: FullAdder-behav
     Info (12023): Found entity 1: FullAdder
-Info (12128): Elaborating entity "FullAdder" for hierarchy "datapath:u_dp|ULA:u_alu|Adder16Bit:u_add|FullAdder:U0"
+Info (12128): Elaborating entity "FullAdder" for hierarchy "datapath:u_dp|Adder16Bit:u_pc_add|FullAdder:U0"
+Warning (12125): Using design file registerfile.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: RegisterFile-structural
+    Info (12023): Found entity 1: RegisterFile
+Info (12128): Elaborating entity "RegisterFile" for hierarchy "datapath:u_dp|RegisterFile:u_rf"
+Warning (12125): Using design file mux16x1.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Mux16x1-structural
+    Info (12023): Found entity 1: Mux16x1
+Info (12128): Elaborating entity "Mux16x1" for hierarchy "datapath:u_dp|RegisterFile:u_rf|Mux16x1:\gen_rda:0:u_mux_a"
+Info (12128): Elaborating entity "ULA" for hierarchy "datapath:u_dp|ULA:u_ula"
+Warning (12125): Using design file ela.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: ELA-dataflow
+    Info (12023): Found entity 1: ELA
+Info (12128): Elaborating entity "ELA" for hierarchy "datapath:u_dp|ULA:u_ula|ELA:u_ela"
+Info (12128): Elaborating entity "Shifter16Bits" for hierarchy "datapath:u_dp|Shifter16Bits:u_shifter"
 Info (12128): Elaborating entity "Comparador16Bits" for hierarchy "datapath:u_dp|Comparador16Bits:u_cmp"
 Info (12128): Elaborating entity "Comparador" for hierarchy "datapath:u_dp|Comparador16Bits:u_cmp|Comparador:st15"
 Warning (12125): Using design file controlunit.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: ControlUnit-behav
     Info (12023): Found entity 1: ControlUnit
 Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:u_ctrl"
-Warning (10541): VHDL Signal Declaration warning at controlunit.vhd(15): used implicit default value for signal "n2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at controlunit.vhd(15): used implicit default value for signal "n1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at controlunit.vhd(15): used implicit default value for signal "n0" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Error (12002): Port "alu_x" does not exist in macrofunction "u_ctrl" File: D:/SD/RTL/Processador.vhd Line: 82
-Error (12002): Port "alu_y" does not exist in macrofunction "u_ctrl" File: D:/SD/RTL/Processador.vhd Line: 82
-Error (12002): Port "alu_z" does not exist in macrofunction "u_ctrl" File: D:/SD/RTL/Processador.vhd Line: 82
-Error (12002): Port "alu_x" does not exist in macrofunction "u_dp" File: D:/SD/RTL/Processador.vhd Line: 61
-Error (12002): Port "alu_y" does not exist in macrofunction "u_dp" File: D:/SD/RTL/Processador.vhd Line: 61
-Error (12002): Port "alu_z" does not exist in macrofunction "u_dp" File: D:/SD/RTL/Processador.vhd Line: 61
-Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 6 errors, 103 warnings
-    Error: Peak virtual memory: 4629 megabytes
-    Error: Processing ended: Wed Jun 17 19:13:05 2026
-    Error: Elapsed time: 00:00:02
-    Error: Total CPU time (on all processors): 00:00:01
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 912 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 34 input pins
+    Info (21059): Implemented 34 output pins
+    Info (21061): Implemented 844 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 20 warnings
+    Info: Peak virtual memory: 4648 megabytes
+    Info: Processing ended: Wed Jun 17 20:49:15 2026
+    Info: Elapsed time: 00:00:48
+    Info: Total CPU time (on all processors): 00:00:34
 
 
