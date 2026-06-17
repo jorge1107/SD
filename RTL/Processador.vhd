@@ -59,6 +59,7 @@ architecture structural of Processador is
 begin
     -- Instanciações completas omitidas por brevidade no original, mas agora estruturalmente casadas.
     u_dp: datapath port map(
+        shl=>shl, shr=>shr, ula_w=>ula_w,
         clk=>clk, rst=>rst, pc_ld=>'0', pc_inc=>pc_inc, ir_ld=>ir_ld, rf_wr=>rf_wr, mem_rd=>ctrl_mem_rd, mem_wr=>ctrl_mem_wr,
         alu_x=>alu_x, alu_y=>alu_y, alu_z=>alu_z, wb_sel1=>wb_sel1, wb_sel0=>wb_sel0,
         instr_in15=>instr_mem_data15, instr_in14=>instr_mem_data14, instr_in13=>instr_mem_data13, instr_in12=>instr_mem_data12,
@@ -80,6 +81,7 @@ begin
     );
 
     u_ctrl: ControlUnit port map(
+        shl=>shl, shr=>shr, ula_w=>ula_w
         clk=>clk, rst=>rst, 
         opcode3=>ir_out15, opcode2=>ir_out14, opcode1=>ir_out13, opcode0=>ir_out12,
         pc_inc=>pc_inc, ir_ld=>ir_ld, rf_wr=>rf_wr, mem_rd=>ctrl_mem_rd, mem_wr=>ctrl_mem_wr,

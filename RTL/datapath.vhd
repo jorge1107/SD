@@ -5,7 +5,7 @@ entity datapath is
     port(
         clk, rst: in bit;
         pc_ld, pc_inc, ir_ld, rf_wr, mem_rd, mem_wr: in bit;
-        alu_x, alu_y, alu_z: in bit;
+        ULAX, ULAY, ULAZ: in bit;
         wb_sel1, wb_sel0: in bit; 
         
         -- Memória de instrução desmembrada (16 bits)
@@ -48,6 +48,29 @@ architecture structural of datapath is
            alu_s7, alu_s6, alu_s5, alu_s4, alu_s3, alu_s2, alu_s1, alu_s0: bit;
            
     signal cmp_gt, cmp_eq, cmp_lt: bit;
+        -- Sinais internos novos
+    signal pc_val7..pc_val0: bit;
+    signal pc_next7..pc_next0: bit;
+    signal wb15..wb0: bit;  -- Write-back data
+    signal imm4_ext15..imm4_ext0: bit;  -- imm4 zero-extended
+    signal imm8_ext15..imm8_ext0: bit;  -- imm8 zero-extended
+    signal shifter_s15..shifter_s0: bit;
+    signal ula_or_shifter15..ula_or_shifter0: bit; -- MUX 2x1 ULA vs Shifter
+
+    -- PC: Reg16Bits truncado para 8 bits (ou use Reg16Bits e ignore MSBs)
+    -- Incrementador: Adder16Bit com B=1, Op=0, ou um adder8 específico
+    
+    -- RegisterFile instanciado com os sinais rf_ra, rf_rb, rf_rd
+    
+    -- Write-Back MUX 4x1 (wb_sel1,wb_sel0):
+    -- 00: ULA/Shifter result
+    -- 01: data_in (MEM)
+    -- 10: imm8_ext (LOADI/ADDI)
+    -- 11: Comparador result expandido (opcional)
+    
+    -- Para ADDI: o imediato vem de ir3..ir0 (4 bits) e deve ser injetado em B da ULA
+    -- ou na entrada do RF. O controlador força ULA=ADD, então o datapath deve colocar
+    -- imm4_ext no operando B da ULA (via MUX na entrada B).
     
     component Reg16Bits is 
         port(
@@ -91,7 +114,7 @@ begin
         a7=>rf_rdata_a7, a6=>rf_rdata_a6, a5=>rf_rdata_a5, a4=>rf_rdata_a4, a3=>rf_rdata_a3, a2=>rf_rdata_a2, a1=>rf_rdata_a1, a0=>rf_rdata_a0,
         b15=>rf_rdata_b15, b14=>rf_rdata_b14, b13=>rf_rdata_b13, b12=>rf_rdata_b12, b11=>rf_rdata_b11, b10=>rf_rdata_b10, b9=>rf_rdata_b9, b8=>rf_rdata_b8,
         b7=>rf_rdata_b7, b6=>rf_rdata_b6, b5=>rf_rdata_b5, b4=>rf_rdata_b4, b3=>rf_rdata_b3, b2=>rf_rdata_b2, b1=>rf_rdata_b1, b0=>rf_rdata_b0,
-        x=>alu_x, y=>alu_y, z=>alu_z,
+        x=>ULAX, y=>ULAY, z=>ULAZ,
         s15=>alu_s15, s14=>alu_s14, s13=>alu_s13, s12=>alu_s12, s11=>alu_s11, s10=>alu_s10, s9=>alu_s9, s8=>alu_s8,
         s7=>alu_s7, s6=>alu_s6, s5=>alu_s5, s4=>alu_s4, s3=>alu_s3, s2=>alu_s2, s1=>alu_s1, s0=>alu_s0
     );

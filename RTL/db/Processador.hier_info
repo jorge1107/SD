@@ -1,0 +1,1224 @@
+|Processador
+clk => datapath:u_dp.clk
+clk => ControlUnit:u_ctrl.clk
+rst => datapath:u_dp.rst
+rst => ControlUnit:u_ctrl.rst
+instr_mem_data15 => datapath:u_dp.instr_in15
+instr_mem_data14 => datapath:u_dp.instr_in14
+instr_mem_data13 => datapath:u_dp.instr_in13
+instr_mem_data12 => datapath:u_dp.instr_in12
+instr_mem_data11 => datapath:u_dp.instr_in11
+instr_mem_data10 => datapath:u_dp.instr_in10
+instr_mem_data9 => datapath:u_dp.instr_in9
+instr_mem_data8 => datapath:u_dp.instr_in8
+instr_mem_data7 => datapath:u_dp.instr_in7
+instr_mem_data6 => datapath:u_dp.instr_in6
+instr_mem_data5 => datapath:u_dp.instr_in5
+instr_mem_data4 => datapath:u_dp.instr_in4
+instr_mem_data3 => datapath:u_dp.instr_in3
+instr_mem_data2 => datapath:u_dp.instr_in2
+instr_mem_data1 => datapath:u_dp.instr_in1
+instr_mem_data0 => datapath:u_dp.instr_in0
+data_mem_data_in15 => datapath:u_dp.data_in15
+data_mem_data_in14 => datapath:u_dp.data_in14
+data_mem_data_in13 => datapath:u_dp.data_in13
+data_mem_data_in12 => datapath:u_dp.data_in12
+data_mem_data_in11 => datapath:u_dp.data_in11
+data_mem_data_in10 => datapath:u_dp.data_in10
+data_mem_data_in9 => datapath:u_dp.data_in9
+data_mem_data_in8 => datapath:u_dp.data_in8
+data_mem_data_in7 => datapath:u_dp.data_in7
+data_mem_data_in6 => datapath:u_dp.data_in6
+data_mem_data_in5 => datapath:u_dp.data_in5
+data_mem_data_in4 => datapath:u_dp.data_in4
+data_mem_data_in3 => datapath:u_dp.data_in3
+data_mem_data_in2 => datapath:u_dp.data_in2
+data_mem_data_in1 => datapath:u_dp.data_in1
+data_mem_data_in0 => datapath:u_dp.data_in0
+instr_addr7 <= datapath:u_dp.pc_out7
+instr_addr6 <= datapath:u_dp.pc_out6
+instr_addr5 <= datapath:u_dp.pc_out5
+instr_addr4 <= datapath:u_dp.pc_out4
+instr_addr3 <= datapath:u_dp.pc_out3
+instr_addr2 <= datapath:u_dp.pc_out2
+instr_addr1 <= datapath:u_dp.pc_out1
+instr_addr0 <= datapath:u_dp.pc_out0
+data_addr7 <= datapath:u_dp.addr_out7
+data_addr6 <= datapath:u_dp.addr_out6
+data_addr5 <= datapath:u_dp.addr_out5
+data_addr4 <= datapath:u_dp.addr_out4
+data_addr3 <= datapath:u_dp.addr_out3
+data_addr2 <= datapath:u_dp.addr_out2
+data_addr1 <= datapath:u_dp.addr_out1
+data_addr0 <= datapath:u_dp.addr_out0
+data_mem_data_out15 <= datapath:u_dp.data_out15
+data_mem_data_out14 <= datapath:u_dp.data_out14
+data_mem_data_out13 <= datapath:u_dp.data_out13
+data_mem_data_out12 <= datapath:u_dp.data_out12
+data_mem_data_out11 <= datapath:u_dp.data_out11
+data_mem_data_out10 <= datapath:u_dp.data_out10
+data_mem_data_out9 <= datapath:u_dp.data_out9
+data_mem_data_out8 <= datapath:u_dp.data_out8
+data_mem_data_out7 <= datapath:u_dp.data_out7
+data_mem_data_out6 <= datapath:u_dp.data_out6
+data_mem_data_out5 <= datapath:u_dp.data_out5
+data_mem_data_out4 <= datapath:u_dp.data_out4
+data_mem_data_out3 <= datapath:u_dp.data_out3
+data_mem_data_out2 <= datapath:u_dp.data_out2
+data_mem_data_out1 <= datapath:u_dp.data_out1
+data_mem_data_out0 <= datapath:u_dp.data_out0
+mem_rd <= ControlUnit:u_ctrl.mem_rd
+mem_wr <= ControlUnit:u_ctrl.mem_wr
+
+
+|Processador|datapath:u_dp
+clk => Reg16Bits:u_ir.clk
+rst => Reg16Bits:u_ir.rst
+pc_ld => ~NO_FANOUT~
+pc_inc => ~NO_FANOUT~
+ir_ld => Reg16Bits:u_ir.ld
+rf_wr => ~NO_FANOUT~
+mem_rd => ~NO_FANOUT~
+mem_wr => ~NO_FANOUT~
+ULAX => ULA:u_alu.x
+ULAY => ULA:u_alu.y
+ULAZ => ULA:u_alu.z
+wb_sel1 => ~NO_FANOUT~
+wb_sel0 => ~NO_FANOUT~
+instr_in15 => Reg16Bits:u_ir.d15
+instr_in14 => Reg16Bits:u_ir.d14
+instr_in13 => Reg16Bits:u_ir.d13
+instr_in12 => Reg16Bits:u_ir.d12
+instr_in11 => Reg16Bits:u_ir.d11
+instr_in10 => Reg16Bits:u_ir.d10
+instr_in9 => Reg16Bits:u_ir.d9
+instr_in8 => Reg16Bits:u_ir.d8
+instr_in7 => Reg16Bits:u_ir.d7
+instr_in6 => Reg16Bits:u_ir.d6
+instr_in5 => Reg16Bits:u_ir.d5
+instr_in4 => Reg16Bits:u_ir.d4
+instr_in3 => Reg16Bits:u_ir.d3
+instr_in2 => Reg16Bits:u_ir.d2
+instr_in1 => Reg16Bits:u_ir.d1
+instr_in0 => Reg16Bits:u_ir.d0
+data_in15 => ~NO_FANOUT~
+data_in14 => ~NO_FANOUT~
+data_in13 => ~NO_FANOUT~
+data_in12 => ~NO_FANOUT~
+data_in11 => ~NO_FANOUT~
+data_in10 => ~NO_FANOUT~
+data_in9 => ~NO_FANOUT~
+data_in8 => ~NO_FANOUT~
+data_in7 => ~NO_FANOUT~
+data_in6 => ~NO_FANOUT~
+data_in5 => ~NO_FANOUT~
+data_in4 => ~NO_FANOUT~
+data_in3 => ~NO_FANOUT~
+data_in2 => ~NO_FANOUT~
+data_in1 => ~NO_FANOUT~
+data_in0 => ~NO_FANOUT~
+pc_out7 <= <GND>
+pc_out6 <= <GND>
+pc_out5 <= <GND>
+pc_out4 <= <GND>
+pc_out3 <= <GND>
+pc_out2 <= <GND>
+pc_out1 <= <GND>
+pc_out0 <= <GND>
+instr_out15 <= Reg16Bits:u_ir.q15
+instr_out14 <= Reg16Bits:u_ir.q14
+instr_out13 <= Reg16Bits:u_ir.q13
+instr_out12 <= Reg16Bits:u_ir.q12
+instr_out11 <= Reg16Bits:u_ir.q11
+instr_out10 <= Reg16Bits:u_ir.q10
+instr_out9 <= Reg16Bits:u_ir.q9
+instr_out8 <= Reg16Bits:u_ir.q8
+instr_out7 <= Reg16Bits:u_ir.q7
+instr_out6 <= Reg16Bits:u_ir.q6
+instr_out5 <= Reg16Bits:u_ir.q5
+instr_out4 <= Reg16Bits:u_ir.q4
+instr_out3 <= Reg16Bits:u_ir.q3
+instr_out2 <= Reg16Bits:u_ir.q2
+instr_out1 <= Reg16Bits:u_ir.q1
+instr_out0 <= Reg16Bits:u_ir.q0
+addr_out7 <= <GND>
+addr_out6 <= <GND>
+addr_out5 <= <GND>
+addr_out4 <= <GND>
+addr_out3 <= <GND>
+addr_out2 <= <GND>
+addr_out1 <= <GND>
+addr_out0 <= <GND>
+data_out15 <= <GND>
+data_out14 <= <GND>
+data_out13 <= <GND>
+data_out12 <= <GND>
+data_out11 <= <GND>
+data_out10 <= <GND>
+data_out9 <= <GND>
+data_out8 <= <GND>
+data_out7 <= <GND>
+data_out6 <= <GND>
+data_out5 <= <GND>
+data_out4 <= <GND>
+data_out3 <= <GND>
+data_out2 <= <GND>
+data_out1 <= <GND>
+data_out0 <= <GND>
+
+
+|Processador|datapath:u_dp|Reg16Bits:u_ir
+clk => FlipFlopD:ff0.clk
+clk => FlipFlopD:ff1.clk
+clk => FlipFlopD:ff2.clk
+clk => FlipFlopD:ff3.clk
+clk => FlipFlopD:ff4.clk
+clk => FlipFlopD:ff5.clk
+clk => FlipFlopD:ff6.clk
+clk => FlipFlopD:ff7.clk
+clk => FlipFlopD:ff8.clk
+clk => FlipFlopD:ff9.clk
+clk => FlipFlopD:ff10.clk
+clk => FlipFlopD:ff11.clk
+clk => FlipFlopD:ff12.clk
+clk => FlipFlopD:ff13.clk
+clk => FlipFlopD:ff14.clk
+clk => FlipFlopD:ff15.clk
+rst => FlipFlopD:ff0.rst
+rst => FlipFlopD:ff1.rst
+rst => FlipFlopD:ff2.rst
+rst => FlipFlopD:ff3.rst
+rst => FlipFlopD:ff4.rst
+rst => FlipFlopD:ff5.rst
+rst => FlipFlopD:ff6.rst
+rst => FlipFlopD:ff7.rst
+rst => FlipFlopD:ff8.rst
+rst => FlipFlopD:ff9.rst
+rst => FlipFlopD:ff10.rst
+rst => FlipFlopD:ff11.rst
+rst => FlipFlopD:ff12.rst
+rst => FlipFlopD:ff13.rst
+rst => FlipFlopD:ff14.rst
+rst => FlipFlopD:ff15.rst
+ld => Mux2x1:mu0.s0
+ld => Mux2x1:mu1.s0
+ld => Mux2x1:mu2.s0
+ld => Mux2x1:mu3.s0
+ld => Mux2x1:mu4.s0
+ld => Mux2x1:mu5.s0
+ld => Mux2x1:mu6.s0
+ld => Mux2x1:mu7.s0
+ld => Mux2x1:mu8.s0
+ld => Mux2x1:mu9.s0
+ld => Mux2x1:mu10.s0
+ld => Mux2x1:mu11.s0
+ld => Mux2x1:mu12.s0
+ld => Mux2x1:mu13.s0
+ld => Mux2x1:mu14.s0
+ld => Mux2x1:mu15.s0
+d15 => Mux2x1:mu15.i1
+d14 => Mux2x1:mu14.i1
+d13 => Mux2x1:mu13.i1
+d12 => Mux2x1:mu12.i1
+d11 => Mux2x1:mu11.i1
+d10 => Mux2x1:mu10.i1
+d9 => Mux2x1:mu9.i1
+d8 => Mux2x1:mu8.i1
+d7 => Mux2x1:mu7.i1
+d6 => Mux2x1:mu6.i1
+d5 => Mux2x1:mu5.i1
+d4 => Mux2x1:mu4.i1
+d3 => Mux2x1:mu3.i1
+d2 => Mux2x1:mu2.i1
+d1 => Mux2x1:mu1.i1
+d0 => Mux2x1:mu0.i1
+q15 <= FlipFlopD:ff15.q
+q14 <= FlipFlopD:ff14.q
+q13 <= FlipFlopD:ff13.q
+q12 <= FlipFlopD:ff12.q
+q11 <= FlipFlopD:ff11.q
+q10 <= FlipFlopD:ff10.q
+q9 <= FlipFlopD:ff9.q
+q8 <= FlipFlopD:ff8.q
+q7 <= FlipFlopD:ff7.q
+q6 <= FlipFlopD:ff6.q
+q5 <= FlipFlopD:ff5.q
+q4 <= FlipFlopD:ff4.q
+q3 <= FlipFlopD:ff3.q
+q2 <= FlipFlopD:ff2.q
+q1 <= FlipFlopD:ff1.q
+q0 <= FlipFlopD:ff0.q
+
+
+|Processador|datapath:u_dp|Reg16Bits:u_ir|Mux2x1:mu0
+i0 => d.IN0
+i1 => d.IN0
+s0 => d.IN1
+s0 => d.IN1
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Reg16Bits:u_ir|FlipFlopD:ff0
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Reg16Bits:u_ir|Mux2x1:mu1
+i0 => d.IN0
+i1 => d.IN0
+s0 => d.IN1
+s0 => d.IN1
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Reg16Bits:u_ir|FlipFlopD:ff1
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Reg16Bits:u_ir|Mux2x1:mu2
+i0 => d.IN0
+i1 => d.IN0
+s0 => d.IN1
+s0 => d.IN1
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Reg16Bits:u_ir|FlipFlopD:ff2
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Reg16Bits:u_ir|Mux2x1:mu3
+i0 => d.IN0
+i1 => d.IN0
+s0 => d.IN1
+s0 => d.IN1
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Reg16Bits:u_ir|FlipFlopD:ff3
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Reg16Bits:u_ir|Mux2x1:mu4
+i0 => d.IN0
+i1 => d.IN0
+s0 => d.IN1
+s0 => d.IN1
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Reg16Bits:u_ir|FlipFlopD:ff4
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Reg16Bits:u_ir|Mux2x1:mu5
+i0 => d.IN0
+i1 => d.IN0
+s0 => d.IN1
+s0 => d.IN1
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Reg16Bits:u_ir|FlipFlopD:ff5
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Reg16Bits:u_ir|Mux2x1:mu6
+i0 => d.IN0
+i1 => d.IN0
+s0 => d.IN1
+s0 => d.IN1
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Reg16Bits:u_ir|FlipFlopD:ff6
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Reg16Bits:u_ir|Mux2x1:mu7
+i0 => d.IN0
+i1 => d.IN0
+s0 => d.IN1
+s0 => d.IN1
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Reg16Bits:u_ir|FlipFlopD:ff7
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Reg16Bits:u_ir|Mux2x1:mu8
+i0 => d.IN0
+i1 => d.IN0
+s0 => d.IN1
+s0 => d.IN1
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Reg16Bits:u_ir|FlipFlopD:ff8
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Reg16Bits:u_ir|Mux2x1:mu9
+i0 => d.IN0
+i1 => d.IN0
+s0 => d.IN1
+s0 => d.IN1
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Reg16Bits:u_ir|FlipFlopD:ff9
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Reg16Bits:u_ir|Mux2x1:mu10
+i0 => d.IN0
+i1 => d.IN0
+s0 => d.IN1
+s0 => d.IN1
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Reg16Bits:u_ir|FlipFlopD:ff10
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Reg16Bits:u_ir|Mux2x1:mu11
+i0 => d.IN0
+i1 => d.IN0
+s0 => d.IN1
+s0 => d.IN1
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Reg16Bits:u_ir|FlipFlopD:ff11
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Reg16Bits:u_ir|Mux2x1:mu12
+i0 => d.IN0
+i1 => d.IN0
+s0 => d.IN1
+s0 => d.IN1
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Reg16Bits:u_ir|FlipFlopD:ff12
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Reg16Bits:u_ir|Mux2x1:mu13
+i0 => d.IN0
+i1 => d.IN0
+s0 => d.IN1
+s0 => d.IN1
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Reg16Bits:u_ir|FlipFlopD:ff13
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Reg16Bits:u_ir|Mux2x1:mu14
+i0 => d.IN0
+i1 => d.IN0
+s0 => d.IN1
+s0 => d.IN1
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Reg16Bits:u_ir|FlipFlopD:ff14
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Reg16Bits:u_ir|Mux2x1:mu15
+i0 => d.IN0
+i1 => d.IN0
+s0 => d.IN1
+s0 => d.IN1
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Reg16Bits:u_ir|FlipFlopD:ff15
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|ULA:u_alu
+a15 => ELA:u_signal.a15
+a14 => ELA:u_signal.a14
+a13 => ELA:u_signal.a13
+a12 => ELA:u_signal.a12
+a11 => ELA:u_signal.a11
+a10 => ELA:u_signal.a10
+a9 => ELA:u_signal.a9
+a8 => ELA:u_signal.a8
+a7 => ELA:u_signal.a7
+a6 => ELA:u_signal.a6
+a5 => ELA:u_signal.a5
+a4 => ELA:u_signal.a4
+a3 => ELA:u_signal.a3
+a2 => ELA:u_signal.a2
+a1 => ELA:u_signal.a1
+a0 => ELA:u_signal.a0
+b15 => ELA:u_signal.b15
+b14 => ELA:u_signal.b14
+b13 => ELA:u_signal.b13
+b12 => ELA:u_signal.b12
+b11 => ELA:u_signal.b11
+b10 => ELA:u_signal.b10
+b9 => ELA:u_signal.b9
+b8 => ELA:u_signal.b8
+b7 => ELA:u_signal.b7
+b6 => ELA:u_signal.b6
+b5 => ELA:u_signal.b5
+b4 => ELA:u_signal.b4
+b3 => ELA:u_signal.b3
+b2 => ELA:u_signal.b2
+b1 => ELA:u_signal.b1
+b0 => ELA:u_signal.b0
+w => ELA:u_signal.w
+x => ELA:u_signal.x
+y => ELA:u_signal.y
+z => ELA:u_signal.z
+s15 <= Adder16Bit:u_add.S15
+s14 <= Adder16Bit:u_add.S14
+s13 <= Adder16Bit:u_add.S13
+s12 <= Adder16Bit:u_add.S12
+s11 <= Adder16Bit:u_add.S11
+s10 <= Adder16Bit:u_add.S10
+s9 <= Adder16Bit:u_add.S9
+s8 <= Adder16Bit:u_add.S8
+s7 <= Adder16Bit:u_add.S7
+s6 <= Adder16Bit:u_add.S6
+s5 <= Adder16Bit:u_add.S5
+s4 <= Adder16Bit:u_add.S4
+s3 <= Adder16Bit:u_add.S3
+s2 <= Adder16Bit:u_add.S2
+s1 <= Adder16Bit:u_add.S1
+s0 <= Adder16Bit:u_add.S0
+cout <= Adder16Bit:u_add.Cout
+
+
+|Processador|datapath:u_dp|ULA:u_alu|ELA:u_signal
+w => ia15.IN0
+x => ia15.IN1
+y => ia0.IN0
+y => ia1.IN0
+y => ia2.IN0
+y => ia3.IN0
+y => ia4.IN0
+y => ia5.IN0
+y => ia6.IN0
+y => ia7.IN0
+y => ia8.IN0
+y => ia9.IN0
+y => ia10.IN0
+y => ia11.IN0
+y => ia12.IN0
+y => ia13.IN0
+y => ia14.IN0
+y => ia15.IN0
+y => ib15.IN0
+y => ib15.IN0
+y => cin.IN1
+y => ia15.IN0
+y => ia15.IN0
+z => ia15.IN1
+z => ib15.IN1
+z => cin.IN1
+z => ia15.IN1
+z => ib15.IN1
+a15 => ia15.IN1
+a15 => ia15.IN1
+a15 => ia15.IN0
+a14 => ia14.IN1
+a14 => ia14.IN1
+a14 => ia14.IN0
+a13 => ia13.IN1
+a13 => ia13.IN1
+a13 => ia13.IN0
+a12 => ia12.IN1
+a12 => ia12.IN1
+a12 => ia12.IN0
+a11 => ia11.IN1
+a11 => ia11.IN1
+a11 => ia11.IN0
+a10 => ia10.IN1
+a10 => ia10.IN1
+a10 => ia10.IN0
+a9 => ia9.IN1
+a9 => ia9.IN1
+a9 => ia9.IN0
+a8 => ia8.IN1
+a8 => ia8.IN1
+a8 => ia8.IN0
+a7 => ia7.IN1
+a7 => ia7.IN1
+a7 => ia7.IN0
+a6 => ia6.IN1
+a6 => ia6.IN1
+a6 => ia6.IN0
+a5 => ia5.IN1
+a5 => ia5.IN1
+a5 => ia5.IN0
+a4 => ia4.IN1
+a4 => ia4.IN1
+a4 => ia4.IN0
+a3 => ia3.IN1
+a3 => ia3.IN1
+a3 => ia3.IN0
+a2 => ia2.IN1
+a2 => ia2.IN1
+a2 => ia2.IN0
+a1 => ia1.IN1
+a1 => ia1.IN1
+a1 => ia1.IN0
+a0 => ia0.IN1
+a0 => ia0.IN1
+a0 => ia0.IN0
+b15 => ia15.IN1
+b15 => ia15.IN1
+b15 => ib15.IN1
+b15 => ib15.IN1
+b14 => ia14.IN1
+b14 => ia14.IN1
+b14 => ib14.IN1
+b14 => ib14.IN1
+b13 => ia13.IN1
+b13 => ia13.IN1
+b13 => ib13.IN1
+b12 => ia12.IN1
+b12 => ia12.IN1
+b12 => ib13.IN1
+b12 => ib12.IN1
+b11 => ia11.IN1
+b11 => ia11.IN1
+b11 => ib11.IN1
+b11 => ib11.IN1
+b10 => ia10.IN1
+b10 => ia10.IN1
+b10 => ib10.IN1
+b10 => ib10.IN1
+b9 => ia9.IN1
+b9 => ia9.IN1
+b9 => ib9.IN1
+b9 => ib9.IN1
+b8 => ia8.IN1
+b8 => ia8.IN1
+b8 => ib8.IN1
+b8 => ib8.IN1
+b7 => ia7.IN1
+b7 => ia7.IN1
+b7 => ib7.IN1
+b7 => ib7.IN1
+b6 => ia6.IN1
+b6 => ia6.IN1
+b6 => ib6.IN1
+b6 => ib6.IN1
+b5 => ia5.IN1
+b5 => ia5.IN1
+b5 => ib5.IN1
+b5 => ib5.IN1
+b4 => ia4.IN1
+b4 => ia4.IN1
+b4 => ib4.IN1
+b4 => ib4.IN1
+b3 => ia3.IN1
+b3 => ia3.IN1
+b3 => ib3.IN1
+b3 => ib3.IN1
+b2 => ia2.IN1
+b2 => ia2.IN1
+b2 => ib2.IN1
+b2 => ib2.IN1
+b1 => ia1.IN1
+b1 => ia1.IN1
+b1 => ib1.IN1
+b1 => ib1.IN1
+b0 => ia0.IN1
+b0 => ia0.IN1
+b0 => ib0.IN1
+b0 => ib0.IN1
+ia15 <= ia15.DB_MAX_OUTPUT_PORT_TYPE
+ia14 <= ia14.DB_MAX_OUTPUT_PORT_TYPE
+ia13 <= ia13.DB_MAX_OUTPUT_PORT_TYPE
+ia12 <= ia12.DB_MAX_OUTPUT_PORT_TYPE
+ia11 <= ia11.DB_MAX_OUTPUT_PORT_TYPE
+ia10 <= ia10.DB_MAX_OUTPUT_PORT_TYPE
+ia9 <= ia9.DB_MAX_OUTPUT_PORT_TYPE
+ia8 <= ia8.DB_MAX_OUTPUT_PORT_TYPE
+ia7 <= ia7.DB_MAX_OUTPUT_PORT_TYPE
+ia6 <= ia6.DB_MAX_OUTPUT_PORT_TYPE
+ia5 <= ia5.DB_MAX_OUTPUT_PORT_TYPE
+ia4 <= ia4.DB_MAX_OUTPUT_PORT_TYPE
+ia3 <= ia3.DB_MAX_OUTPUT_PORT_TYPE
+ia2 <= ia2.DB_MAX_OUTPUT_PORT_TYPE
+ia1 <= ia1.DB_MAX_OUTPUT_PORT_TYPE
+ia0 <= ia0.DB_MAX_OUTPUT_PORT_TYPE
+ib15 <= ib15.DB_MAX_OUTPUT_PORT_TYPE
+ib14 <= ib14.DB_MAX_OUTPUT_PORT_TYPE
+ib13 <= ib13.DB_MAX_OUTPUT_PORT_TYPE
+ib12 <= ib12.DB_MAX_OUTPUT_PORT_TYPE
+ib11 <= ib11.DB_MAX_OUTPUT_PORT_TYPE
+ib10 <= ib10.DB_MAX_OUTPUT_PORT_TYPE
+ib9 <= ib9.DB_MAX_OUTPUT_PORT_TYPE
+ib8 <= ib8.DB_MAX_OUTPUT_PORT_TYPE
+ib7 <= ib7.DB_MAX_OUTPUT_PORT_TYPE
+ib6 <= ib6.DB_MAX_OUTPUT_PORT_TYPE
+ib5 <= ib5.DB_MAX_OUTPUT_PORT_TYPE
+ib4 <= ib4.DB_MAX_OUTPUT_PORT_TYPE
+ib3 <= ib3.DB_MAX_OUTPUT_PORT_TYPE
+ib2 <= ib2.DB_MAX_OUTPUT_PORT_TYPE
+ib1 <= ib1.DB_MAX_OUTPUT_PORT_TYPE
+ib0 <= ib0.DB_MAX_OUTPUT_PORT_TYPE
+cin <= cin.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|ULA:u_alu|Adder16Bit:u_add
+A15 => ~NO_FANOUT~
+A14 => ~NO_FANOUT~
+A13 => ~NO_FANOUT~
+A12 => ~NO_FANOUT~
+A11 => ~NO_FANOUT~
+A10 => ~NO_FANOUT~
+A9 => ~NO_FANOUT~
+A8 => ~NO_FANOUT~
+A7 => FullAdder:U7.A
+A6 => FullAdder:U6.A
+A5 => FullAdder:U5.A
+A4 => FullAdder:U4.A
+A3 => FullAdder:U3.A
+A2 => FullAdder:U2.A
+A1 => FullAdder:U1.A
+A0 => FullAdder:U0.A
+B15 => ~NO_FANOUT~
+B14 => ~NO_FANOUT~
+B13 => ~NO_FANOUT~
+B12 => ~NO_FANOUT~
+B11 => ~NO_FANOUT~
+B10 => ~NO_FANOUT~
+B9 => ~NO_FANOUT~
+B8 => ~NO_FANOUT~
+B7 => FullAdder:U7.B
+B6 => FullAdder:U6.B
+B5 => FullAdder:U5.B
+B4 => FullAdder:U4.B
+B3 => FullAdder:U3.B
+B2 => FullAdder:U2.B
+B1 => FullAdder:U1.B
+B0 => FullAdder:U0.B
+Op => FullAdder:U0.Cin
+S15 <= <GND>
+S14 <= <GND>
+S13 <= <GND>
+S12 <= <GND>
+S11 <= <GND>
+S10 <= <GND>
+S9 <= <GND>
+S8 <= <GND>
+S7 <= FullAdder:U7.Sum
+S6 <= FullAdder:U6.Sum
+S5 <= FullAdder:U5.Sum
+S4 <= FullAdder:U4.Sum
+S3 <= FullAdder:U3.Sum
+S2 <= FullAdder:U2.Sum
+S1 <= FullAdder:U1.Sum
+S0 <= FullAdder:U0.Sum
+Cout <= <GND>
+
+
+|Processador|datapath:u_dp|ULA:u_alu|Adder16Bit:u_add|FullAdder:U0
+A => Sum.IN0
+A => Cout.IN0
+B => Sum.IN1
+B => Cout.IN1
+Cin => Sum.IN1
+Cin => Cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|ULA:u_alu|Adder16Bit:u_add|FullAdder:U1
+A => Sum.IN0
+A => Cout.IN0
+B => Sum.IN1
+B => Cout.IN1
+Cin => Sum.IN1
+Cin => Cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|ULA:u_alu|Adder16Bit:u_add|FullAdder:U2
+A => Sum.IN0
+A => Cout.IN0
+B => Sum.IN1
+B => Cout.IN1
+Cin => Sum.IN1
+Cin => Cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|ULA:u_alu|Adder16Bit:u_add|FullAdder:U3
+A => Sum.IN0
+A => Cout.IN0
+B => Sum.IN1
+B => Cout.IN1
+Cin => Sum.IN1
+Cin => Cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|ULA:u_alu|Adder16Bit:u_add|FullAdder:U4
+A => Sum.IN0
+A => Cout.IN0
+B => Sum.IN1
+B => Cout.IN1
+Cin => Sum.IN1
+Cin => Cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|ULA:u_alu|Adder16Bit:u_add|FullAdder:U5
+A => Sum.IN0
+A => Cout.IN0
+B => Sum.IN1
+B => Cout.IN1
+Cin => Sum.IN1
+Cin => Cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|ULA:u_alu|Adder16Bit:u_add|FullAdder:U6
+A => Sum.IN0
+A => Cout.IN0
+B => Sum.IN1
+B => Cout.IN1
+Cin => Sum.IN1
+Cin => Cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|ULA:u_alu|Adder16Bit:u_add|FullAdder:U7
+A => Sum.IN0
+A => Cout.IN0
+B => Sum.IN1
+B => Cout.IN1
+Cin => Sum.IN1
+Cin => Cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Comparador16Bits:u_cmp
+a15 => Comparador:st15.a
+a14 => Comparador:st14.a
+a13 => Comparador:st13.a
+a12 => Comparador:st12.a
+a11 => Comparador:st11.a
+a10 => Comparador:st10.a
+a9 => Comparador:st9.a
+a8 => Comparador:st8.a
+a7 => Comparador:st7.a
+a6 => Comparador:st6.a
+a5 => Comparador:st5.a
+a4 => Comparador:st4.a
+a3 => Comparador:st3.a
+a2 => Comparador:st2.a
+a1 => Comparador:st1.a
+a0 => Comparador:st0.a
+b15 => Comparador:st15.b
+b14 => Comparador:st14.b
+b13 => Comparador:st13.b
+b12 => Comparador:st12.b
+b11 => Comparador:st11.b
+b10 => Comparador:st10.b
+b9 => Comparador:st9.b
+b8 => Comparador:st8.b
+b7 => Comparador:st7.b
+b6 => Comparador:st6.b
+b5 => Comparador:st5.b
+b4 => Comparador:st4.b
+b3 => Comparador:st3.b
+b2 => Comparador:st2.b
+b1 => Comparador:st1.b
+b0 => Comparador:st0.b
+AgtB <= Comparador:st0.out_gt
+AeqB <= Comparador:st0.out_eq
+AltB <= Comparador:st0.out_lt
+
+
+|Processador|datapath:u_dp|Comparador16Bits:u_cmp|Comparador:st15
+a => eq_bit.IN0
+a => out_gt.IN0
+a => out_lt.IN0
+b => eq_bit.IN1
+b => out_lt.IN1
+b => out_gt.IN1
+in_gt => out_gt.IN1
+in_eq => out_eq.IN1
+in_eq => out_gt.IN1
+in_eq => out_lt.IN1
+in_lt => out_lt.IN1
+out_gt <= out_gt.DB_MAX_OUTPUT_PORT_TYPE
+out_eq <= out_eq.DB_MAX_OUTPUT_PORT_TYPE
+out_lt <= out_lt.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Comparador16Bits:u_cmp|Comparador:st14
+a => eq_bit.IN0
+a => out_gt.IN0
+a => out_lt.IN0
+b => eq_bit.IN1
+b => out_lt.IN1
+b => out_gt.IN1
+in_gt => out_gt.IN1
+in_eq => out_eq.IN1
+in_eq => out_gt.IN1
+in_eq => out_lt.IN1
+in_lt => out_lt.IN1
+out_gt <= out_gt.DB_MAX_OUTPUT_PORT_TYPE
+out_eq <= out_eq.DB_MAX_OUTPUT_PORT_TYPE
+out_lt <= out_lt.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Comparador16Bits:u_cmp|Comparador:st13
+a => eq_bit.IN0
+a => out_gt.IN0
+a => out_lt.IN0
+b => eq_bit.IN1
+b => out_lt.IN1
+b => out_gt.IN1
+in_gt => out_gt.IN1
+in_eq => out_eq.IN1
+in_eq => out_gt.IN1
+in_eq => out_lt.IN1
+in_lt => out_lt.IN1
+out_gt <= out_gt.DB_MAX_OUTPUT_PORT_TYPE
+out_eq <= out_eq.DB_MAX_OUTPUT_PORT_TYPE
+out_lt <= out_lt.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Comparador16Bits:u_cmp|Comparador:st12
+a => eq_bit.IN0
+a => out_gt.IN0
+a => out_lt.IN0
+b => eq_bit.IN1
+b => out_lt.IN1
+b => out_gt.IN1
+in_gt => out_gt.IN1
+in_eq => out_eq.IN1
+in_eq => out_gt.IN1
+in_eq => out_lt.IN1
+in_lt => out_lt.IN1
+out_gt <= out_gt.DB_MAX_OUTPUT_PORT_TYPE
+out_eq <= out_eq.DB_MAX_OUTPUT_PORT_TYPE
+out_lt <= out_lt.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Comparador16Bits:u_cmp|Comparador:st11
+a => eq_bit.IN0
+a => out_gt.IN0
+a => out_lt.IN0
+b => eq_bit.IN1
+b => out_lt.IN1
+b => out_gt.IN1
+in_gt => out_gt.IN1
+in_eq => out_eq.IN1
+in_eq => out_gt.IN1
+in_eq => out_lt.IN1
+in_lt => out_lt.IN1
+out_gt <= out_gt.DB_MAX_OUTPUT_PORT_TYPE
+out_eq <= out_eq.DB_MAX_OUTPUT_PORT_TYPE
+out_lt <= out_lt.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Comparador16Bits:u_cmp|Comparador:st10
+a => eq_bit.IN0
+a => out_gt.IN0
+a => out_lt.IN0
+b => eq_bit.IN1
+b => out_lt.IN1
+b => out_gt.IN1
+in_gt => out_gt.IN1
+in_eq => out_eq.IN1
+in_eq => out_gt.IN1
+in_eq => out_lt.IN1
+in_lt => out_lt.IN1
+out_gt <= out_gt.DB_MAX_OUTPUT_PORT_TYPE
+out_eq <= out_eq.DB_MAX_OUTPUT_PORT_TYPE
+out_lt <= out_lt.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Comparador16Bits:u_cmp|Comparador:st9
+a => eq_bit.IN0
+a => out_gt.IN0
+a => out_lt.IN0
+b => eq_bit.IN1
+b => out_lt.IN1
+b => out_gt.IN1
+in_gt => out_gt.IN1
+in_eq => out_eq.IN1
+in_eq => out_gt.IN1
+in_eq => out_lt.IN1
+in_lt => out_lt.IN1
+out_gt <= out_gt.DB_MAX_OUTPUT_PORT_TYPE
+out_eq <= out_eq.DB_MAX_OUTPUT_PORT_TYPE
+out_lt <= out_lt.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Comparador16Bits:u_cmp|Comparador:st8
+a => eq_bit.IN0
+a => out_gt.IN0
+a => out_lt.IN0
+b => eq_bit.IN1
+b => out_lt.IN1
+b => out_gt.IN1
+in_gt => out_gt.IN1
+in_eq => out_eq.IN1
+in_eq => out_gt.IN1
+in_eq => out_lt.IN1
+in_lt => out_lt.IN1
+out_gt <= out_gt.DB_MAX_OUTPUT_PORT_TYPE
+out_eq <= out_eq.DB_MAX_OUTPUT_PORT_TYPE
+out_lt <= out_lt.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Comparador16Bits:u_cmp|Comparador:st7
+a => eq_bit.IN0
+a => out_gt.IN0
+a => out_lt.IN0
+b => eq_bit.IN1
+b => out_lt.IN1
+b => out_gt.IN1
+in_gt => out_gt.IN1
+in_eq => out_eq.IN1
+in_eq => out_gt.IN1
+in_eq => out_lt.IN1
+in_lt => out_lt.IN1
+out_gt <= out_gt.DB_MAX_OUTPUT_PORT_TYPE
+out_eq <= out_eq.DB_MAX_OUTPUT_PORT_TYPE
+out_lt <= out_lt.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Comparador16Bits:u_cmp|Comparador:st6
+a => eq_bit.IN0
+a => out_gt.IN0
+a => out_lt.IN0
+b => eq_bit.IN1
+b => out_lt.IN1
+b => out_gt.IN1
+in_gt => out_gt.IN1
+in_eq => out_eq.IN1
+in_eq => out_gt.IN1
+in_eq => out_lt.IN1
+in_lt => out_lt.IN1
+out_gt <= out_gt.DB_MAX_OUTPUT_PORT_TYPE
+out_eq <= out_eq.DB_MAX_OUTPUT_PORT_TYPE
+out_lt <= out_lt.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Comparador16Bits:u_cmp|Comparador:st5
+a => eq_bit.IN0
+a => out_gt.IN0
+a => out_lt.IN0
+b => eq_bit.IN1
+b => out_lt.IN1
+b => out_gt.IN1
+in_gt => out_gt.IN1
+in_eq => out_eq.IN1
+in_eq => out_gt.IN1
+in_eq => out_lt.IN1
+in_lt => out_lt.IN1
+out_gt <= out_gt.DB_MAX_OUTPUT_PORT_TYPE
+out_eq <= out_eq.DB_MAX_OUTPUT_PORT_TYPE
+out_lt <= out_lt.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Comparador16Bits:u_cmp|Comparador:st4
+a => eq_bit.IN0
+a => out_gt.IN0
+a => out_lt.IN0
+b => eq_bit.IN1
+b => out_lt.IN1
+b => out_gt.IN1
+in_gt => out_gt.IN1
+in_eq => out_eq.IN1
+in_eq => out_gt.IN1
+in_eq => out_lt.IN1
+in_lt => out_lt.IN1
+out_gt <= out_gt.DB_MAX_OUTPUT_PORT_TYPE
+out_eq <= out_eq.DB_MAX_OUTPUT_PORT_TYPE
+out_lt <= out_lt.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Comparador16Bits:u_cmp|Comparador:st3
+a => eq_bit.IN0
+a => out_gt.IN0
+a => out_lt.IN0
+b => eq_bit.IN1
+b => out_lt.IN1
+b => out_gt.IN1
+in_gt => out_gt.IN1
+in_eq => out_eq.IN1
+in_eq => out_gt.IN1
+in_eq => out_lt.IN1
+in_lt => out_lt.IN1
+out_gt <= out_gt.DB_MAX_OUTPUT_PORT_TYPE
+out_eq <= out_eq.DB_MAX_OUTPUT_PORT_TYPE
+out_lt <= out_lt.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Comparador16Bits:u_cmp|Comparador:st2
+a => eq_bit.IN0
+a => out_gt.IN0
+a => out_lt.IN0
+b => eq_bit.IN1
+b => out_lt.IN1
+b => out_gt.IN1
+in_gt => out_gt.IN1
+in_eq => out_eq.IN1
+in_eq => out_gt.IN1
+in_eq => out_lt.IN1
+in_lt => out_lt.IN1
+out_gt <= out_gt.DB_MAX_OUTPUT_PORT_TYPE
+out_eq <= out_eq.DB_MAX_OUTPUT_PORT_TYPE
+out_lt <= out_lt.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Comparador16Bits:u_cmp|Comparador:st1
+a => eq_bit.IN0
+a => out_gt.IN0
+a => out_lt.IN0
+b => eq_bit.IN1
+b => out_lt.IN1
+b => out_gt.IN1
+in_gt => out_gt.IN1
+in_eq => out_eq.IN1
+in_eq => out_gt.IN1
+in_eq => out_lt.IN1
+in_lt => out_lt.IN1
+out_gt <= out_gt.DB_MAX_OUTPUT_PORT_TYPE
+out_eq <= out_eq.DB_MAX_OUTPUT_PORT_TYPE
+out_lt <= out_lt.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|datapath:u_dp|Comparador16Bits:u_cmp|Comparador:st0
+a => eq_bit.IN0
+a => out_gt.IN0
+a => out_lt.IN0
+b => eq_bit.IN1
+b => out_lt.IN1
+b => out_gt.IN1
+in_gt => out_gt.IN1
+in_eq => out_eq.IN1
+in_eq => out_gt.IN1
+in_eq => out_lt.IN1
+in_lt => out_lt.IN1
+out_gt <= out_gt.DB_MAX_OUTPUT_PORT_TYPE
+out_eq <= out_eq.DB_MAX_OUTPUT_PORT_TYPE
+out_lt <= out_lt.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|ControlUnit:u_ctrl
+clk => FlipFlopD:u0.clk
+clk => FlipFlopD:u1.clk
+clk => FlipFlopD:u2.clk
+rst => FlipFlopD:u0.rst
+rst => FlipFlopD:u1.rst
+rst => FlipFlopD:u2.rst
+opcode3 => is_load.IN0
+opcode3 => ULAX.DATAIN
+opcode3 => wb_sel1.IN1
+opcode2 => ULAY.DATAIN
+opcode2 => is_load.IN1
+opcode1 => is_immed.IN1
+opcode1 => ULAZ.DATAIN
+opcode1 => is_load.IN1
+opcode0 => is_store.IN1
+opcode0 => is_load.IN1
+pc_inc <= pc_inc.DB_MAX_OUTPUT_PORT_TYPE
+ir_ld <= ir_ld.DB_MAX_OUTPUT_PORT_TYPE
+rf_wr <= rf_wr.DB_MAX_OUTPUT_PORT_TYPE
+mem_rd <= mem_rd.DB_MAX_OUTPUT_PORT_TYPE
+mem_wr <= mem_wr.DB_MAX_OUTPUT_PORT_TYPE
+ULAX <= opcode3.DB_MAX_OUTPUT_PORT_TYPE
+ULAY <= opcode2.DB_MAX_OUTPUT_PORT_TYPE
+ULAZ <= opcode1.DB_MAX_OUTPUT_PORT_TYPE
+wb_sel1 <= wb_sel1.DB_MAX_OUTPUT_PORT_TYPE
+wb_sel0 <= wb_sel0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|ControlUnit:u_ctrl|FlipFlopD:u0
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|ControlUnit:u_ctrl|FlipFlopD:u1
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processador|ControlUnit:u_ctrl|FlipFlopD:u2
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
