@@ -1,0 +1,41 @@
+library verilog;
+use verilog.vl_types.all;
+entity Processador_vlg_sample_tst is
+    port(
+        clk             : in     vl_logic;
+        data_mem_data_in0: in     vl_logic;
+        data_mem_data_in1: in     vl_logic;
+        data_mem_data_in2: in     vl_logic;
+        data_mem_data_in3: in     vl_logic;
+        data_mem_data_in4: in     vl_logic;
+        data_mem_data_in5: in     vl_logic;
+        data_mem_data_in6: in     vl_logic;
+        data_mem_data_in7: in     vl_logic;
+        data_mem_data_in8: in     vl_logic;
+        data_mem_data_in9: in     vl_logic;
+        data_mem_data_in10: in     vl_logic;
+        data_mem_data_in11: in     vl_logic;
+        data_mem_data_in12: in     vl_logic;
+        data_mem_data_in13: in     vl_logic;
+        data_mem_data_in14: in     vl_logic;
+        data_mem_data_in15: in     vl_logic;
+        instr_mem_data0 : in     vl_logic;
+        instr_mem_data1 : in     vl_logic;
+        instr_mem_data2 : in     vl_logic;
+        instr_mem_data3 : in     vl_logic;
+        instr_mem_data4 : in     vl_logic;
+        instr_mem_data5 : in     vl_logic;
+        instr_mem_data6 : in     vl_logic;
+        instr_mem_data7 : in     vl_logic;
+        instr_mem_data8 : in     vl_logic;
+        instr_mem_data9 : in     vl_logic;
+        instr_mem_data10: in     vl_logic;
+        instr_mem_data11: in     vl_logic;
+        instr_mem_data12: in     vl_logic;
+        instr_mem_data13: in     vl_logic;
+        instr_mem_data14: in     vl_logic;
+        instr_mem_data15: in     vl_logic;
+        rst             : in     vl_logic;
+        sampler_tx      : out    vl_logic
+    );
+end Processador_vlg_sample_tst;

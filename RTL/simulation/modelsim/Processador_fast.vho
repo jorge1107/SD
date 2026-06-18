@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
--- DATE "06/17/2026 20:49:43"
+-- DATE "06/17/2026 21:44:13"
 
 -- 
 -- Device: Altera EP2C35F672C6 Package FBGA672
@@ -28,10 +28,8 @@
 
 LIBRARY CYCLONEII;
 LIBRARY IEEE;
-LIBRARY STD;
 USE CYCLONEII.CYCLONEII_COMPONENTS.ALL;
 USE IEEE.STD_LOGIC_1164.ALL;
-USE STD.STANDARD.ALL;
 
 ENTITY 	Processador IS
     PORT (
@@ -69,40 +67,40 @@ ENTITY 	Processador IS
 	data_mem_data_in2 : IN std_logic;
 	data_mem_data_in1 : IN std_logic;
 	data_mem_data_in0 : IN std_logic;
-	instr_addr7 : OUT STD.STANDARD.bit;
-	instr_addr6 : OUT STD.STANDARD.bit;
-	instr_addr5 : OUT STD.STANDARD.bit;
-	instr_addr4 : OUT STD.STANDARD.bit;
-	instr_addr3 : OUT STD.STANDARD.bit;
-	instr_addr2 : OUT STD.STANDARD.bit;
-	instr_addr1 : OUT STD.STANDARD.bit;
-	instr_addr0 : OUT STD.STANDARD.bit;
-	data_addr7 : OUT STD.STANDARD.bit;
-	data_addr6 : OUT STD.STANDARD.bit;
-	data_addr5 : OUT STD.STANDARD.bit;
-	data_addr4 : OUT STD.STANDARD.bit;
-	data_addr3 : OUT STD.STANDARD.bit;
-	data_addr2 : OUT STD.STANDARD.bit;
-	data_addr1 : OUT STD.STANDARD.bit;
-	data_addr0 : OUT STD.STANDARD.bit;
-	data_mem_data_out15 : OUT STD.STANDARD.bit;
-	data_mem_data_out14 : OUT STD.STANDARD.bit;
-	data_mem_data_out13 : OUT STD.STANDARD.bit;
-	data_mem_data_out12 : OUT STD.STANDARD.bit;
-	data_mem_data_out11 : OUT STD.STANDARD.bit;
-	data_mem_data_out10 : OUT STD.STANDARD.bit;
-	data_mem_data_out9 : OUT STD.STANDARD.bit;
-	data_mem_data_out8 : OUT STD.STANDARD.bit;
-	data_mem_data_out7 : OUT STD.STANDARD.bit;
-	data_mem_data_out6 : OUT STD.STANDARD.bit;
-	data_mem_data_out5 : OUT STD.STANDARD.bit;
-	data_mem_data_out4 : OUT STD.STANDARD.bit;
-	data_mem_data_out3 : OUT STD.STANDARD.bit;
-	data_mem_data_out2 : OUT STD.STANDARD.bit;
-	data_mem_data_out1 : OUT STD.STANDARD.bit;
-	data_mem_data_out0 : OUT STD.STANDARD.bit;
-	mem_rd : OUT STD.STANDARD.bit;
-	mem_wr : OUT STD.STANDARD.bit
+	instr_addr7 : OUT std_logic;
+	instr_addr6 : OUT std_logic;
+	instr_addr5 : OUT std_logic;
+	instr_addr4 : OUT std_logic;
+	instr_addr3 : OUT std_logic;
+	instr_addr2 : OUT std_logic;
+	instr_addr1 : OUT std_logic;
+	instr_addr0 : OUT std_logic;
+	data_addr7 : OUT std_logic;
+	data_addr6 : OUT std_logic;
+	data_addr5 : OUT std_logic;
+	data_addr4 : OUT std_logic;
+	data_addr3 : OUT std_logic;
+	data_addr2 : OUT std_logic;
+	data_addr1 : OUT std_logic;
+	data_addr0 : OUT std_logic;
+	data_mem_data_out15 : OUT std_logic;
+	data_mem_data_out14 : OUT std_logic;
+	data_mem_data_out13 : OUT std_logic;
+	data_mem_data_out12 : OUT std_logic;
+	data_mem_data_out11 : OUT std_logic;
+	data_mem_data_out10 : OUT std_logic;
+	data_mem_data_out9 : OUT std_logic;
+	data_mem_data_out8 : OUT std_logic;
+	data_mem_data_out7 : OUT std_logic;
+	data_mem_data_out6 : OUT std_logic;
+	data_mem_data_out5 : OUT std_logic;
+	data_mem_data_out4 : OUT std_logic;
+	data_mem_data_out3 : OUT std_logic;
+	data_mem_data_out2 : OUT std_logic;
+	data_mem_data_out1 : OUT std_logic;
+	data_mem_data_out0 : OUT std_logic;
+	mem_rd : OUT std_logic;
+	mem_wr : OUT std_logic
 	);
 END Processador;
 
@@ -1273,40 +1271,40 @@ ww_data_mem_data_in3 <= data_mem_data_in3;
 ww_data_mem_data_in2 <= data_mem_data_in2;
 ww_data_mem_data_in1 <= data_mem_data_in1;
 ww_data_mem_data_in0 <= data_mem_data_in0;
-instr_addr7 <= IEEE.STD_LOGIC_1164.TO_BIT(ww_instr_addr7);
-instr_addr6 <= IEEE.STD_LOGIC_1164.TO_BIT(ww_instr_addr6);
-instr_addr5 <= IEEE.STD_LOGIC_1164.TO_BIT(ww_instr_addr5);
-instr_addr4 <= IEEE.STD_LOGIC_1164.TO_BIT(ww_instr_addr4);
-instr_addr3 <= IEEE.STD_LOGIC_1164.TO_BIT(ww_instr_addr3);
-instr_addr2 <= IEEE.STD_LOGIC_1164.TO_BIT(ww_instr_addr2);
-instr_addr1 <= IEEE.STD_LOGIC_1164.TO_BIT(ww_instr_addr1);
-instr_addr0 <= IEEE.STD_LOGIC_1164.TO_BIT(ww_instr_addr0);
-data_addr7 <= IEEE.STD_LOGIC_1164.TO_BIT(ww_data_addr7);
-data_addr6 <= IEEE.STD_LOGIC_1164.TO_BIT(ww_data_addr6);
-data_addr5 <= IEEE.STD_LOGIC_1164.TO_BIT(ww_data_addr5);
-data_addr4 <= IEEE.STD_LOGIC_1164.TO_BIT(ww_data_addr4);
-data_addr3 <= IEEE.STD_LOGIC_1164.TO_BIT(ww_data_addr3);
-data_addr2 <= IEEE.STD_LOGIC_1164.TO_BIT(ww_data_addr2);
-data_addr1 <= IEEE.STD_LOGIC_1164.TO_BIT(ww_data_addr1);
-data_addr0 <= IEEE.STD_LOGIC_1164.TO_BIT(ww_data_addr0);
-data_mem_data_out15 <= IEEE.STD_LOGIC_1164.TO_BIT(ww_data_mem_data_out15);
-data_mem_data_out14 <= IEEE.STD_LOGIC_1164.TO_BIT(ww_data_mem_data_out14);
-data_mem_data_out13 <= IEEE.STD_LOGIC_1164.TO_BIT(ww_data_mem_data_out13);
-data_mem_data_out12 <= IEEE.STD_LOGIC_1164.TO_BIT(ww_data_mem_data_out12);
-data_mem_data_out11 <= IEEE.STD_LOGIC_1164.TO_BIT(ww_data_mem_data_out11);
-data_mem_data_out10 <= IEEE.STD_LOGIC_1164.TO_BIT(ww_data_mem_data_out10);
-data_mem_data_out9 <= IEEE.STD_LOGIC_1164.TO_BIT(ww_data_mem_data_out9);
-data_mem_data_out8 <= IEEE.STD_LOGIC_1164.TO_BIT(ww_data_mem_data_out8);
-data_mem_data_out7 <= IEEE.STD_LOGIC_1164.TO_BIT(ww_data_mem_data_out7);
-data_mem_data_out6 <= IEEE.STD_LOGIC_1164.TO_BIT(ww_data_mem_data_out6);
-data_mem_data_out5 <= IEEE.STD_LOGIC_1164.TO_BIT(ww_data_mem_data_out5);
-data_mem_data_out4 <= IEEE.STD_LOGIC_1164.TO_BIT(ww_data_mem_data_out4);
-data_mem_data_out3 <= IEEE.STD_LOGIC_1164.TO_BIT(ww_data_mem_data_out3);
-data_mem_data_out2 <= IEEE.STD_LOGIC_1164.TO_BIT(ww_data_mem_data_out2);
-data_mem_data_out1 <= IEEE.STD_LOGIC_1164.TO_BIT(ww_data_mem_data_out1);
-data_mem_data_out0 <= IEEE.STD_LOGIC_1164.TO_BIT(ww_data_mem_data_out0);
-mem_rd <= IEEE.STD_LOGIC_1164.TO_BIT(ww_mem_rd);
-mem_wr <= IEEE.STD_LOGIC_1164.TO_BIT(ww_mem_wr);
+instr_addr7 <= ww_instr_addr7;
+instr_addr6 <= ww_instr_addr6;
+instr_addr5 <= ww_instr_addr5;
+instr_addr4 <= ww_instr_addr4;
+instr_addr3 <= ww_instr_addr3;
+instr_addr2 <= ww_instr_addr2;
+instr_addr1 <= ww_instr_addr1;
+instr_addr0 <= ww_instr_addr0;
+data_addr7 <= ww_data_addr7;
+data_addr6 <= ww_data_addr6;
+data_addr5 <= ww_data_addr5;
+data_addr4 <= ww_data_addr4;
+data_addr3 <= ww_data_addr3;
+data_addr2 <= ww_data_addr2;
+data_addr1 <= ww_data_addr1;
+data_addr0 <= ww_data_addr0;
+data_mem_data_out15 <= ww_data_mem_data_out15;
+data_mem_data_out14 <= ww_data_mem_data_out14;
+data_mem_data_out13 <= ww_data_mem_data_out13;
+data_mem_data_out12 <= ww_data_mem_data_out12;
+data_mem_data_out11 <= ww_data_mem_data_out11;
+data_mem_data_out10 <= ww_data_mem_data_out10;
+data_mem_data_out9 <= ww_data_mem_data_out9;
+data_mem_data_out8 <= ww_data_mem_data_out8;
+data_mem_data_out7 <= ww_data_mem_data_out7;
+data_mem_data_out6 <= ww_data_mem_data_out6;
+data_mem_data_out5 <= ww_data_mem_data_out5;
+data_mem_data_out4 <= ww_data_mem_data_out4;
+data_mem_data_out3 <= ww_data_mem_data_out3;
+data_mem_data_out2 <= ww_data_mem_data_out2;
+data_mem_data_out1 <= ww_data_mem_data_out1;
+data_mem_data_out0 <= ww_data_mem_data_out0;
+mem_rd <= ww_mem_rd;
+mem_wr <= ww_mem_wr;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;

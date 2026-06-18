@@ -1,0 +1,1539 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "06/17/2026 21:44:57"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    Processador
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module Processador_vlg_sample_tst(
+	clk,
+	data_mem_data_in0,
+	data_mem_data_in1,
+	data_mem_data_in2,
+	data_mem_data_in3,
+	data_mem_data_in4,
+	data_mem_data_in5,
+	data_mem_data_in6,
+	data_mem_data_in7,
+	data_mem_data_in8,
+	data_mem_data_in9,
+	data_mem_data_in10,
+	data_mem_data_in11,
+	data_mem_data_in12,
+	data_mem_data_in13,
+	data_mem_data_in14,
+	data_mem_data_in15,
+	instr_mem_data0,
+	instr_mem_data1,
+	instr_mem_data2,
+	instr_mem_data3,
+	instr_mem_data4,
+	instr_mem_data5,
+	instr_mem_data6,
+	instr_mem_data7,
+	instr_mem_data8,
+	instr_mem_data9,
+	instr_mem_data10,
+	instr_mem_data11,
+	instr_mem_data12,
+	instr_mem_data13,
+	instr_mem_data14,
+	instr_mem_data15,
+	rst,
+	sampler_tx
+);
+input  clk;
+input  data_mem_data_in0;
+input  data_mem_data_in1;
+input  data_mem_data_in2;
+input  data_mem_data_in3;
+input  data_mem_data_in4;
+input  data_mem_data_in5;
+input  data_mem_data_in6;
+input  data_mem_data_in7;
+input  data_mem_data_in8;
+input  data_mem_data_in9;
+input  data_mem_data_in10;
+input  data_mem_data_in11;
+input  data_mem_data_in12;
+input  data_mem_data_in13;
+input  data_mem_data_in14;
+input  data_mem_data_in15;
+input  instr_mem_data0;
+input  instr_mem_data1;
+input  instr_mem_data2;
+input  instr_mem_data3;
+input  instr_mem_data4;
+input  instr_mem_data5;
+input  instr_mem_data6;
+input  instr_mem_data7;
+input  instr_mem_data8;
+input  instr_mem_data9;
+input  instr_mem_data10;
+input  instr_mem_data11;
+input  instr_mem_data12;
+input  instr_mem_data13;
+input  instr_mem_data14;
+input  instr_mem_data15;
+input  rst;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(clk or data_mem_data_in0 or data_mem_data_in1 or data_mem_data_in2 or data_mem_data_in3 or data_mem_data_in4 or data_mem_data_in5 or data_mem_data_in6 or data_mem_data_in7 or data_mem_data_in8 or data_mem_data_in9 or data_mem_data_in10 or data_mem_data_in11 or data_mem_data_in12 or data_mem_data_in13 or data_mem_data_in14 or data_mem_data_in15 or instr_mem_data0 or instr_mem_data1 or instr_mem_data2 or instr_mem_data3 or instr_mem_data4 or instr_mem_data5 or instr_mem_data6 or instr_mem_data7 or instr_mem_data8 or instr_mem_data9 or instr_mem_data10 or instr_mem_data11 or instr_mem_data12 or instr_mem_data13 or instr_mem_data14 or instr_mem_data15 or rst)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module Processador_vlg_check_tst (
+	data_addr0,
+	data_addr1,
+	data_addr2,
+	data_addr3,
+	data_addr4,
+	data_addr5,
+	data_addr6,
+	data_addr7,
+	data_mem_data_out0,
+	data_mem_data_out1,
+	data_mem_data_out2,
+	data_mem_data_out3,
+	data_mem_data_out4,
+	data_mem_data_out5,
+	data_mem_data_out6,
+	data_mem_data_out7,
+	data_mem_data_out8,
+	data_mem_data_out9,
+	data_mem_data_out10,
+	data_mem_data_out11,
+	data_mem_data_out12,
+	data_mem_data_out13,
+	data_mem_data_out14,
+	data_mem_data_out15,
+	instr_addr0,
+	instr_addr1,
+	instr_addr2,
+	instr_addr3,
+	instr_addr4,
+	instr_addr5,
+	instr_addr6,
+	instr_addr7,
+	mem_rd,
+	mem_wr,
+	sampler_rx
+);
+input  data_addr0;
+input  data_addr1;
+input  data_addr2;
+input  data_addr3;
+input  data_addr4;
+input  data_addr5;
+input  data_addr6;
+input  data_addr7;
+input  data_mem_data_out0;
+input  data_mem_data_out1;
+input  data_mem_data_out2;
+input  data_mem_data_out3;
+input  data_mem_data_out4;
+input  data_mem_data_out5;
+input  data_mem_data_out6;
+input  data_mem_data_out7;
+input  data_mem_data_out8;
+input  data_mem_data_out9;
+input  data_mem_data_out10;
+input  data_mem_data_out11;
+input  data_mem_data_out12;
+input  data_mem_data_out13;
+input  data_mem_data_out14;
+input  data_mem_data_out15;
+input  instr_addr0;
+input  instr_addr1;
+input  instr_addr2;
+input  instr_addr3;
+input  instr_addr4;
+input  instr_addr5;
+input  instr_addr6;
+input  instr_addr7;
+input  mem_rd;
+input  mem_wr;
+input sampler_rx;
+
+reg  data_addr0_expected;
+reg  data_addr1_expected;
+reg  data_addr2_expected;
+reg  data_addr3_expected;
+reg  data_addr4_expected;
+reg  data_addr5_expected;
+reg  data_addr6_expected;
+reg  data_addr7_expected;
+reg  data_mem_data_out0_expected;
+reg  data_mem_data_out1_expected;
+reg  data_mem_data_out2_expected;
+reg  data_mem_data_out3_expected;
+reg  data_mem_data_out4_expected;
+reg  data_mem_data_out5_expected;
+reg  data_mem_data_out6_expected;
+reg  data_mem_data_out7_expected;
+reg  data_mem_data_out8_expected;
+reg  data_mem_data_out9_expected;
+reg  data_mem_data_out10_expected;
+reg  data_mem_data_out11_expected;
+reg  data_mem_data_out12_expected;
+reg  data_mem_data_out13_expected;
+reg  data_mem_data_out14_expected;
+reg  data_mem_data_out15_expected;
+reg  instr_addr0_expected;
+reg  instr_addr1_expected;
+reg  instr_addr2_expected;
+reg  instr_addr3_expected;
+reg  instr_addr4_expected;
+reg  instr_addr5_expected;
+reg  instr_addr6_expected;
+reg  instr_addr7_expected;
+reg  mem_rd_expected;
+reg  mem_wr_expected;
+
+reg  data_addr0_prev;
+reg  data_addr1_prev;
+reg  data_addr2_prev;
+reg  data_addr3_prev;
+reg  data_addr4_prev;
+reg  data_addr5_prev;
+reg  data_addr6_prev;
+reg  data_addr7_prev;
+reg  data_mem_data_out0_prev;
+reg  data_mem_data_out1_prev;
+reg  data_mem_data_out2_prev;
+reg  data_mem_data_out3_prev;
+reg  data_mem_data_out4_prev;
+reg  data_mem_data_out5_prev;
+reg  data_mem_data_out6_prev;
+reg  data_mem_data_out7_prev;
+reg  data_mem_data_out8_prev;
+reg  data_mem_data_out9_prev;
+reg  data_mem_data_out10_prev;
+reg  data_mem_data_out11_prev;
+reg  data_mem_data_out12_prev;
+reg  data_mem_data_out13_prev;
+reg  data_mem_data_out14_prev;
+reg  data_mem_data_out15_prev;
+reg  instr_addr0_prev;
+reg  instr_addr1_prev;
+reg  instr_addr2_prev;
+reg  instr_addr3_prev;
+reg  instr_addr4_prev;
+reg  instr_addr5_prev;
+reg  instr_addr6_prev;
+reg  instr_addr7_prev;
+reg  mem_rd_prev;
+reg  mem_wr_prev;
+
+reg  data_addr0_expected_prev;
+reg  data_addr1_expected_prev;
+reg  data_addr2_expected_prev;
+reg  data_addr3_expected_prev;
+reg  data_addr4_expected_prev;
+reg  data_addr5_expected_prev;
+reg  data_addr6_expected_prev;
+reg  data_addr7_expected_prev;
+reg  data_mem_data_out0_expected_prev;
+reg  data_mem_data_out1_expected_prev;
+reg  data_mem_data_out2_expected_prev;
+reg  data_mem_data_out3_expected_prev;
+reg  data_mem_data_out4_expected_prev;
+reg  data_mem_data_out5_expected_prev;
+reg  data_mem_data_out6_expected_prev;
+reg  data_mem_data_out7_expected_prev;
+reg  data_mem_data_out8_expected_prev;
+reg  data_mem_data_out9_expected_prev;
+reg  data_mem_data_out10_expected_prev;
+reg  data_mem_data_out11_expected_prev;
+reg  data_mem_data_out12_expected_prev;
+reg  data_mem_data_out13_expected_prev;
+reg  data_mem_data_out14_expected_prev;
+reg  data_mem_data_out15_expected_prev;
+reg  instr_addr0_expected_prev;
+reg  instr_addr1_expected_prev;
+reg  instr_addr2_expected_prev;
+reg  instr_addr3_expected_prev;
+reg  instr_addr4_expected_prev;
+reg  instr_addr5_expected_prev;
+reg  instr_addr6_expected_prev;
+reg  instr_addr7_expected_prev;
+reg  mem_rd_expected_prev;
+reg  mem_wr_expected_prev;
+
+reg  last_data_addr0_exp;
+reg  last_data_addr1_exp;
+reg  last_data_addr2_exp;
+reg  last_data_addr3_exp;
+reg  last_data_addr4_exp;
+reg  last_data_addr5_exp;
+reg  last_data_addr6_exp;
+reg  last_data_addr7_exp;
+reg  last_data_mem_data_out0_exp;
+reg  last_data_mem_data_out1_exp;
+reg  last_data_mem_data_out2_exp;
+reg  last_data_mem_data_out3_exp;
+reg  last_data_mem_data_out4_exp;
+reg  last_data_mem_data_out5_exp;
+reg  last_data_mem_data_out6_exp;
+reg  last_data_mem_data_out7_exp;
+reg  last_data_mem_data_out8_exp;
+reg  last_data_mem_data_out9_exp;
+reg  last_data_mem_data_out10_exp;
+reg  last_data_mem_data_out11_exp;
+reg  last_data_mem_data_out12_exp;
+reg  last_data_mem_data_out13_exp;
+reg  last_data_mem_data_out14_exp;
+reg  last_data_mem_data_out15_exp;
+reg  last_instr_addr0_exp;
+reg  last_instr_addr1_exp;
+reg  last_instr_addr2_exp;
+reg  last_instr_addr3_exp;
+reg  last_instr_addr4_exp;
+reg  last_instr_addr5_exp;
+reg  last_instr_addr6_exp;
+reg  last_instr_addr7_exp;
+reg  last_mem_rd_exp;
+reg  last_mem_wr_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:34] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 34'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	data_addr0_prev = data_addr0;
+	data_addr1_prev = data_addr1;
+	data_addr2_prev = data_addr2;
+	data_addr3_prev = data_addr3;
+	data_addr4_prev = data_addr4;
+	data_addr5_prev = data_addr5;
+	data_addr6_prev = data_addr6;
+	data_addr7_prev = data_addr7;
+	data_mem_data_out0_prev = data_mem_data_out0;
+	data_mem_data_out1_prev = data_mem_data_out1;
+	data_mem_data_out2_prev = data_mem_data_out2;
+	data_mem_data_out3_prev = data_mem_data_out3;
+	data_mem_data_out4_prev = data_mem_data_out4;
+	data_mem_data_out5_prev = data_mem_data_out5;
+	data_mem_data_out6_prev = data_mem_data_out6;
+	data_mem_data_out7_prev = data_mem_data_out7;
+	data_mem_data_out8_prev = data_mem_data_out8;
+	data_mem_data_out9_prev = data_mem_data_out9;
+	data_mem_data_out10_prev = data_mem_data_out10;
+	data_mem_data_out11_prev = data_mem_data_out11;
+	data_mem_data_out12_prev = data_mem_data_out12;
+	data_mem_data_out13_prev = data_mem_data_out13;
+	data_mem_data_out14_prev = data_mem_data_out14;
+	data_mem_data_out15_prev = data_mem_data_out15;
+	instr_addr0_prev = instr_addr0;
+	instr_addr1_prev = instr_addr1;
+	instr_addr2_prev = instr_addr2;
+	instr_addr3_prev = instr_addr3;
+	instr_addr4_prev = instr_addr4;
+	instr_addr5_prev = instr_addr5;
+	instr_addr6_prev = instr_addr6;
+	instr_addr7_prev = instr_addr7;
+	mem_rd_prev = mem_rd;
+	mem_wr_prev = mem_wr;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	data_addr0_expected_prev = data_addr0_expected;
+	data_addr1_expected_prev = data_addr1_expected;
+	data_addr2_expected_prev = data_addr2_expected;
+	data_addr3_expected_prev = data_addr3_expected;
+	data_addr4_expected_prev = data_addr4_expected;
+	data_addr5_expected_prev = data_addr5_expected;
+	data_addr6_expected_prev = data_addr6_expected;
+	data_addr7_expected_prev = data_addr7_expected;
+	data_mem_data_out0_expected_prev = data_mem_data_out0_expected;
+	data_mem_data_out1_expected_prev = data_mem_data_out1_expected;
+	data_mem_data_out2_expected_prev = data_mem_data_out2_expected;
+	data_mem_data_out3_expected_prev = data_mem_data_out3_expected;
+	data_mem_data_out4_expected_prev = data_mem_data_out4_expected;
+	data_mem_data_out5_expected_prev = data_mem_data_out5_expected;
+	data_mem_data_out6_expected_prev = data_mem_data_out6_expected;
+	data_mem_data_out7_expected_prev = data_mem_data_out7_expected;
+	data_mem_data_out8_expected_prev = data_mem_data_out8_expected;
+	data_mem_data_out9_expected_prev = data_mem_data_out9_expected;
+	data_mem_data_out10_expected_prev = data_mem_data_out10_expected;
+	data_mem_data_out11_expected_prev = data_mem_data_out11_expected;
+	data_mem_data_out12_expected_prev = data_mem_data_out12_expected;
+	data_mem_data_out13_expected_prev = data_mem_data_out13_expected;
+	data_mem_data_out14_expected_prev = data_mem_data_out14_expected;
+	data_mem_data_out15_expected_prev = data_mem_data_out15_expected;
+	instr_addr0_expected_prev = instr_addr0_expected;
+	instr_addr1_expected_prev = instr_addr1_expected;
+	instr_addr2_expected_prev = instr_addr2_expected;
+	instr_addr3_expected_prev = instr_addr3_expected;
+	instr_addr4_expected_prev = instr_addr4_expected;
+	instr_addr5_expected_prev = instr_addr5_expected;
+	instr_addr6_expected_prev = instr_addr6_expected;
+	instr_addr7_expected_prev = instr_addr7_expected;
+	mem_rd_expected_prev = mem_rd_expected;
+	mem_wr_expected_prev = mem_wr_expected;
+end
+
+
+
+// expected data_addr0
+initial
+begin
+	data_addr0_expected = 1'bX;
+end 
+
+// expected data_addr1
+initial
+begin
+	data_addr1_expected = 1'bX;
+end 
+
+// expected data_addr2
+initial
+begin
+	data_addr2_expected = 1'bX;
+end 
+
+// expected data_addr3
+initial
+begin
+	data_addr3_expected = 1'bX;
+end 
+
+// expected data_addr4
+initial
+begin
+	data_addr4_expected = 1'bX;
+end 
+
+// expected data_addr5
+initial
+begin
+	data_addr5_expected = 1'bX;
+end 
+
+// expected data_addr6
+initial
+begin
+	data_addr6_expected = 1'bX;
+end 
+
+// expected data_addr7
+initial
+begin
+	data_addr7_expected = 1'bX;
+end 
+
+// expected data_mem_data_out0
+initial
+begin
+	data_mem_data_out0_expected = 1'bX;
+end 
+
+// expected data_mem_data_out1
+initial
+begin
+	data_mem_data_out1_expected = 1'bX;
+end 
+
+// expected data_mem_data_out2
+initial
+begin
+	data_mem_data_out2_expected = 1'bX;
+end 
+
+// expected data_mem_data_out3
+initial
+begin
+	data_mem_data_out3_expected = 1'bX;
+end 
+
+// expected data_mem_data_out4
+initial
+begin
+	data_mem_data_out4_expected = 1'bX;
+end 
+
+// expected data_mem_data_out5
+initial
+begin
+	data_mem_data_out5_expected = 1'bX;
+end 
+
+// expected data_mem_data_out6
+initial
+begin
+	data_mem_data_out6_expected = 1'bX;
+end 
+
+// expected data_mem_data_out7
+initial
+begin
+	data_mem_data_out7_expected = 1'bX;
+end 
+
+// expected data_mem_data_out8
+initial
+begin
+	data_mem_data_out8_expected = 1'bX;
+end 
+
+// expected data_mem_data_out9
+initial
+begin
+	data_mem_data_out9_expected = 1'bX;
+end 
+
+// expected data_mem_data_out10
+initial
+begin
+	data_mem_data_out10_expected = 1'bX;
+end 
+
+// expected data_mem_data_out11
+initial
+begin
+	data_mem_data_out11_expected = 1'bX;
+end 
+
+// expected data_mem_data_out12
+initial
+begin
+	data_mem_data_out12_expected = 1'bX;
+end 
+
+// expected data_mem_data_out13
+initial
+begin
+	data_mem_data_out13_expected = 1'bX;
+end 
+
+// expected data_mem_data_out14
+initial
+begin
+	data_mem_data_out14_expected = 1'bX;
+end 
+
+// expected data_mem_data_out15
+initial
+begin
+	data_mem_data_out15_expected = 1'bX;
+end 
+
+// expected instr_addr0
+initial
+begin
+	instr_addr0_expected = 1'bX;
+end 
+
+// expected instr_addr1
+initial
+begin
+	instr_addr1_expected = 1'bX;
+end 
+
+// expected instr_addr2
+initial
+begin
+	instr_addr2_expected = 1'bX;
+end 
+
+// expected instr_addr3
+initial
+begin
+	instr_addr3_expected = 1'bX;
+end 
+
+// expected instr_addr4
+initial
+begin
+	instr_addr4_expected = 1'bX;
+end 
+
+// expected instr_addr5
+initial
+begin
+	instr_addr5_expected = 1'bX;
+end 
+
+// expected instr_addr6
+initial
+begin
+	instr_addr6_expected = 1'bX;
+end 
+
+// expected instr_addr7
+initial
+begin
+	instr_addr7_expected = 1'bX;
+end 
+
+// expected mem_rd
+initial
+begin
+	mem_rd_expected = 1'bX;
+end 
+
+// expected mem_wr
+initial
+begin
+	mem_wr_expected = 1'bX;
+end 
+// generate trigger
+always @(data_addr0_expected or data_addr0 or data_addr1_expected or data_addr1 or data_addr2_expected or data_addr2 or data_addr3_expected or data_addr3 or data_addr4_expected or data_addr4 or data_addr5_expected or data_addr5 or data_addr6_expected or data_addr6 or data_addr7_expected or data_addr7 or data_mem_data_out0_expected or data_mem_data_out0 or data_mem_data_out1_expected or data_mem_data_out1 or data_mem_data_out2_expected or data_mem_data_out2 or data_mem_data_out3_expected or data_mem_data_out3 or data_mem_data_out4_expected or data_mem_data_out4 or data_mem_data_out5_expected or data_mem_data_out5 or data_mem_data_out6_expected or data_mem_data_out6 or data_mem_data_out7_expected or data_mem_data_out7 or data_mem_data_out8_expected or data_mem_data_out8 or data_mem_data_out9_expected or data_mem_data_out9 or data_mem_data_out10_expected or data_mem_data_out10 or data_mem_data_out11_expected or data_mem_data_out11 or data_mem_data_out12_expected or data_mem_data_out12 or data_mem_data_out13_expected or data_mem_data_out13 or data_mem_data_out14_expected or data_mem_data_out14 or data_mem_data_out15_expected or data_mem_data_out15 or instr_addr0_expected or instr_addr0 or instr_addr1_expected or instr_addr1 or instr_addr2_expected or instr_addr2 or instr_addr3_expected or instr_addr3 or instr_addr4_expected or instr_addr4 or instr_addr5_expected or instr_addr5 or instr_addr6_expected or instr_addr6 or instr_addr7_expected or instr_addr7 or mem_rd_expected or mem_rd or mem_wr_expected or mem_wr)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected data_addr0 = %b | expected data_addr1 = %b | expected data_addr2 = %b | expected data_addr3 = %b | expected data_addr4 = %b | expected data_addr5 = %b | expected data_addr6 = %b | expected data_addr7 = %b | expected data_mem_data_out0 = %b | expected data_mem_data_out1 = %b | expected data_mem_data_out2 = %b | expected data_mem_data_out3 = %b | expected data_mem_data_out4 = %b | expected data_mem_data_out5 = %b | expected data_mem_data_out6 = %b | expected data_mem_data_out7 = %b | expected data_mem_data_out8 = %b | expected data_mem_data_out9 = %b | expected data_mem_data_out10 = %b | expected data_mem_data_out11 = %b | expected data_mem_data_out12 = %b | expected data_mem_data_out13 = %b | expected data_mem_data_out14 = %b | expected data_mem_data_out15 = %b | expected instr_addr0 = %b | expected instr_addr1 = %b | expected instr_addr2 = %b | expected instr_addr3 = %b | expected instr_addr4 = %b | expected instr_addr5 = %b | expected instr_addr6 = %b | expected instr_addr7 = %b | expected mem_rd = %b | expected mem_wr = %b | ",data_addr0_expected_prev,data_addr1_expected_prev,data_addr2_expected_prev,data_addr3_expected_prev,data_addr4_expected_prev,data_addr5_expected_prev,data_addr6_expected_prev,data_addr7_expected_prev,data_mem_data_out0_expected_prev,data_mem_data_out1_expected_prev,data_mem_data_out2_expected_prev,data_mem_data_out3_expected_prev,data_mem_data_out4_expected_prev,data_mem_data_out5_expected_prev,data_mem_data_out6_expected_prev,data_mem_data_out7_expected_prev,data_mem_data_out8_expected_prev,data_mem_data_out9_expected_prev,data_mem_data_out10_expected_prev,data_mem_data_out11_expected_prev,data_mem_data_out12_expected_prev,data_mem_data_out13_expected_prev,data_mem_data_out14_expected_prev,data_mem_data_out15_expected_prev,instr_addr0_expected_prev,instr_addr1_expected_prev,instr_addr2_expected_prev,instr_addr3_expected_prev,instr_addr4_expected_prev,instr_addr5_expected_prev,instr_addr6_expected_prev,instr_addr7_expected_prev,mem_rd_expected_prev,mem_wr_expected_prev);
+	$display("| real data_addr0 = %b | real data_addr1 = %b | real data_addr2 = %b | real data_addr3 = %b | real data_addr4 = %b | real data_addr5 = %b | real data_addr6 = %b | real data_addr7 = %b | real data_mem_data_out0 = %b | real data_mem_data_out1 = %b | real data_mem_data_out2 = %b | real data_mem_data_out3 = %b | real data_mem_data_out4 = %b | real data_mem_data_out5 = %b | real data_mem_data_out6 = %b | real data_mem_data_out7 = %b | real data_mem_data_out8 = %b | real data_mem_data_out9 = %b | real data_mem_data_out10 = %b | real data_mem_data_out11 = %b | real data_mem_data_out12 = %b | real data_mem_data_out13 = %b | real data_mem_data_out14 = %b | real data_mem_data_out15 = %b | real instr_addr0 = %b | real instr_addr1 = %b | real instr_addr2 = %b | real instr_addr3 = %b | real instr_addr4 = %b | real instr_addr5 = %b | real instr_addr6 = %b | real instr_addr7 = %b | real mem_rd = %b | real mem_wr = %b | ",data_addr0_prev,data_addr1_prev,data_addr2_prev,data_addr3_prev,data_addr4_prev,data_addr5_prev,data_addr6_prev,data_addr7_prev,data_mem_data_out0_prev,data_mem_data_out1_prev,data_mem_data_out2_prev,data_mem_data_out3_prev,data_mem_data_out4_prev,data_mem_data_out5_prev,data_mem_data_out6_prev,data_mem_data_out7_prev,data_mem_data_out8_prev,data_mem_data_out9_prev,data_mem_data_out10_prev,data_mem_data_out11_prev,data_mem_data_out12_prev,data_mem_data_out13_prev,data_mem_data_out14_prev,data_mem_data_out15_prev,instr_addr0_prev,instr_addr1_prev,instr_addr2_prev,instr_addr3_prev,instr_addr4_prev,instr_addr5_prev,instr_addr6_prev,instr_addr7_prev,mem_rd_prev,mem_wr_prev);
+`endif
+	if (
+		( data_addr0_expected_prev !== 1'bx ) && ( data_addr0_prev !== data_addr0_expected_prev )
+		&& ((data_addr0_expected_prev !== last_data_addr0_exp) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port data_addr0 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", data_addr0_expected_prev);
+		$display ("     Real value = %b", data_addr0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_data_addr0_exp = data_addr0_expected_prev;
+	end
+	if (
+		( data_addr1_expected_prev !== 1'bx ) && ( data_addr1_prev !== data_addr1_expected_prev )
+		&& ((data_addr1_expected_prev !== last_data_addr1_exp) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port data_addr1 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", data_addr1_expected_prev);
+		$display ("     Real value = %b", data_addr1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_data_addr1_exp = data_addr1_expected_prev;
+	end
+	if (
+		( data_addr2_expected_prev !== 1'bx ) && ( data_addr2_prev !== data_addr2_expected_prev )
+		&& ((data_addr2_expected_prev !== last_data_addr2_exp) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port data_addr2 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", data_addr2_expected_prev);
+		$display ("     Real value = %b", data_addr2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_data_addr2_exp = data_addr2_expected_prev;
+	end
+	if (
+		( data_addr3_expected_prev !== 1'bx ) && ( data_addr3_prev !== data_addr3_expected_prev )
+		&& ((data_addr3_expected_prev !== last_data_addr3_exp) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port data_addr3 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", data_addr3_expected_prev);
+		$display ("     Real value = %b", data_addr3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_data_addr3_exp = data_addr3_expected_prev;
+	end
+	if (
+		( data_addr4_expected_prev !== 1'bx ) && ( data_addr4_prev !== data_addr4_expected_prev )
+		&& ((data_addr4_expected_prev !== last_data_addr4_exp) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port data_addr4 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", data_addr4_expected_prev);
+		$display ("     Real value = %b", data_addr4_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_data_addr4_exp = data_addr4_expected_prev;
+	end
+	if (
+		( data_addr5_expected_prev !== 1'bx ) && ( data_addr5_prev !== data_addr5_expected_prev )
+		&& ((data_addr5_expected_prev !== last_data_addr5_exp) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port data_addr5 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", data_addr5_expected_prev);
+		$display ("     Real value = %b", data_addr5_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_data_addr5_exp = data_addr5_expected_prev;
+	end
+	if (
+		( data_addr6_expected_prev !== 1'bx ) && ( data_addr6_prev !== data_addr6_expected_prev )
+		&& ((data_addr6_expected_prev !== last_data_addr6_exp) ||
+			on_first_change[7])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port data_addr6 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", data_addr6_expected_prev);
+		$display ("     Real value = %b", data_addr6_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[7] = 1'b0;
+		last_data_addr6_exp = data_addr6_expected_prev;
+	end
+	if (
+		( data_addr7_expected_prev !== 1'bx ) && ( data_addr7_prev !== data_addr7_expected_prev )
+		&& ((data_addr7_expected_prev !== last_data_addr7_exp) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port data_addr7 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", data_addr7_expected_prev);
+		$display ("     Real value = %b", data_addr7_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_data_addr7_exp = data_addr7_expected_prev;
+	end
+	if (
+		( data_mem_data_out0_expected_prev !== 1'bx ) && ( data_mem_data_out0_prev !== data_mem_data_out0_expected_prev )
+		&& ((data_mem_data_out0_expected_prev !== last_data_mem_data_out0_exp) ||
+			on_first_change[9])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port data_mem_data_out0 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", data_mem_data_out0_expected_prev);
+		$display ("     Real value = %b", data_mem_data_out0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[9] = 1'b0;
+		last_data_mem_data_out0_exp = data_mem_data_out0_expected_prev;
+	end
+	if (
+		( data_mem_data_out1_expected_prev !== 1'bx ) && ( data_mem_data_out1_prev !== data_mem_data_out1_expected_prev )
+		&& ((data_mem_data_out1_expected_prev !== last_data_mem_data_out1_exp) ||
+			on_first_change[10])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port data_mem_data_out1 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", data_mem_data_out1_expected_prev);
+		$display ("     Real value = %b", data_mem_data_out1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[10] = 1'b0;
+		last_data_mem_data_out1_exp = data_mem_data_out1_expected_prev;
+	end
+	if (
+		( data_mem_data_out2_expected_prev !== 1'bx ) && ( data_mem_data_out2_prev !== data_mem_data_out2_expected_prev )
+		&& ((data_mem_data_out2_expected_prev !== last_data_mem_data_out2_exp) ||
+			on_first_change[11])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port data_mem_data_out2 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", data_mem_data_out2_expected_prev);
+		$display ("     Real value = %b", data_mem_data_out2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[11] = 1'b0;
+		last_data_mem_data_out2_exp = data_mem_data_out2_expected_prev;
+	end
+	if (
+		( data_mem_data_out3_expected_prev !== 1'bx ) && ( data_mem_data_out3_prev !== data_mem_data_out3_expected_prev )
+		&& ((data_mem_data_out3_expected_prev !== last_data_mem_data_out3_exp) ||
+			on_first_change[12])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port data_mem_data_out3 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", data_mem_data_out3_expected_prev);
+		$display ("     Real value = %b", data_mem_data_out3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[12] = 1'b0;
+		last_data_mem_data_out3_exp = data_mem_data_out3_expected_prev;
+	end
+	if (
+		( data_mem_data_out4_expected_prev !== 1'bx ) && ( data_mem_data_out4_prev !== data_mem_data_out4_expected_prev )
+		&& ((data_mem_data_out4_expected_prev !== last_data_mem_data_out4_exp) ||
+			on_first_change[13])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port data_mem_data_out4 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", data_mem_data_out4_expected_prev);
+		$display ("     Real value = %b", data_mem_data_out4_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[13] = 1'b0;
+		last_data_mem_data_out4_exp = data_mem_data_out4_expected_prev;
+	end
+	if (
+		( data_mem_data_out5_expected_prev !== 1'bx ) && ( data_mem_data_out5_prev !== data_mem_data_out5_expected_prev )
+		&& ((data_mem_data_out5_expected_prev !== last_data_mem_data_out5_exp) ||
+			on_first_change[14])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port data_mem_data_out5 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", data_mem_data_out5_expected_prev);
+		$display ("     Real value = %b", data_mem_data_out5_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[14] = 1'b0;
+		last_data_mem_data_out5_exp = data_mem_data_out5_expected_prev;
+	end
+	if (
+		( data_mem_data_out6_expected_prev !== 1'bx ) && ( data_mem_data_out6_prev !== data_mem_data_out6_expected_prev )
+		&& ((data_mem_data_out6_expected_prev !== last_data_mem_data_out6_exp) ||
+			on_first_change[15])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port data_mem_data_out6 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", data_mem_data_out6_expected_prev);
+		$display ("     Real value = %b", data_mem_data_out6_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[15] = 1'b0;
+		last_data_mem_data_out6_exp = data_mem_data_out6_expected_prev;
+	end
+	if (
+		( data_mem_data_out7_expected_prev !== 1'bx ) && ( data_mem_data_out7_prev !== data_mem_data_out7_expected_prev )
+		&& ((data_mem_data_out7_expected_prev !== last_data_mem_data_out7_exp) ||
+			on_first_change[16])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port data_mem_data_out7 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", data_mem_data_out7_expected_prev);
+		$display ("     Real value = %b", data_mem_data_out7_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[16] = 1'b0;
+		last_data_mem_data_out7_exp = data_mem_data_out7_expected_prev;
+	end
+	if (
+		( data_mem_data_out8_expected_prev !== 1'bx ) && ( data_mem_data_out8_prev !== data_mem_data_out8_expected_prev )
+		&& ((data_mem_data_out8_expected_prev !== last_data_mem_data_out8_exp) ||
+			on_first_change[17])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port data_mem_data_out8 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", data_mem_data_out8_expected_prev);
+		$display ("     Real value = %b", data_mem_data_out8_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[17] = 1'b0;
+		last_data_mem_data_out8_exp = data_mem_data_out8_expected_prev;
+	end
+	if (
+		( data_mem_data_out9_expected_prev !== 1'bx ) && ( data_mem_data_out9_prev !== data_mem_data_out9_expected_prev )
+		&& ((data_mem_data_out9_expected_prev !== last_data_mem_data_out9_exp) ||
+			on_first_change[18])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port data_mem_data_out9 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", data_mem_data_out9_expected_prev);
+		$display ("     Real value = %b", data_mem_data_out9_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[18] = 1'b0;
+		last_data_mem_data_out9_exp = data_mem_data_out9_expected_prev;
+	end
+	if (
+		( data_mem_data_out10_expected_prev !== 1'bx ) && ( data_mem_data_out10_prev !== data_mem_data_out10_expected_prev )
+		&& ((data_mem_data_out10_expected_prev !== last_data_mem_data_out10_exp) ||
+			on_first_change[19])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port data_mem_data_out10 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", data_mem_data_out10_expected_prev);
+		$display ("     Real value = %b", data_mem_data_out10_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[19] = 1'b0;
+		last_data_mem_data_out10_exp = data_mem_data_out10_expected_prev;
+	end
+	if (
+		( data_mem_data_out11_expected_prev !== 1'bx ) && ( data_mem_data_out11_prev !== data_mem_data_out11_expected_prev )
+		&& ((data_mem_data_out11_expected_prev !== last_data_mem_data_out11_exp) ||
+			on_first_change[20])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port data_mem_data_out11 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", data_mem_data_out11_expected_prev);
+		$display ("     Real value = %b", data_mem_data_out11_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[20] = 1'b0;
+		last_data_mem_data_out11_exp = data_mem_data_out11_expected_prev;
+	end
+	if (
+		( data_mem_data_out12_expected_prev !== 1'bx ) && ( data_mem_data_out12_prev !== data_mem_data_out12_expected_prev )
+		&& ((data_mem_data_out12_expected_prev !== last_data_mem_data_out12_exp) ||
+			on_first_change[21])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port data_mem_data_out12 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", data_mem_data_out12_expected_prev);
+		$display ("     Real value = %b", data_mem_data_out12_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[21] = 1'b0;
+		last_data_mem_data_out12_exp = data_mem_data_out12_expected_prev;
+	end
+	if (
+		( data_mem_data_out13_expected_prev !== 1'bx ) && ( data_mem_data_out13_prev !== data_mem_data_out13_expected_prev )
+		&& ((data_mem_data_out13_expected_prev !== last_data_mem_data_out13_exp) ||
+			on_first_change[22])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port data_mem_data_out13 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", data_mem_data_out13_expected_prev);
+		$display ("     Real value = %b", data_mem_data_out13_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[22] = 1'b0;
+		last_data_mem_data_out13_exp = data_mem_data_out13_expected_prev;
+	end
+	if (
+		( data_mem_data_out14_expected_prev !== 1'bx ) && ( data_mem_data_out14_prev !== data_mem_data_out14_expected_prev )
+		&& ((data_mem_data_out14_expected_prev !== last_data_mem_data_out14_exp) ||
+			on_first_change[23])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port data_mem_data_out14 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", data_mem_data_out14_expected_prev);
+		$display ("     Real value = %b", data_mem_data_out14_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[23] = 1'b0;
+		last_data_mem_data_out14_exp = data_mem_data_out14_expected_prev;
+	end
+	if (
+		( data_mem_data_out15_expected_prev !== 1'bx ) && ( data_mem_data_out15_prev !== data_mem_data_out15_expected_prev )
+		&& ((data_mem_data_out15_expected_prev !== last_data_mem_data_out15_exp) ||
+			on_first_change[24])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port data_mem_data_out15 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", data_mem_data_out15_expected_prev);
+		$display ("     Real value = %b", data_mem_data_out15_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[24] = 1'b0;
+		last_data_mem_data_out15_exp = data_mem_data_out15_expected_prev;
+	end
+	if (
+		( instr_addr0_expected_prev !== 1'bx ) && ( instr_addr0_prev !== instr_addr0_expected_prev )
+		&& ((instr_addr0_expected_prev !== last_instr_addr0_exp) ||
+			on_first_change[25])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port instr_addr0 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", instr_addr0_expected_prev);
+		$display ("     Real value = %b", instr_addr0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[25] = 1'b0;
+		last_instr_addr0_exp = instr_addr0_expected_prev;
+	end
+	if (
+		( instr_addr1_expected_prev !== 1'bx ) && ( instr_addr1_prev !== instr_addr1_expected_prev )
+		&& ((instr_addr1_expected_prev !== last_instr_addr1_exp) ||
+			on_first_change[26])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port instr_addr1 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", instr_addr1_expected_prev);
+		$display ("     Real value = %b", instr_addr1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[26] = 1'b0;
+		last_instr_addr1_exp = instr_addr1_expected_prev;
+	end
+	if (
+		( instr_addr2_expected_prev !== 1'bx ) && ( instr_addr2_prev !== instr_addr2_expected_prev )
+		&& ((instr_addr2_expected_prev !== last_instr_addr2_exp) ||
+			on_first_change[27])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port instr_addr2 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", instr_addr2_expected_prev);
+		$display ("     Real value = %b", instr_addr2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[27] = 1'b0;
+		last_instr_addr2_exp = instr_addr2_expected_prev;
+	end
+	if (
+		( instr_addr3_expected_prev !== 1'bx ) && ( instr_addr3_prev !== instr_addr3_expected_prev )
+		&& ((instr_addr3_expected_prev !== last_instr_addr3_exp) ||
+			on_first_change[28])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port instr_addr3 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", instr_addr3_expected_prev);
+		$display ("     Real value = %b", instr_addr3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[28] = 1'b0;
+		last_instr_addr3_exp = instr_addr3_expected_prev;
+	end
+	if (
+		( instr_addr4_expected_prev !== 1'bx ) && ( instr_addr4_prev !== instr_addr4_expected_prev )
+		&& ((instr_addr4_expected_prev !== last_instr_addr4_exp) ||
+			on_first_change[29])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port instr_addr4 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", instr_addr4_expected_prev);
+		$display ("     Real value = %b", instr_addr4_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[29] = 1'b0;
+		last_instr_addr4_exp = instr_addr4_expected_prev;
+	end
+	if (
+		( instr_addr5_expected_prev !== 1'bx ) && ( instr_addr5_prev !== instr_addr5_expected_prev )
+		&& ((instr_addr5_expected_prev !== last_instr_addr5_exp) ||
+			on_first_change[30])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port instr_addr5 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", instr_addr5_expected_prev);
+		$display ("     Real value = %b", instr_addr5_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[30] = 1'b0;
+		last_instr_addr5_exp = instr_addr5_expected_prev;
+	end
+	if (
+		( instr_addr6_expected_prev !== 1'bx ) && ( instr_addr6_prev !== instr_addr6_expected_prev )
+		&& ((instr_addr6_expected_prev !== last_instr_addr6_exp) ||
+			on_first_change[31])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port instr_addr6 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", instr_addr6_expected_prev);
+		$display ("     Real value = %b", instr_addr6_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[31] = 1'b0;
+		last_instr_addr6_exp = instr_addr6_expected_prev;
+	end
+	if (
+		( instr_addr7_expected_prev !== 1'bx ) && ( instr_addr7_prev !== instr_addr7_expected_prev )
+		&& ((instr_addr7_expected_prev !== last_instr_addr7_exp) ||
+			on_first_change[32])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port instr_addr7 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", instr_addr7_expected_prev);
+		$display ("     Real value = %b", instr_addr7_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[32] = 1'b0;
+		last_instr_addr7_exp = instr_addr7_expected_prev;
+	end
+	if (
+		( mem_rd_expected_prev !== 1'bx ) && ( mem_rd_prev !== mem_rd_expected_prev )
+		&& ((mem_rd_expected_prev !== last_mem_rd_exp) ||
+			on_first_change[33])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port mem_rd :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", mem_rd_expected_prev);
+		$display ("     Real value = %b", mem_rd_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[33] = 1'b0;
+		last_mem_rd_exp = mem_rd_expected_prev;
+	end
+	if (
+		( mem_wr_expected_prev !== 1'bx ) && ( mem_wr_prev !== mem_wr_expected_prev )
+		&& ((mem_wr_expected_prev !== last_mem_wr_exp) ||
+			on_first_change[34])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port mem_wr :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", mem_wr_expected_prev);
+		$display ("     Real value = %b", mem_wr_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[34] = 1'b0;
+		last_mem_wr_exp = mem_wr_expected_prev;
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#1000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module Processador_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg clk;
+reg data_mem_data_in0;
+reg data_mem_data_in1;
+reg data_mem_data_in2;
+reg data_mem_data_in3;
+reg data_mem_data_in4;
+reg data_mem_data_in5;
+reg data_mem_data_in6;
+reg data_mem_data_in7;
+reg data_mem_data_in8;
+reg data_mem_data_in9;
+reg data_mem_data_in10;
+reg data_mem_data_in11;
+reg data_mem_data_in12;
+reg data_mem_data_in13;
+reg data_mem_data_in14;
+reg data_mem_data_in15;
+reg instr_mem_data0;
+reg instr_mem_data1;
+reg instr_mem_data2;
+reg instr_mem_data3;
+reg instr_mem_data4;
+reg instr_mem_data5;
+reg instr_mem_data6;
+reg instr_mem_data7;
+reg instr_mem_data8;
+reg instr_mem_data9;
+reg instr_mem_data10;
+reg instr_mem_data11;
+reg instr_mem_data12;
+reg instr_mem_data13;
+reg instr_mem_data14;
+reg instr_mem_data15;
+reg rst;
+// wires                                               
+wire data_addr0;
+wire data_addr1;
+wire data_addr2;
+wire data_addr3;
+wire data_addr4;
+wire data_addr5;
+wire data_addr6;
+wire data_addr7;
+wire data_mem_data_out0;
+wire data_mem_data_out1;
+wire data_mem_data_out2;
+wire data_mem_data_out3;
+wire data_mem_data_out4;
+wire data_mem_data_out5;
+wire data_mem_data_out6;
+wire data_mem_data_out7;
+wire data_mem_data_out8;
+wire data_mem_data_out9;
+wire data_mem_data_out10;
+wire data_mem_data_out11;
+wire data_mem_data_out12;
+wire data_mem_data_out13;
+wire data_mem_data_out14;
+wire data_mem_data_out15;
+wire instr_addr0;
+wire instr_addr1;
+wire instr_addr2;
+wire instr_addr3;
+wire instr_addr4;
+wire instr_addr5;
+wire instr_addr6;
+wire instr_addr7;
+wire mem_rd;
+wire mem_wr;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+Processador i1 (
+// port map - connection between master ports and signals/registers   
+	.clk(clk),
+	.data_addr0(data_addr0),
+	.data_addr1(data_addr1),
+	.data_addr2(data_addr2),
+	.data_addr3(data_addr3),
+	.data_addr4(data_addr4),
+	.data_addr5(data_addr5),
+	.data_addr6(data_addr6),
+	.data_addr7(data_addr7),
+	.data_mem_data_in0(data_mem_data_in0),
+	.data_mem_data_in1(data_mem_data_in1),
+	.data_mem_data_in2(data_mem_data_in2),
+	.data_mem_data_in3(data_mem_data_in3),
+	.data_mem_data_in4(data_mem_data_in4),
+	.data_mem_data_in5(data_mem_data_in5),
+	.data_mem_data_in6(data_mem_data_in6),
+	.data_mem_data_in7(data_mem_data_in7),
+	.data_mem_data_in8(data_mem_data_in8),
+	.data_mem_data_in9(data_mem_data_in9),
+	.data_mem_data_in10(data_mem_data_in10),
+	.data_mem_data_in11(data_mem_data_in11),
+	.data_mem_data_in12(data_mem_data_in12),
+	.data_mem_data_in13(data_mem_data_in13),
+	.data_mem_data_in14(data_mem_data_in14),
+	.data_mem_data_in15(data_mem_data_in15),
+	.data_mem_data_out0(data_mem_data_out0),
+	.data_mem_data_out1(data_mem_data_out1),
+	.data_mem_data_out2(data_mem_data_out2),
+	.data_mem_data_out3(data_mem_data_out3),
+	.data_mem_data_out4(data_mem_data_out4),
+	.data_mem_data_out5(data_mem_data_out5),
+	.data_mem_data_out6(data_mem_data_out6),
+	.data_mem_data_out7(data_mem_data_out7),
+	.data_mem_data_out8(data_mem_data_out8),
+	.data_mem_data_out9(data_mem_data_out9),
+	.data_mem_data_out10(data_mem_data_out10),
+	.data_mem_data_out11(data_mem_data_out11),
+	.data_mem_data_out12(data_mem_data_out12),
+	.data_mem_data_out13(data_mem_data_out13),
+	.data_mem_data_out14(data_mem_data_out14),
+	.data_mem_data_out15(data_mem_data_out15),
+	.instr_addr0(instr_addr0),
+	.instr_addr1(instr_addr1),
+	.instr_addr2(instr_addr2),
+	.instr_addr3(instr_addr3),
+	.instr_addr4(instr_addr4),
+	.instr_addr5(instr_addr5),
+	.instr_addr6(instr_addr6),
+	.instr_addr7(instr_addr7),
+	.instr_mem_data0(instr_mem_data0),
+	.instr_mem_data1(instr_mem_data1),
+	.instr_mem_data2(instr_mem_data2),
+	.instr_mem_data3(instr_mem_data3),
+	.instr_mem_data4(instr_mem_data4),
+	.instr_mem_data5(instr_mem_data5),
+	.instr_mem_data6(instr_mem_data6),
+	.instr_mem_data7(instr_mem_data7),
+	.instr_mem_data8(instr_mem_data8),
+	.instr_mem_data9(instr_mem_data9),
+	.instr_mem_data10(instr_mem_data10),
+	.instr_mem_data11(instr_mem_data11),
+	.instr_mem_data12(instr_mem_data12),
+	.instr_mem_data13(instr_mem_data13),
+	.instr_mem_data14(instr_mem_data14),
+	.instr_mem_data15(instr_mem_data15),
+	.mem_rd(mem_rd),
+	.mem_wr(mem_wr),
+	.rst(rst)
+);
+
+// clk
+always
+begin
+	clk = 1'b0;
+	clk = #5000 1'b1;
+	#5000;
+end 
+
+// data_mem_data_in0
+initial
+begin
+	data_mem_data_in0 = 1'b0;
+end 
+
+// data_mem_data_in1
+initial
+begin
+	data_mem_data_in1 = 1'b0;
+end 
+
+// data_mem_data_in2
+initial
+begin
+	data_mem_data_in2 = 1'b0;
+end 
+
+// data_mem_data_in3
+initial
+begin
+	data_mem_data_in3 = 1'b0;
+end 
+
+// data_mem_data_in4
+initial
+begin
+	data_mem_data_in4 = 1'b0;
+end 
+
+// data_mem_data_in5
+initial
+begin
+	data_mem_data_in5 = 1'b0;
+end 
+
+// data_mem_data_in6
+initial
+begin
+	data_mem_data_in6 = 1'b0;
+end 
+
+// data_mem_data_in7
+initial
+begin
+	data_mem_data_in7 = 1'b0;
+end 
+
+// data_mem_data_in8
+initial
+begin
+	data_mem_data_in8 = 1'b0;
+end 
+
+// data_mem_data_in9
+initial
+begin
+	data_mem_data_in9 = 1'b0;
+end 
+
+// data_mem_data_in10
+initial
+begin
+	data_mem_data_in10 = 1'b0;
+end 
+
+// data_mem_data_in11
+initial
+begin
+	data_mem_data_in11 = 1'b0;
+end 
+
+// data_mem_data_in12
+initial
+begin
+	data_mem_data_in12 = 1'b0;
+end 
+
+// data_mem_data_in13
+initial
+begin
+	data_mem_data_in13 = 1'b0;
+end 
+
+// data_mem_data_in14
+initial
+begin
+	data_mem_data_in14 = 1'b0;
+end 
+
+// data_mem_data_in15
+initial
+begin
+	data_mem_data_in15 = 1'b0;
+end 
+
+// instr_mem_data0
+initial
+begin
+	instr_mem_data0 = 1'b0;
+end 
+
+// instr_mem_data1
+initial
+begin
+	instr_mem_data1 = 1'b0;
+end 
+
+// instr_mem_data2
+initial
+begin
+	instr_mem_data2 = 1'b0;
+end 
+
+// instr_mem_data3
+initial
+begin
+	instr_mem_data3 = 1'b0;
+end 
+
+// instr_mem_data4
+initial
+begin
+	instr_mem_data4 = 1'b0;
+end 
+
+// instr_mem_data5
+initial
+begin
+	instr_mem_data5 = 1'b0;
+end 
+
+// instr_mem_data6
+initial
+begin
+	instr_mem_data6 = 1'b0;
+end 
+
+// instr_mem_data7
+initial
+begin
+	instr_mem_data7 = 1'b0;
+end 
+
+// instr_mem_data8
+initial
+begin
+	instr_mem_data8 = 1'b0;
+end 
+
+// instr_mem_data9
+initial
+begin
+	instr_mem_data9 = 1'b0;
+end 
+
+// instr_mem_data10
+initial
+begin
+	instr_mem_data10 = 1'b0;
+end 
+
+// instr_mem_data11
+initial
+begin
+	instr_mem_data11 = 1'b0;
+end 
+
+// instr_mem_data12
+initial
+begin
+	instr_mem_data12 = 1'b0;
+end 
+
+// instr_mem_data13
+initial
+begin
+	instr_mem_data13 = 1'b0;
+end 
+
+// instr_mem_data14
+initial
+begin
+	instr_mem_data14 = 1'b0;
+end 
+
+// instr_mem_data15
+initial
+begin
+	instr_mem_data15 = 1'b0;
+end 
+
+// rst
+initial
+begin
+	rst = 1'b0;
+end 
+
+Processador_vlg_sample_tst tb_sample (
+	.clk(clk),
+	.data_mem_data_in0(data_mem_data_in0),
+	.data_mem_data_in1(data_mem_data_in1),
+	.data_mem_data_in2(data_mem_data_in2),
+	.data_mem_data_in3(data_mem_data_in3),
+	.data_mem_data_in4(data_mem_data_in4),
+	.data_mem_data_in5(data_mem_data_in5),
+	.data_mem_data_in6(data_mem_data_in6),
+	.data_mem_data_in7(data_mem_data_in7),
+	.data_mem_data_in8(data_mem_data_in8),
+	.data_mem_data_in9(data_mem_data_in9),
+	.data_mem_data_in10(data_mem_data_in10),
+	.data_mem_data_in11(data_mem_data_in11),
+	.data_mem_data_in12(data_mem_data_in12),
+	.data_mem_data_in13(data_mem_data_in13),
+	.data_mem_data_in14(data_mem_data_in14),
+	.data_mem_data_in15(data_mem_data_in15),
+	.instr_mem_data0(instr_mem_data0),
+	.instr_mem_data1(instr_mem_data1),
+	.instr_mem_data2(instr_mem_data2),
+	.instr_mem_data3(instr_mem_data3),
+	.instr_mem_data4(instr_mem_data4),
+	.instr_mem_data5(instr_mem_data5),
+	.instr_mem_data6(instr_mem_data6),
+	.instr_mem_data7(instr_mem_data7),
+	.instr_mem_data8(instr_mem_data8),
+	.instr_mem_data9(instr_mem_data9),
+	.instr_mem_data10(instr_mem_data10),
+	.instr_mem_data11(instr_mem_data11),
+	.instr_mem_data12(instr_mem_data12),
+	.instr_mem_data13(instr_mem_data13),
+	.instr_mem_data14(instr_mem_data14),
+	.instr_mem_data15(instr_mem_data15),
+	.rst(rst),
+	.sampler_tx(sampler)
+);
+
+Processador_vlg_check_tst tb_out(
+	.data_addr0(data_addr0),
+	.data_addr1(data_addr1),
+	.data_addr2(data_addr2),
+	.data_addr3(data_addr3),
+	.data_addr4(data_addr4),
+	.data_addr5(data_addr5),
+	.data_addr6(data_addr6),
+	.data_addr7(data_addr7),
+	.data_mem_data_out0(data_mem_data_out0),
+	.data_mem_data_out1(data_mem_data_out1),
+	.data_mem_data_out2(data_mem_data_out2),
+	.data_mem_data_out3(data_mem_data_out3),
+	.data_mem_data_out4(data_mem_data_out4),
+	.data_mem_data_out5(data_mem_data_out5),
+	.data_mem_data_out6(data_mem_data_out6),
+	.data_mem_data_out7(data_mem_data_out7),
+	.data_mem_data_out8(data_mem_data_out8),
+	.data_mem_data_out9(data_mem_data_out9),
+	.data_mem_data_out10(data_mem_data_out10),
+	.data_mem_data_out11(data_mem_data_out11),
+	.data_mem_data_out12(data_mem_data_out12),
+	.data_mem_data_out13(data_mem_data_out13),
+	.data_mem_data_out14(data_mem_data_out14),
+	.data_mem_data_out15(data_mem_data_out15),
+	.instr_addr0(instr_addr0),
+	.instr_addr1(instr_addr1),
+	.instr_addr2(instr_addr2),
+	.instr_addr3(instr_addr3),
+	.instr_addr4(instr_addr4),
+	.instr_addr5(instr_addr5),
+	.instr_addr6(instr_addr6),
+	.instr_addr7(instr_addr7),
+	.mem_rd(mem_rd),
+	.mem_wr(mem_wr),
+	.sampler_rx(sampler)
+);
+endmodule
+
