@@ -5,7 +5,7 @@ entity Reg16Bits is
     port(
         clk, rst, ld: in bit;
         d15, d14, d13, d12, d11, d10, d9, d8, d7, d6, d5, d4, d3, d2, d1, d0: in bit;
-        q15, q14, q13, q12, q11, q10, q9, q8, q7, q6, q5, q4, q3, q2, q1, q0: buffer bit -- buffer permite leitura recursiva do q anterior
+        q15, q14, q13, q12, q11, q10, q9, q8, q7, q6, q5, q4, q3, q2, q1, q0: buffer bit -- buffer permite escrita interna, enquanto in é read only
     );
 end;
 

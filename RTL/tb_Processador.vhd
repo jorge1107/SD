@@ -59,14 +59,11 @@ architecture sim of tb_Processador is
     component Processador is
         port(
             clk, rst: in bit;
-            instr_mem_data15, instr_mem_data14, instr_mem_data13, instr_mem_data12, instr_mem_data11, instr_mem_data10, instr_mem_data9, instr_mem_data8,
-            instr_mem_data7, instr_mem_data6, instr_mem_data5, instr_mem_data4, instr_mem_data3, instr_mem_data2, instr_mem_data1, instr_mem_data0: in bit;
-            data_mem_data_in15, data_mem_data_in14, data_mem_data_in13, data_mem_data_in12, data_mem_data_in11, data_mem_data_in10, data_mem_data_in9, data_mem_data_in8,
-            data_mem_data_in7, data_mem_data_in6, data_mem_data_in5, data_mem_data_in4, data_mem_data_in3, data_mem_data_in2, data_mem_data_in1, data_mem_data_in0: in bit;
+            instr_mem_data15, instr_mem_data14, instr_mem_data13, instr_mem_data12, instr_mem_data11, instr_mem_data10, instr_mem_data9, instr_mem_data8, instr_mem_data7, instr_mem_data6, instr_mem_data5, instr_mem_data4, instr_mem_data3, instr_mem_data2, instr_mem_data1, instr_mem_data0: in bit;
+            data_mem_data_in15, data_mem_data_in14, data_mem_data_in13, data_mem_data_in12, data_mem_data_in11, data_mem_data_in10, data_mem_data_in9, data_mem_data_in8, data_mem_data_in7, data_mem_data_in6, data_mem_data_in5, data_mem_data_in4, data_mem_data_in3, data_mem_data_in2, data_mem_data_in1, data_mem_data_in0: in bit;
             instr_addr7, instr_addr6, instr_addr5, instr_addr4, instr_addr3, instr_addr2, instr_addr1, instr_addr0: out bit;
             data_addr7, data_addr6, data_addr5, data_addr4, data_addr3, data_addr2, data_addr1, data_addr0: out bit;
-            data_mem_data_out15, data_mem_data_out14, data_mem_data_out13, data_mem_data_out12, data_mem_data_out11, data_mem_data_out10, data_mem_data_out9, data_mem_data_out8,
-            data_mem_data_out7, data_mem_data_out6, data_mem_data_out5, data_mem_data_out4, data_mem_data_out3, data_mem_data_out2, data_mem_data_out1, data_mem_data_out0: out bit;
+            data_mem_data_out15, data_mem_data_out14, data_mem_data_out13, data_mem_data_out12, data_mem_data_out11, data_mem_data_out10, data_mem_data_out9, data_mem_data_out8, data_mem_data_out7, data_mem_data_out6, data_mem_data_out5, data_mem_data_out4, data_mem_data_out3, data_mem_data_out2, data_mem_data_out1, data_mem_data_out0: out bit;
             mem_rd, mem_wr: out bit
         );
     end component;
@@ -74,71 +71,11 @@ architecture sim of tb_Processador is
 begin
 
     dut: Processador port map(
-        clk=>clk, rst=>rst,
-        instr_mem_data15=>instr_data(15),
-        instr_mem_data14=>instr_data(14),
-        instr_mem_data13=>instr_data(13),
-        instr_mem_data12=>instr_data(12),
-        instr_mem_data11=>instr_data(11),
-        instr_mem_data10=>instr_data(10),
-        instr_mem_data9=>instr_data(9),
-        instr_mem_data8=>instr_data(8),
-        instr_mem_data7=>instr_data(7),
-        instr_mem_data6=>instr_data(6),
-        instr_mem_data5=>instr_data(5),
-        instr_mem_data4=>instr_data(4),
-        instr_mem_data3=>instr_data(3),
-        instr_mem_data2=>instr_data(2),
-        instr_mem_data1=>instr_data(1),
-        instr_mem_data0=>instr_data(0),
-        data_mem_data_in15=>ddata_in(15),
-        data_mem_data_in14=>ddata_in(14),
-        data_mem_data_in13=>ddata_in(13),
-        data_mem_data_in12=>ddata_in(12),
-        data_mem_data_in11=>ddata_in(11),
-        data_mem_data_in10=>ddata_in(10),
-        data_mem_data_in9=>ddata_in(9),
-        data_mem_data_in8=>ddata_in(8),
-        data_mem_data_in7=>ddata_in(7),
-        data_mem_data_in6=>ddata_in(6),
-        data_mem_data_in5=>ddata_in(5),
-        data_mem_data_in4=>ddata_in(4),
-        data_mem_data_in3=>ddata_in(3),
-        data_mem_data_in2=>ddata_in(2),
-        data_mem_data_in1=>ddata_in(1),
-        data_mem_data_in0=>ddata_in(0),
-        instr_addr7=>iaddr(7),
-        instr_addr6=>iaddr(6),
-        instr_addr5=>iaddr(5),
-        instr_addr4=>iaddr(4),
-        instr_addr3=>iaddr(3),
-        instr_addr2=>iaddr(2),
-        instr_addr1=>iaddr(1),
-        instr_addr0=>iaddr(0),
-        data_addr7=>daddr(7),
-        data_addr6=>daddr(6),
-        data_addr5=>daddr(5),
-        data_addr4=>daddr(4),
-        data_addr3=>daddr(3),
-        data_addr2=>daddr(2),
-        data_addr1=>daddr(1),
-        data_addr0=>daddr(0),
-        data_mem_data_out15=>ddata_out(15),
-        data_mem_data_out14=>ddata_out(14),
-        data_mem_data_out13=>ddata_out(13),
-        data_mem_data_out12=>ddata_out(12),
-        data_mem_data_out11=>ddata_out(11),
-        data_mem_data_out10=>ddata_out(10),
-        data_mem_data_out9=>ddata_out(9),
-        data_mem_data_out8=>ddata_out(8),
-        data_mem_data_out7=>ddata_out(7),
-        data_mem_data_out6=>ddata_out(6),
-        data_mem_data_out5=>ddata_out(5),
-        data_mem_data_out4=>ddata_out(4),
-        data_mem_data_out3=>ddata_out(3),
-        data_mem_data_out2=>ddata_out(2),
-        data_mem_data_out1=>ddata_out(1),
-        data_mem_data_out0=>ddata_out(0),
+        clk=>clk, rst=>rst, 
+        instr_mem_data15=>instr_data(15), instr_mem_data14=>instr_data(14), instr_mem_data13=>instr_data(13), instr_mem_data12=>instr_data(12), instr_mem_data11=>instr_data(11), instr_mem_data10=>instr_data(10), instr_mem_data9=>instr_data(9), instr_mem_data8=>instr_data(8), instr_mem_data7=>instr_data(7), instr_mem_data6=>instr_data(6), instr_mem_data5=>instr_data(5), instr_mem_data4=>instr_data(4), instr_mem_data3=>instr_data(3), instr_mem_data2=>instr_data(2), instr_mem_data1=>instr_data(1), instr_mem_data0=>instr_data(0),
+        data_mem_data_in15=>ddata_in(15), data_mem_data_in14=>ddata_in(14), data_mem_data_in13=>ddata_in(13), data_mem_data_in12=>ddata_in(12), data_mem_data_in11=>ddata_in(11), data_mem_data_in10=>ddata_in(10), data_mem_data_in9=>ddata_in(9), data_mem_data_in8=>ddata_in(8), data_mem_data_in7=>ddata_in(7), data_mem_data_in6=>ddata_in(6), data_mem_data_in5=>ddata_in(5), data_mem_data_in4=>ddata_in(4), data_mem_data_in3=>ddata_in(3), data_mem_data_in2=>ddata_in(2), data_mem_data_in1=>ddata_in(1), data_mem_data_in0=>ddata_in(0),
+        instr_addr7=>iaddr(7), instr_addr6=>iaddr(6), instr_addr5=>iaddr(5), instr_addr4=>iaddr(4), instr_addr3=>iaddr(3), instr_addr2=>iaddr(2), instr_addr1=>iaddr(1), instr_addr0=>iaddr(0), data_addr7=>daddr(7), data_addr6=>daddr(6), data_addr5=>daddr(5), data_addr4=>daddr(4), data_addr3=>daddr(3), data_addr2=>daddr(2), data_addr1=>daddr(1), data_addr0=>daddr(0),
+        data_mem_data_out15=>ddata_out(15), data_mem_data_out14=>ddata_out(14), data_mem_data_out13=>ddata_out(13), data_mem_data_out12=>ddata_out(12), data_mem_data_out11=>ddata_out(11), data_mem_data_out10=>ddata_out(10), data_mem_data_out9=>ddata_out(9), data_mem_data_out8=>ddata_out(8), data_mem_data_out7=>ddata_out(7), data_mem_data_out6=>ddata_out(6), data_mem_data_out5=>ddata_out(5), data_mem_data_out4=>ddata_out(4), data_mem_data_out3=>ddata_out(3), data_mem_data_out2=>ddata_out(2), data_mem_data_out1=>ddata_out(1), data_mem_data_out0=>ddata_out(0),
         mem_rd=>mem_rd, mem_wr=>mem_wr
     );
 

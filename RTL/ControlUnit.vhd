@@ -36,20 +36,18 @@ begin
     is_exec  <= is_alu or is_immed;
     is_mem   <= is_load or is_store;
     
-    -- Lógica de próximo estado (corrigida)
+    
     -- FETCH(000) -> DECODE(001)
     -- DECODE(001) -> EXEC(010) se is_exec; -> MEM(011) se is_mem
     -- EXEC(010)   -> WB(100)
     -- MEM(011)    -> WB(100) se is_load; -> FETCH(000) se is_store
     -- WB(100)     -> FETCH(000)
     
-    n2 <= (not s2 and s1 and not s0) or 
-          (not s2 and s1 and s0 and is_load);
+    n2 <= (not s2 and s1 and not s0) or (not s2 and s1 and s0 and is_load);
           
     n1 <= (not s2 and not s1 and s0 and (is_exec or is_mem));
           
-    n0 <= (not s2 and not s1 and not s0) or 
-          (not s2 and not s1 and s0 and is_mem);
+    n0 <= (not s2 and not s1 and not s0) or (not s2 and not s1 and s0 and is_mem);
     
     -- Sinais de controle
     pc_inc  <= not s2 and not s1 and not s0;
