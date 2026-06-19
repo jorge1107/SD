@@ -33,12 +33,12 @@ architecture structural of datapath is
     -- Vetores internos para facilitar interconexão
     signal instr_in_vec, data_in_vec: bit_vector(15 downto 0);
     signal pc_vec, pc_next_vec: bit_vector(15 downto 0);
-    signal ir_vec: bit_vector(15 downto 0);
+    signal ir_vec : bit_vector(15 downto 0);
     signal rf_rd_vec, rf_ra_vec, rf_rb_vec: bit_vector(3 downto 0);
     signal rf_ra_data, rf_rb_data, rf_wd_data: bit_vector(15 downto 0);
     signal ula_a_vec, ula_b_vec, ula_s_vec: bit_vector(15 downto 0);
     signal shifter_s_vec, ula_shifter_res: bit_vector(15 downto 0);
-    signal cmp_res_vec: bit_vector(15 downto 0);
+    signal cmp_res_vec : bit_vector(15 downto 0);
     signal imm4_vec, imm8_vec: bit_vector(15 downto 0);
     signal use_shifter, is_addi, cmp_gt, cmp_eq, cmp_lt: bit;
     

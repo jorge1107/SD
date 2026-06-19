@@ -952,7 +952,11 @@ TRANSITION_LIST("data_addr0")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 135.0;
+		LEVEL 1 FOR 360.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 425.0;
 	}
 }
 TRANSITION_LIST("data_addr1")
@@ -968,7 +972,11 @@ TRANSITION_LIST("data_addr2")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 135.0;
+		LEVEL 1 FOR 360.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 425.0;
 	}
 }
 TRANSITION_LIST("data_addr3")
@@ -1056,7 +1064,9 @@ TRANSITION_LIST("data_mem_data_in5")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 450.0;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 470.0;
 	}
 }
 TRANSITION_LIST("data_mem_data_in6")
@@ -1096,7 +1106,9 @@ TRANSITION_LIST("data_mem_data_in10")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 490.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 470.0;
 	}
 }
 TRANSITION_LIST("data_mem_data_in11")
@@ -1104,7 +1116,9 @@ TRANSITION_LIST("data_mem_data_in11")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 450.0;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 470.0;
 	}
 }
 TRANSITION_LIST("data_mem_data_in12")
@@ -1112,7 +1126,9 @@ TRANSITION_LIST("data_mem_data_in12")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 450.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 510.0;
 	}
 }
 TRANSITION_LIST("data_mem_data_in13")
@@ -1136,7 +1152,9 @@ TRANSITION_LIST("data_mem_data_in15")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 450.0;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 470.0;
 	}
 }
 TRANSITION_LIST("data_mem_data_out0")
@@ -1144,7 +1162,11 @@ TRANSITION_LIST("data_mem_data_out0")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 135.0;
+		LEVEL 1 FOR 240.0;
+		LEVEL 0 FOR 160.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 425.0;
 	}
 }
 TRANSITION_LIST("data_mem_data_out1")
@@ -1152,7 +1174,11 @@ TRANSITION_LIST("data_mem_data_out1")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 135.0;
+		LEVEL 1 FOR 240.0;
+		LEVEL 0 FOR 160.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 425.0;
 	}
 }
 TRANSITION_LIST("data_mem_data_out2")
@@ -1272,7 +1298,7 @@ TRANSITION_LIST("instr_addr0")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 5.0;
+		LEVEL 0 FOR 15.0;
 		LEVEL 1 FOR 40.0;
 		LEVEL 0 FOR 40.0;
 		LEVEL 1 FOR 40.0;
@@ -1297,7 +1323,7 @@ TRANSITION_LIST("instr_addr0")
 		LEVEL 0 FOR 40.0;
 		LEVEL 1 FOR 40.0;
 		LEVEL 0 FOR 40.0;
-		LEVEL 1 FOR 35.0;
+		LEVEL 1 FOR 25.0;
 	}
 }
 TRANSITION_LIST("instr_addr1")
@@ -1305,7 +1331,7 @@ TRANSITION_LIST("instr_addr1")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 45.0;
+		LEVEL 0 FOR 55.0;
 		LEVEL 1 FOR 80.0;
 		LEVEL 0 FOR 80.0;
 		LEVEL 1 FOR 80.0;
@@ -1317,7 +1343,7 @@ TRANSITION_LIST("instr_addr1")
 		LEVEL 1 FOR 80.0;
 		LEVEL 0 FOR 80.0;
 		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 75.0;
+		LEVEL 0 FOR 65.0;
 	}
 }
 TRANSITION_LIST("instr_addr2")
@@ -1325,13 +1351,13 @@ TRANSITION_LIST("instr_addr2")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 125.0;
+		LEVEL 0 FOR 135.0;
 		LEVEL 1 FOR 160.0;
 		LEVEL 0 FOR 160.0;
 		LEVEL 1 FOR 160.0;
 		LEVEL 0 FOR 160.0;
 		LEVEL 1 FOR 160.0;
-		LEVEL 0 FOR 75.0;
+		LEVEL 0 FOR 65.0;
 	}
 }
 TRANSITION_LIST("instr_addr3")
@@ -1339,10 +1365,10 @@ TRANSITION_LIST("instr_addr3")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 285.0;
+		LEVEL 0 FOR 295.0;
 		LEVEL 1 FOR 320.0;
 		LEVEL 0 FOR 320.0;
-		LEVEL 1 FOR 75.0;
+		LEVEL 1 FOR 65.0;
 	}
 }
 TRANSITION_LIST("instr_addr4")
@@ -1350,8 +1376,8 @@ TRANSITION_LIST("instr_addr4")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 605.0;
-		LEVEL 1 FOR 395.0;
+		LEVEL 0 FOR 615.0;
+		LEVEL 1 FOR 385.0;
 	}
 }
 TRANSITION_LIST("instr_addr5")
@@ -1383,7 +1409,9 @@ TRANSITION_LIST("instr_mem_data0")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 100.0;
+		LEVEL 0 FOR 890.0;
 	}
 }
 TRANSITION_LIST("instr_mem_data1")
@@ -1391,7 +1419,13 @@ TRANSITION_LIST("instr_mem_data1")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 150.0;
+		LEVEL 0 FOR 50.0;
+		LEVEL 1 FOR 100.0;
+		LEVEL 0 FOR 150.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 440.0;
 	}
 }
 TRANSITION_LIST("instr_mem_data2")
@@ -1399,7 +1433,11 @@ TRANSITION_LIST("instr_mem_data2")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 150.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 740.0;
 	}
 }
 TRANSITION_LIST("instr_mem_data3")
@@ -1415,7 +1453,11 @@ TRANSITION_LIST("instr_mem_data4")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 110.0;
+		LEVEL 1 FOR 350.0;
+		LEVEL 0 FOR 50.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 440.0;
 	}
 }
 TRANSITION_LIST("instr_mem_data5")
@@ -1447,7 +1489,19 @@ TRANSITION_LIST("instr_mem_data8")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 50.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 50.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 50.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 50.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 50.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 440.0;
 	}
 }
 TRANSITION_LIST("instr_mem_data9")
@@ -1455,7 +1509,13 @@ TRANSITION_LIST("instr_mem_data9")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 100.0;
+		LEVEL 0 FOR 100.0;
+		LEVEL 1 FOR 100.0;
+		LEVEL 0 FOR 100.0;
+		LEVEL 1 FOR 100.0;
+		LEVEL 0 FOR 440.0;
 	}
 }
 TRANSITION_LIST("instr_mem_data10")
@@ -1463,7 +1523,9 @@ TRANSITION_LIST("instr_mem_data10")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 160.0;
+		LEVEL 1 FOR 200.0;
+		LEVEL 0 FOR 640.0;
 	}
 }
 TRANSITION_LIST("instr_mem_data11")
@@ -1471,7 +1533,9 @@ TRANSITION_LIST("instr_mem_data11")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 360.0;
+		LEVEL 1 FOR 200.0;
+		LEVEL 0 FOR 440.0;
 	}
 }
 TRANSITION_LIST("instr_mem_data12")
@@ -1479,7 +1543,15 @@ TRANSITION_LIST("instr_mem_data12")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 100.0;
+		LEVEL 0 FOR 50.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 100.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 50.0;
+		LEVEL 1 FOR 100.0;
+		LEVEL 0 FOR 490.0;
 	}
 }
 TRANSITION_LIST("instr_mem_data13")
@@ -1487,7 +1559,13 @@ TRANSITION_LIST("instr_mem_data13")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 100.0;
+		LEVEL 0 FOR 100.0;
+		LEVEL 1 FOR 150.0;
+		LEVEL 0 FOR 100.0;
+		LEVEL 1 FOR 100.0;
+		LEVEL 0 FOR 440.0;
 	}
 }
 TRANSITION_LIST("instr_mem_data14")
@@ -1495,7 +1573,9 @@ TRANSITION_LIST("instr_mem_data14")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 360.0;
+		LEVEL 1 FOR 200.0;
+		LEVEL 0 FOR 440.0;
 	}
 }
 TRANSITION_LIST("instr_mem_data15")
@@ -1503,7 +1583,11 @@ TRANSITION_LIST("instr_mem_data15")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 100.0;
+		LEVEL 0 FOR 100.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 740.0;
 	}
 }
 TRANSITION_LIST("mem_rd")
@@ -1527,7 +1611,8 @@ TRANSITION_LIST("rst")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 990.0;
 	}
 }
 
@@ -1536,7 +1621,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "clk";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 0;
 	TREE_LEVEL = 0;
 }
@@ -1545,7 +1630,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "data_addr";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 1;
 	TREE_LEVEL = 0;
 	CHILDREN = 2, 3, 4, 5, 6, 7, 8, 9;
@@ -1553,60 +1638,10 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "data_addr0";
+	CHANNEL = "data_addr7";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 2;
-	TREE_LEVEL = 1;
-	PARENT = 1;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "data_addr1";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 3;
-	TREE_LEVEL = 1;
-	PARENT = 1;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "data_addr2";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 4;
-	TREE_LEVEL = 1;
-	PARENT = 1;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "data_addr3";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 5;
-	TREE_LEVEL = 1;
-	PARENT = 1;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "data_addr4";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 6;
-	TREE_LEVEL = 1;
-	PARENT = 1;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "data_addr5";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 7;
 	TREE_LEVEL = 1;
 	PARENT = 1;
 }
@@ -1615,7 +1650,57 @@ DISPLAY_LINE
 {
 	CHANNEL = "data_addr6";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 3;
+	TREE_LEVEL = 1;
+	PARENT = 1;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_addr5";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 4;
+	TREE_LEVEL = 1;
+	PARENT = 1;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_addr4";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 5;
+	TREE_LEVEL = 1;
+	PARENT = 1;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_addr3";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 6;
+	TREE_LEVEL = 1;
+	PARENT = 1;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_addr2";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 7;
+	TREE_LEVEL = 1;
+	PARENT = 1;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_addr1";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 8;
 	TREE_LEVEL = 1;
 	PARENT = 1;
@@ -1623,9 +1708,9 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "data_addr7";
+	CHANNEL = "data_addr0";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 9;
 	TREE_LEVEL = 1;
 	PARENT = 1;
@@ -1634,8 +1719,8 @@ DISPLAY_LINE
 DISPLAY_LINE
 {
 	CHANNEL = "data_mem_data_in";
-	EXPAND_STATUS = EXPANDED;
-	RADIX = Binary;
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 10;
 	TREE_LEVEL = 0;
 	CHILDREN = 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26;
@@ -1643,140 +1728,10 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "data_mem_data_in0";
+	CHANNEL = "data_mem_data_in15";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 11;
-	TREE_LEVEL = 1;
-	PARENT = 10;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "data_mem_data_in1";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 12;
-	TREE_LEVEL = 1;
-	PARENT = 10;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "data_mem_data_in2";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 13;
-	TREE_LEVEL = 1;
-	PARENT = 10;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "data_mem_data_in3";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 14;
-	TREE_LEVEL = 1;
-	PARENT = 10;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "data_mem_data_in4";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 15;
-	TREE_LEVEL = 1;
-	PARENT = 10;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "data_mem_data_in5";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 16;
-	TREE_LEVEL = 1;
-	PARENT = 10;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "data_mem_data_in6";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 17;
-	TREE_LEVEL = 1;
-	PARENT = 10;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "data_mem_data_in7";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 18;
-	TREE_LEVEL = 1;
-	PARENT = 10;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "data_mem_data_in8";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 19;
-	TREE_LEVEL = 1;
-	PARENT = 10;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "data_mem_data_in9";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 20;
-	TREE_LEVEL = 1;
-	PARENT = 10;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "data_mem_data_in10";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 21;
-	TREE_LEVEL = 1;
-	PARENT = 10;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "data_mem_data_in11";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 22;
-	TREE_LEVEL = 1;
-	PARENT = 10;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "data_mem_data_in12";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 23;
-	TREE_LEVEL = 1;
-	PARENT = 10;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "data_mem_data_in13";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 24;
 	TREE_LEVEL = 1;
 	PARENT = 10;
 }
@@ -1785,7 +1740,137 @@ DISPLAY_LINE
 {
 	CHANNEL = "data_mem_data_in14";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 12;
+	TREE_LEVEL = 1;
+	PARENT = 10;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_mem_data_in13";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 13;
+	TREE_LEVEL = 1;
+	PARENT = 10;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_mem_data_in12";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 14;
+	TREE_LEVEL = 1;
+	PARENT = 10;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_mem_data_in11";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 15;
+	TREE_LEVEL = 1;
+	PARENT = 10;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_mem_data_in10";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 16;
+	TREE_LEVEL = 1;
+	PARENT = 10;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_mem_data_in9";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 17;
+	TREE_LEVEL = 1;
+	PARENT = 10;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_mem_data_in8";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 18;
+	TREE_LEVEL = 1;
+	PARENT = 10;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_mem_data_in7";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 19;
+	TREE_LEVEL = 1;
+	PARENT = 10;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_mem_data_in6";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 20;
+	TREE_LEVEL = 1;
+	PARENT = 10;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_mem_data_in5";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 21;
+	TREE_LEVEL = 1;
+	PARENT = 10;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_mem_data_in4";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 22;
+	TREE_LEVEL = 1;
+	PARENT = 10;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_mem_data_in3";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 23;
+	TREE_LEVEL = 1;
+	PARENT = 10;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_mem_data_in2";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 24;
+	TREE_LEVEL = 1;
+	PARENT = 10;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_mem_data_in1";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 25;
 	TREE_LEVEL = 1;
 	PARENT = 10;
@@ -1793,9 +1878,9 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "data_mem_data_in15";
+	CHANNEL = "data_mem_data_in0";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 26;
 	TREE_LEVEL = 1;
 	PARENT = 10;
@@ -1805,7 +1890,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "data_mem_data_out";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 27;
 	TREE_LEVEL = 0;
 	CHILDREN = 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43;
@@ -1813,140 +1898,10 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "data_mem_data_out0";
+	CHANNEL = "data_mem_data_out15";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 28;
-	TREE_LEVEL = 1;
-	PARENT = 27;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "data_mem_data_out1";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 29;
-	TREE_LEVEL = 1;
-	PARENT = 27;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "data_mem_data_out2";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 30;
-	TREE_LEVEL = 1;
-	PARENT = 27;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "data_mem_data_out3";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 31;
-	TREE_LEVEL = 1;
-	PARENT = 27;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "data_mem_data_out4";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 32;
-	TREE_LEVEL = 1;
-	PARENT = 27;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "data_mem_data_out5";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 33;
-	TREE_LEVEL = 1;
-	PARENT = 27;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "data_mem_data_out6";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 34;
-	TREE_LEVEL = 1;
-	PARENT = 27;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "data_mem_data_out7";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 35;
-	TREE_LEVEL = 1;
-	PARENT = 27;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "data_mem_data_out8";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 36;
-	TREE_LEVEL = 1;
-	PARENT = 27;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "data_mem_data_out9";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 37;
-	TREE_LEVEL = 1;
-	PARENT = 27;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "data_mem_data_out10";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 38;
-	TREE_LEVEL = 1;
-	PARENT = 27;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "data_mem_data_out11";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 39;
-	TREE_LEVEL = 1;
-	PARENT = 27;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "data_mem_data_out12";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 40;
-	TREE_LEVEL = 1;
-	PARENT = 27;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "data_mem_data_out13";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 41;
 	TREE_LEVEL = 1;
 	PARENT = 27;
 }
@@ -1955,7 +1910,137 @@ DISPLAY_LINE
 {
 	CHANNEL = "data_mem_data_out14";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 29;
+	TREE_LEVEL = 1;
+	PARENT = 27;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_mem_data_out13";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 30;
+	TREE_LEVEL = 1;
+	PARENT = 27;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_mem_data_out12";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 31;
+	TREE_LEVEL = 1;
+	PARENT = 27;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_mem_data_out11";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 32;
+	TREE_LEVEL = 1;
+	PARENT = 27;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_mem_data_out10";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 33;
+	TREE_LEVEL = 1;
+	PARENT = 27;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_mem_data_out9";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 34;
+	TREE_LEVEL = 1;
+	PARENT = 27;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_mem_data_out8";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 35;
+	TREE_LEVEL = 1;
+	PARENT = 27;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_mem_data_out7";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 36;
+	TREE_LEVEL = 1;
+	PARENT = 27;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_mem_data_out6";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 37;
+	TREE_LEVEL = 1;
+	PARENT = 27;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_mem_data_out5";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 38;
+	TREE_LEVEL = 1;
+	PARENT = 27;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_mem_data_out4";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 39;
+	TREE_LEVEL = 1;
+	PARENT = 27;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_mem_data_out3";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 40;
+	TREE_LEVEL = 1;
+	PARENT = 27;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_mem_data_out2";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 41;
+	TREE_LEVEL = 1;
+	PARENT = 27;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_mem_data_out1";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 42;
 	TREE_LEVEL = 1;
 	PARENT = 27;
@@ -1963,9 +2048,9 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "data_mem_data_out15";
+	CHANNEL = "data_mem_data_out0";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 43;
 	TREE_LEVEL = 1;
 	PARENT = 27;
@@ -1975,7 +2060,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "instr_addr";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 44;
 	TREE_LEVEL = 0;
 	CHILDREN = 45, 46, 47, 48, 49, 50, 51, 52;
@@ -1983,60 +2068,10 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "instr_addr0";
+	CHANNEL = "instr_addr7";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 45;
-	TREE_LEVEL = 1;
-	PARENT = 44;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "instr_addr1";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 46;
-	TREE_LEVEL = 1;
-	PARENT = 44;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "instr_addr2";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 47;
-	TREE_LEVEL = 1;
-	PARENT = 44;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "instr_addr3";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 48;
-	TREE_LEVEL = 1;
-	PARENT = 44;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "instr_addr4";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 49;
-	TREE_LEVEL = 1;
-	PARENT = 44;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "instr_addr5";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 50;
 	TREE_LEVEL = 1;
 	PARENT = 44;
 }
@@ -2045,7 +2080,57 @@ DISPLAY_LINE
 {
 	CHANNEL = "instr_addr6";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 46;
+	TREE_LEVEL = 1;
+	PARENT = 44;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "instr_addr5";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 47;
+	TREE_LEVEL = 1;
+	PARENT = 44;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "instr_addr4";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 48;
+	TREE_LEVEL = 1;
+	PARENT = 44;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "instr_addr3";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 49;
+	TREE_LEVEL = 1;
+	PARENT = 44;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "instr_addr2";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 50;
+	TREE_LEVEL = 1;
+	PARENT = 44;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "instr_addr1";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 51;
 	TREE_LEVEL = 1;
 	PARENT = 44;
@@ -2053,9 +2138,9 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "instr_addr7";
+	CHANNEL = "instr_addr0";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 52;
 	TREE_LEVEL = 1;
 	PARENT = 44;
@@ -2064,8 +2149,8 @@ DISPLAY_LINE
 DISPLAY_LINE
 {
 	CHANNEL = "instr_mem_data";
-	EXPAND_STATUS = EXPANDED;
-	RADIX = Binary;
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 53;
 	TREE_LEVEL = 0;
 	CHILDREN = 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69;
@@ -2073,140 +2158,10 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "instr_mem_data0";
+	CHANNEL = "instr_mem_data15";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 54;
-	TREE_LEVEL = 1;
-	PARENT = 53;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "instr_mem_data1";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 55;
-	TREE_LEVEL = 1;
-	PARENT = 53;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "instr_mem_data2";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 56;
-	TREE_LEVEL = 1;
-	PARENT = 53;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "instr_mem_data3";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 57;
-	TREE_LEVEL = 1;
-	PARENT = 53;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "instr_mem_data4";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 58;
-	TREE_LEVEL = 1;
-	PARENT = 53;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "instr_mem_data5";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 59;
-	TREE_LEVEL = 1;
-	PARENT = 53;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "instr_mem_data6";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 60;
-	TREE_LEVEL = 1;
-	PARENT = 53;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "instr_mem_data7";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 61;
-	TREE_LEVEL = 1;
-	PARENT = 53;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "instr_mem_data8";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 62;
-	TREE_LEVEL = 1;
-	PARENT = 53;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "instr_mem_data9";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 63;
-	TREE_LEVEL = 1;
-	PARENT = 53;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "instr_mem_data10";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 64;
-	TREE_LEVEL = 1;
-	PARENT = 53;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "instr_mem_data11";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 65;
-	TREE_LEVEL = 1;
-	PARENT = 53;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "instr_mem_data12";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 66;
-	TREE_LEVEL = 1;
-	PARENT = 53;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "instr_mem_data13";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 67;
 	TREE_LEVEL = 1;
 	PARENT = 53;
 }
@@ -2215,7 +2170,137 @@ DISPLAY_LINE
 {
 	CHANNEL = "instr_mem_data14";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 55;
+	TREE_LEVEL = 1;
+	PARENT = 53;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "instr_mem_data13";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 56;
+	TREE_LEVEL = 1;
+	PARENT = 53;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "instr_mem_data12";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 57;
+	TREE_LEVEL = 1;
+	PARENT = 53;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "instr_mem_data11";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 58;
+	TREE_LEVEL = 1;
+	PARENT = 53;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "instr_mem_data10";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 59;
+	TREE_LEVEL = 1;
+	PARENT = 53;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "instr_mem_data9";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 60;
+	TREE_LEVEL = 1;
+	PARENT = 53;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "instr_mem_data8";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 61;
+	TREE_LEVEL = 1;
+	PARENT = 53;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "instr_mem_data7";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 62;
+	TREE_LEVEL = 1;
+	PARENT = 53;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "instr_mem_data6";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 63;
+	TREE_LEVEL = 1;
+	PARENT = 53;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "instr_mem_data5";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 64;
+	TREE_LEVEL = 1;
+	PARENT = 53;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "instr_mem_data4";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 65;
+	TREE_LEVEL = 1;
+	PARENT = 53;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "instr_mem_data3";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 66;
+	TREE_LEVEL = 1;
+	PARENT = 53;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "instr_mem_data2";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 67;
+	TREE_LEVEL = 1;
+	PARENT = 53;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "instr_mem_data1";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 68;
 	TREE_LEVEL = 1;
 	PARENT = 53;
@@ -2223,9 +2308,9 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "instr_mem_data15";
+	CHANNEL = "instr_mem_data0";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 69;
 	TREE_LEVEL = 1;
 	PARENT = 53;
@@ -2235,7 +2320,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "mem_rd";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 70;
 	TREE_LEVEL = 0;
 }
@@ -2244,7 +2329,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "mem_wr";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 71;
 	TREE_LEVEL = 0;
 }
@@ -2253,7 +2338,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "rst";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 72;
 	TREE_LEVEL = 0;
 }

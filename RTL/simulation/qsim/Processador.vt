@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "06/17/2026 21:44:57"
+// Generated on "06/19/2026 00:04:16"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    Processador
 // 
@@ -431,40 +431,10 @@ end
 
 
 
-// expected data_addr0
+// expected data_addr7
 initial
 begin
-	data_addr0_expected = 1'bX;
-end 
-
-// expected data_addr1
-initial
-begin
-	data_addr1_expected = 1'bX;
-end 
-
-// expected data_addr2
-initial
-begin
-	data_addr2_expected = 1'bX;
-end 
-
-// expected data_addr3
-initial
-begin
-	data_addr3_expected = 1'bX;
-end 
-
-// expected data_addr4
-initial
-begin
-	data_addr4_expected = 1'bX;
-end 
-
-// expected data_addr5
-initial
-begin
-	data_addr5_expected = 1'bX;
+	data_addr7_expected = 1'bX;
 end 
 
 // expected data_addr6
@@ -473,100 +443,40 @@ begin
 	data_addr6_expected = 1'bX;
 end 
 
-// expected data_addr7
+// expected data_addr5
 initial
 begin
-	data_addr7_expected = 1'bX;
+	data_addr5_expected = 1'bX;
 end 
 
-// expected data_mem_data_out0
+// expected data_addr4
 initial
 begin
-	data_mem_data_out0_expected = 1'bX;
+	data_addr4_expected = 1'bX;
 end 
 
-// expected data_mem_data_out1
+// expected data_addr3
 initial
 begin
-	data_mem_data_out1_expected = 1'bX;
+	data_addr3_expected = 1'bX;
 end 
 
-// expected data_mem_data_out2
+// expected data_addr2
 initial
 begin
-	data_mem_data_out2_expected = 1'bX;
+	data_addr2_expected = 1'bX;
 end 
 
-// expected data_mem_data_out3
+// expected data_addr1
 initial
 begin
-	data_mem_data_out3_expected = 1'bX;
+	data_addr1_expected = 1'bX;
 end 
 
-// expected data_mem_data_out4
+// expected data_addr0
 initial
 begin
-	data_mem_data_out4_expected = 1'bX;
-end 
-
-// expected data_mem_data_out5
-initial
-begin
-	data_mem_data_out5_expected = 1'bX;
-end 
-
-// expected data_mem_data_out6
-initial
-begin
-	data_mem_data_out6_expected = 1'bX;
-end 
-
-// expected data_mem_data_out7
-initial
-begin
-	data_mem_data_out7_expected = 1'bX;
-end 
-
-// expected data_mem_data_out8
-initial
-begin
-	data_mem_data_out8_expected = 1'bX;
-end 
-
-// expected data_mem_data_out9
-initial
-begin
-	data_mem_data_out9_expected = 1'bX;
-end 
-
-// expected data_mem_data_out10
-initial
-begin
-	data_mem_data_out10_expected = 1'bX;
-end 
-
-// expected data_mem_data_out11
-initial
-begin
-	data_mem_data_out11_expected = 1'bX;
-end 
-
-// expected data_mem_data_out12
-initial
-begin
-	data_mem_data_out12_expected = 1'bX;
-end 
-
-// expected data_mem_data_out13
-initial
-begin
-	data_mem_data_out13_expected = 1'bX;
-end 
-
-// expected data_mem_data_out14
-initial
-begin
-	data_mem_data_out14_expected = 1'bX;
+	data_addr0_expected = 1'bX;
 end 
 
 // expected data_mem_data_out15
@@ -575,40 +485,100 @@ begin
 	data_mem_data_out15_expected = 1'bX;
 end 
 
-// expected instr_addr0
+// expected data_mem_data_out14
 initial
 begin
-	instr_addr0_expected = 1'bX;
+	data_mem_data_out14_expected = 1'bX;
 end 
 
-// expected instr_addr1
+// expected data_mem_data_out13
 initial
 begin
-	instr_addr1_expected = 1'bX;
+	data_mem_data_out13_expected = 1'bX;
 end 
 
-// expected instr_addr2
+// expected data_mem_data_out12
 initial
 begin
-	instr_addr2_expected = 1'bX;
+	data_mem_data_out12_expected = 1'bX;
 end 
 
-// expected instr_addr3
+// expected data_mem_data_out11
 initial
 begin
-	instr_addr3_expected = 1'bX;
+	data_mem_data_out11_expected = 1'bX;
 end 
 
-// expected instr_addr4
+// expected data_mem_data_out10
 initial
 begin
-	instr_addr4_expected = 1'bX;
+	data_mem_data_out10_expected = 1'bX;
 end 
 
-// expected instr_addr5
+// expected data_mem_data_out9
 initial
 begin
-	instr_addr5_expected = 1'bX;
+	data_mem_data_out9_expected = 1'bX;
+end 
+
+// expected data_mem_data_out8
+initial
+begin
+	data_mem_data_out8_expected = 1'bX;
+end 
+
+// expected data_mem_data_out7
+initial
+begin
+	data_mem_data_out7_expected = 1'bX;
+end 
+
+// expected data_mem_data_out6
+initial
+begin
+	data_mem_data_out6_expected = 1'bX;
+end 
+
+// expected data_mem_data_out5
+initial
+begin
+	data_mem_data_out5_expected = 1'bX;
+end 
+
+// expected data_mem_data_out4
+initial
+begin
+	data_mem_data_out4_expected = 1'bX;
+end 
+
+// expected data_mem_data_out3
+initial
+begin
+	data_mem_data_out3_expected = 1'bX;
+end 
+
+// expected data_mem_data_out2
+initial
+begin
+	data_mem_data_out2_expected = 1'bX;
+end 
+
+// expected data_mem_data_out1
+initial
+begin
+	data_mem_data_out1_expected = 1'bX;
+end 
+
+// expected data_mem_data_out0
+initial
+begin
+	data_mem_data_out0_expected = 1'bX;
+end 
+
+// expected instr_addr7
+initial
+begin
+	instr_addr7_expected = 1'bX;
 end 
 
 // expected instr_addr6
@@ -617,10 +587,40 @@ begin
 	instr_addr6_expected = 1'bX;
 end 
 
-// expected instr_addr7
+// expected instr_addr5
 initial
 begin
-	instr_addr7_expected = 1'bX;
+	instr_addr5_expected = 1'bX;
+end 
+
+// expected instr_addr4
+initial
+begin
+	instr_addr4_expected = 1'bX;
+end 
+
+// expected instr_addr3
+initial
+begin
+	instr_addr3_expected = 1'bX;
+end 
+
+// expected instr_addr2
+initial
+begin
+	instr_addr2_expected = 1'bX;
+end 
+
+// expected instr_addr1
+initial
+begin
+	instr_addr1_expected = 1'bX;
+end 
+
+// expected instr_addr0
+initial
+begin
+	instr_addr0_expected = 1'bX;
 end 
 
 // expected mem_rd
@@ -1262,88 +1262,12 @@ begin
 	#5000;
 end 
 
-// data_mem_data_in0
+// data_mem_data_in15
 initial
 begin
-	data_mem_data_in0 = 1'b0;
-end 
-
-// data_mem_data_in1
-initial
-begin
-	data_mem_data_in1 = 1'b0;
-end 
-
-// data_mem_data_in2
-initial
-begin
-	data_mem_data_in2 = 1'b0;
-end 
-
-// data_mem_data_in3
-initial
-begin
-	data_mem_data_in3 = 1'b0;
-end 
-
-// data_mem_data_in4
-initial
-begin
-	data_mem_data_in4 = 1'b0;
-end 
-
-// data_mem_data_in5
-initial
-begin
-	data_mem_data_in5 = 1'b0;
-end 
-
-// data_mem_data_in6
-initial
-begin
-	data_mem_data_in6 = 1'b0;
-end 
-
-// data_mem_data_in7
-initial
-begin
-	data_mem_data_in7 = 1'b0;
-end 
-
-// data_mem_data_in8
-initial
-begin
-	data_mem_data_in8 = 1'b0;
-end 
-
-// data_mem_data_in9
-initial
-begin
-	data_mem_data_in9 = 1'b0;
-end 
-
-// data_mem_data_in10
-initial
-begin
-	data_mem_data_in10 = 1'b0;
-end 
-
-// data_mem_data_in11
-initial
-begin
-	data_mem_data_in11 = 1'b0;
-end 
-
-// data_mem_data_in12
-initial
-begin
-	data_mem_data_in12 = 1'b0;
-end 
-
-// data_mem_data_in13
-initial
-begin
-	data_mem_data_in13 = 1'b0;
+	data_mem_data_in15 = 1'b0;
+	data_mem_data_in15 = #450000 1'b1;
+	data_mem_data_in15 = #80000 1'b0;
 end 
 
 // data_mem_data_in14
@@ -1352,52 +1276,186 @@ begin
 	data_mem_data_in14 = 1'b0;
 end 
 
-// data_mem_data_in15
+// data_mem_data_in13
 initial
 begin
-	data_mem_data_in15 = 1'b0;
+	data_mem_data_in13 = 1'b0;
 end 
 
-// instr_mem_data0
+// data_mem_data_in12
 initial
 begin
-	instr_mem_data0 = 1'b0;
+	data_mem_data_in12 = 1'b0;
+	data_mem_data_in12 = #450000 1'b1;
+	data_mem_data_in12 = #40000 1'b0;
 end 
 
-// instr_mem_data1
+// data_mem_data_in11
 initial
 begin
-	instr_mem_data1 = 1'b0;
+	data_mem_data_in11 = 1'b0;
+	data_mem_data_in11 = #450000 1'b1;
+	data_mem_data_in11 = #80000 1'b0;
 end 
 
-// instr_mem_data2
+// data_mem_data_in10
 initial
 begin
-	instr_mem_data2 = 1'b0;
+	data_mem_data_in10 = 1'b0;
+	data_mem_data_in10 = #490000 1'b1;
+	data_mem_data_in10 = #40000 1'b0;
 end 
 
-// instr_mem_data3
+// data_mem_data_in9
 initial
 begin
-	instr_mem_data3 = 1'b0;
+	data_mem_data_in9 = 1'b0;
 end 
 
-// instr_mem_data4
+// data_mem_data_in8
 initial
 begin
-	instr_mem_data4 = 1'b0;
+	data_mem_data_in8 = 1'b0;
 end 
 
-// instr_mem_data5
+// data_mem_data_in7
 initial
 begin
-	instr_mem_data5 = 1'b0;
+	data_mem_data_in7 = 1'b0;
 end 
 
-// instr_mem_data6
+// data_mem_data_in6
 initial
 begin
-	instr_mem_data6 = 1'b0;
+	data_mem_data_in6 = 1'b0;
+end 
+
+// data_mem_data_in5
+initial
+begin
+	data_mem_data_in5 = 1'b0;
+	data_mem_data_in5 = #450000 1'b1;
+	data_mem_data_in5 = #80000 1'b0;
+end 
+
+// data_mem_data_in4
+initial
+begin
+	data_mem_data_in4 = 1'b0;
+end 
+
+// data_mem_data_in3
+initial
+begin
+	data_mem_data_in3 = 1'b0;
+end 
+
+// data_mem_data_in2
+initial
+begin
+	data_mem_data_in2 = 1'b0;
+end 
+
+// data_mem_data_in1
+initial
+begin
+	data_mem_data_in1 = 1'b0;
+end 
+
+// data_mem_data_in0
+initial
+begin
+	data_mem_data_in0 = 1'b0;
+end 
+
+// instr_mem_data15
+initial
+begin
+	instr_mem_data15 = 1'b0;
+	instr_mem_data15 = #10000 1'b1;
+	instr_mem_data15 = #100000 1'b0;
+	instr_mem_data15 = #100000 1'b1;
+	instr_mem_data15 = #50000 1'b0;
+end 
+
+// instr_mem_data14
+initial
+begin
+	instr_mem_data14 = 1'b0;
+	instr_mem_data14 = #360000 1'b1;
+	instr_mem_data14 = #200000 1'b0;
+end 
+
+// instr_mem_data13
+initial
+begin
+	instr_mem_data13 = 1'b0;
+	instr_mem_data13 = #10000 1'b1;
+	instr_mem_data13 = #100000 1'b0;
+	instr_mem_data13 = #100000 1'b1;
+	instr_mem_data13 = #150000 1'b0;
+	instr_mem_data13 = #100000 1'b1;
+	instr_mem_data13 = #100000 1'b0;
+end 
+
+// instr_mem_data12
+initial
+begin
+	instr_mem_data12 = 1'b0;
+	instr_mem_data12 = #10000 1'b1;
+	instr_mem_data12 = #100000 1'b0;
+	instr_mem_data12 = #50000 1'b1;
+	instr_mem_data12 = #50000 1'b0;
+	instr_mem_data12 = #100000 1'b1;
+	instr_mem_data12 = #50000 1'b0;
+	instr_mem_data12 = #50000 1'b1;
+	instr_mem_data12 = #100000 1'b0;
+end 
+
+// instr_mem_data11
+initial
+begin
+	instr_mem_data11 = 1'b0;
+	instr_mem_data11 = #360000 1'b1;
+	instr_mem_data11 = #200000 1'b0;
+end 
+
+// instr_mem_data10
+initial
+begin
+	instr_mem_data10 = 1'b0;
+	instr_mem_data10 = #160000 1'b1;
+	instr_mem_data10 = #200000 1'b0;
+end 
+
+// instr_mem_data9
+initial
+begin
+	instr_mem_data9 = 1'b0;
+	instr_mem_data9 = #60000 1'b1;
+	instr_mem_data9 = #100000 1'b0;
+	instr_mem_data9 = #100000 1'b1;
+	instr_mem_data9 = #100000 1'b0;
+	instr_mem_data9 = #100000 1'b1;
+	instr_mem_data9 = #100000 1'b0;
+end 
+
+// instr_mem_data8
+initial
+begin
+	instr_mem_data8 = 1'b0;
+	instr_mem_data8 = #10000 1'b1;
+	instr_mem_data8 = #50000 1'b0;
+	instr_mem_data8 = #50000 1'b1;
+	instr_mem_data8 = #50000 1'b0;
+	instr_mem_data8 = #50000 1'b1;
+	instr_mem_data8 = #50000 1'b0;
+	instr_mem_data8 = #50000 1'b1;
+	instr_mem_data8 = #50000 1'b0;
+	instr_mem_data8 = #50000 1'b1;
+	instr_mem_data8 = #50000 1'b0;
+	instr_mem_data8 = #50000 1'b1;
+	instr_mem_data8 = #50000 1'b0;
 end 
 
 // instr_mem_data7
@@ -1406,58 +1464,69 @@ begin
 	instr_mem_data7 = 1'b0;
 end 
 
-// instr_mem_data8
+// instr_mem_data6
 initial
 begin
-	instr_mem_data8 = 1'b0;
+	instr_mem_data6 = 1'b0;
 end 
 
-// instr_mem_data9
+// instr_mem_data5
 initial
 begin
-	instr_mem_data9 = 1'b0;
+	instr_mem_data5 = 1'b0;
 end 
 
-// instr_mem_data10
+// instr_mem_data4
 initial
 begin
-	instr_mem_data10 = 1'b0;
+	instr_mem_data4 = 1'b0;
+	instr_mem_data4 = #110000 1'b1;
+	instr_mem_data4 = #350000 1'b0;
+	instr_mem_data4 = #50000 1'b1;
+	instr_mem_data4 = #50000 1'b0;
 end 
 
-// instr_mem_data11
+// instr_mem_data3
 initial
 begin
-	instr_mem_data11 = 1'b0;
+	instr_mem_data3 = 1'b0;
 end 
 
-// instr_mem_data12
+// instr_mem_data2
 initial
 begin
-	instr_mem_data12 = 1'b0;
+	instr_mem_data2 = 1'b0;
+	instr_mem_data2 = #10000 1'b1;
+	instr_mem_data2 = #50000 1'b0;
+	instr_mem_data2 = #150000 1'b1;
+	instr_mem_data2 = #50000 1'b0;
 end 
 
-// instr_mem_data13
+// instr_mem_data1
 initial
 begin
-	instr_mem_data13 = 1'b0;
+	instr_mem_data1 = 1'b0;
+	instr_mem_data1 = #60000 1'b1;
+	instr_mem_data1 = #150000 1'b0;
+	instr_mem_data1 = #50000 1'b1;
+	instr_mem_data1 = #100000 1'b0;
+	instr_mem_data1 = #150000 1'b1;
+	instr_mem_data1 = #50000 1'b0;
 end 
 
-// instr_mem_data14
+// instr_mem_data0
 initial
 begin
-	instr_mem_data14 = 1'b0;
-end 
-
-// instr_mem_data15
-initial
-begin
-	instr_mem_data15 = 1'b0;
+	instr_mem_data0 = 1'b0;
+	instr_mem_data0 = #10000 1'b1;
+	instr_mem_data0 = #100000 1'b0;
 end 
 
 // rst
 initial
 begin
-	rst = 1'b0;
+	rst = 1'b1;
+	rst = #10000 1'b0;
 end 
 
 Processador_vlg_sample_tst tb_sample (
