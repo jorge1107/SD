@@ -1,5 +1,5 @@
 Flow report for Processador
-Fri Jun 19 00:04:17 2026
+Sat Jun 20 14:07:16 2026
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Fri Jun 19 00:04:17 2026           ;
+; Flow Status                        ; Successful - Sat Jun 20 14:07:16 2026           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Processador                                     ;
 ; Top-level Entity Name              ; Processador                                     ;
@@ -120,7 +120,17 @@ applicable agreement for further details.
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4524 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4524 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4524 MB             ; 00:00:01                           ;
-; Total                ; 00:00:50     ; --                      ; --                  ; 00:00:52                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4524 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4524 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4524 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4524 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4524 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4524 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4524 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4524 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4524 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4524 MB             ; 00:00:01                           ;
+; Total                ; 00:00:59     ; --                      ; --                  ; 00:01:02                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -130,6 +140,16 @@ applicable agreement for further details.
 ; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +----------------------+------------------+-----------+------------+----------------+
 ; Analysis & Synthesis ; ESCRITORIO       ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer   ; ESCRITORIO       ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer   ; ESCRITORIO       ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer   ; ESCRITORIO       ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer   ; ESCRITORIO       ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer   ; ESCRITORIO       ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer   ; ESCRITORIO       ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer   ; ESCRITORIO       ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer   ; ESCRITORIO       ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer   ; ESCRITORIO       ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer   ; ESCRITORIO       ; Windows 7 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer   ; ESCRITORIO       ; Windows 7 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer   ; ESCRITORIO       ; Windows 7 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer   ; ESCRITORIO       ; Windows 7 ; 6.2        ; x86_64         ;
@@ -188,6 +208,16 @@ quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog
 quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog Processador -c Processador --vector_source=D:/SD/RTL/Waveform.vwf --testbench_file=./simulation/qsim/Processador.vt
 quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog Processador -c Processador
 quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog Processador -c Processador --vector_source=D:/SD/RTL/Waveform.vwf --testbench_file=./simulation/qsim/Processador.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog Processador -c Processador
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog Processador -c Processador --vector_source="D:/SD/RTL/Waveform2 - Copia.vwf" --testbench_file=./simulation/qsim/Processador.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog Processador -c Processador
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog Processador -c Processador --vector_source="D:/SD/RTL/Waveform2 - Copia.vwf" --testbench_file=./simulation/qsim/Processador.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog Processador -c Processador
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog Processador -c Processador --vector_source="D:/SD/RTL/Waveform2 - Copia.vwf" --testbench_file=./simulation/qsim/Processador.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog Processador -c Processador
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog Processador -c Processador --vector_source="D:/SD/RTL/Waveform2 - Copia.vwf" --testbench_file=./simulation/qsim/Processador.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog Processador -c Processador
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog Processador -c Processador --vector_source="D:/SD/RTL/Waveform2 - Copia.vwf" --testbench_file=./simulation/qsim/Processador.vt
 quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog Processador -c Processador
 
 

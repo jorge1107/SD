@@ -10,6 +10,7 @@ source_file = 1, D:/SD/RTL/ULA.vhd
 source_file = 1, D:/SD/RTL/datapath.vhd
 source_file = 1, ctrl_unit.vhd
 source_file = 1, D:/SD/RTL/Waveform.vwf
+source_file = 1, D:/SD/RTL/Waveform2 - Copia.vwf
 source_file = 1, D:/SD/RTL/db/Processador.cbx.xml
 source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
