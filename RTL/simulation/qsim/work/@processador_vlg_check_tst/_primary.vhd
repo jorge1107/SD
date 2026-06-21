@@ -1,0 +1,41 @@
+library verilog;
+use verilog.vl_types.all;
+entity Processador_vlg_check_tst is
+    port(
+        data_addr0      : in     vl_logic;
+        data_addr1      : in     vl_logic;
+        data_addr2      : in     vl_logic;
+        data_addr3      : in     vl_logic;
+        data_addr4      : in     vl_logic;
+        data_addr5      : in     vl_logic;
+        data_addr6      : in     vl_logic;
+        data_addr7      : in     vl_logic;
+        data_mem_data_out0: in     vl_logic;
+        data_mem_data_out1: in     vl_logic;
+        data_mem_data_out2: in     vl_logic;
+        data_mem_data_out3: in     vl_logic;
+        data_mem_data_out4: in     vl_logic;
+        data_mem_data_out5: in     vl_logic;
+        data_mem_data_out6: in     vl_logic;
+        data_mem_data_out7: in     vl_logic;
+        data_mem_data_out8: in     vl_logic;
+        data_mem_data_out9: in     vl_logic;
+        data_mem_data_out10: in     vl_logic;
+        data_mem_data_out11: in     vl_logic;
+        data_mem_data_out12: in     vl_logic;
+        data_mem_data_out13: in     vl_logic;
+        data_mem_data_out14: in     vl_logic;
+        data_mem_data_out15: in     vl_logic;
+        instr_addr0     : in     vl_logic;
+        instr_addr1     : in     vl_logic;
+        instr_addr2     : in     vl_logic;
+        instr_addr3     : in     vl_logic;
+        instr_addr4     : in     vl_logic;
+        instr_addr5     : in     vl_logic;
+        instr_addr6     : in     vl_logic;
+        instr_addr7     : in     vl_logic;
+        mem_rd          : in     vl_logic;
+        mem_wr          : in     vl_logic;
+        sampler_rx      : in     vl_logic
+    );
+end Processador_vlg_check_tst;

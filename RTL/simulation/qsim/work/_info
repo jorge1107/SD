@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\SD\RTL\simulation\qsim
+vProcessador
+Z1 !s100 T9Y@JB21PcIo=L8fY]B2B3
+Z2 Il2e`]@:=iWjHj6`o>N8O93
+Z3 VM7?T;4mC:R3]4LLXOT`Q12
+Z4 dD:\SD\RTL\simulation\qsim
+Z5 w1782064612
+Z6 8Processador.vo
+Z7 FProcessador.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|Processador.vo|
+Z10 o-work work -O0
+Z11 n@processador
+!i10b 1
+!s85 0
+Z12 !s108 1782064613.667000
+Z13 !s107 Processador.vo|
+!s101 -O0
+vProcessador_vlg_check_tst
+!i10b 1
+Z14 !s100 ^n;C@Uz^KYSB1oF8nW=O=0
+Z15 I`<Hacdfk:me;[BSXjzCMW1
+Z16 V][8>SZL7[[0minMLaYUJ71
+R4
+R5
+Z17 8Processador.vt
+Z18 FProcessador.vt
+Z19 L0 123
+R8
+r1
+!s85 0
+31
+Z20 !s108 1782064613.827000
+Z21 !s107 Processador.vt|
+Z22 !s90 -work|work|Processador.vt|
+!s101 -O0
+R10
+Z23 n@processador_vlg_check_tst
+vProcessador_vlg_sample_tst
+!i10b 1
+Z24 !s100 81Gf^>B;EVH=Dn>T[K0Y_1
+Z25 IiGHz>ID2XoBNY3o>6eh7Q0
+Z26 VPLR<JfKnN0E7C63@Y:NH@3
+R4
+R5
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 n@processador_vlg_sample_tst
+vProcessador_vlg_vec_tst
+!i10b 1
+Z28 !s100 CB]h`3nda2:OPfTk>:3bK2
+Z29 ILV:NFSHR38ZVk;c;kHc2U0
+Z30 VWk1TBd`z8GiCR?XQY:`Ho2
+R4
+R5
+R17
+R18
+Z31 L0 1109
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z32 n@processador_vlg_vec_tst
