@@ -115,22 +115,22 @@ begin
     u_rf: RegisterFile port map(clk=>clk, rst=>rst, we=>rf_wr, wa3=>rf_rd_vec(3), wa2=>rf_rd_vec(2), wa1=>rf_rd_vec(1), wa0=>rf_rd_vec(0), ra3=>rf_ra_vec(3), ra2=>rf_ra_vec(2), ra1=>rf_ra_vec(1), ra0=>rf_ra_vec(0), rb3=>rf_rb_vec(3), rb2=>rf_rb_vec(2), rb1=>rf_rb_vec(1), rb0=>rf_rb_vec(0), wd15=>rf_wd_data(15), wd14=>rf_wd_data(14), wd13=>rf_wd_data(13), wd12=>rf_wd_data(12), wd11=>rf_wd_data(11), wd10=>rf_wd_data(10), wd9=>rf_wd_data(9), wd8=>rf_wd_data(8), wd7=>rf_wd_data(7), wd6=>rf_wd_data(6), wd5=>rf_wd_data(5), wd4=>rf_wd_data(4), wd3=>rf_wd_data(3), wd2=>rf_wd_data(2), wd1=>rf_wd_data(1), wd0=>rf_wd_data(0), rd_a15=>rf_ra_data(15), rd_a14=>rf_ra_data(14), rd_a13=>rf_ra_data(13), rd_a12=>rf_ra_data(12), rd_a11=>rf_ra_data(11), rd_a10=>rf_ra_data(10), rd_a9=>rf_ra_data(9), rd_a8=>rf_ra_data(8), rd_a7=>rf_ra_data(7), rd_a6=>rf_ra_data(6), rd_a5=>rf_ra_data(5), rd_a4=>rf_ra_data(4), rd_a3=>rf_ra_data(3), rd_a2=>rf_ra_data(2), rd_a1=>rf_ra_data(1), rd_a0=>rf_ra_data(0), rd_b15=>rf_rb_data(15), rd_b14=>rf_rb_data(14), rd_b13=>rf_rb_data(13), rd_b12=>rf_rb_data(12), rd_b11=>rf_rb_data(11), rd_b10=>rf_rb_data(10), rd_b9=>rf_rb_data(9), rd_b8=>rf_rb_data(8), rd_b7=>rf_rb_data(7), rd_b6=>rf_rb_data(6), rd_b5=>rf_rb_data(5), rd_b4=>rf_rb_data(4), rd_b3=>rf_rb_data(3), rd_b2=>rf_rb_data(2), rd_b1=>rf_rb_data(1), rd_b0=>rf_rb_data(0));
 
     -- MUX na entrada B da ULA: rf_rb_data quando normal, imm4 quando ADDI
-        ula_b_vec(15) <= (rf_rb_data(15) and not is_addi) or (imm4_vec(15) and is_addi);
-        ula_b_vec(14) <= (rf_rb_data(14) and not is_addi) or (imm4_vec(14) and is_addi);
-        ula_b_vec(13) <= (rf_rb_data(13) and not is_addi) or (imm4_vec(13) and is_addi);
-        ula_b_vec(12) <= (rf_rb_data(12) and not is_addi) or (imm4_vec(12) and is_addi);
-        ula_b_vec(11) <= (rf_rb_data(11) and not is_addi) or (imm4_vec(11) and is_addi);
-        ula_b_vec(10) <= (rf_rb_data(10) and not is_addi) or (imm4_vec(10) and is_addi);
-        ula_b_vec(9) <= (rf_rb_data(9) and not is_addi) or (imm4_vec(9) and is_addi);
-        ula_b_vec(8) <= (rf_rb_data(8) and not is_addi) or (imm4_vec(8) and is_addi);
-        ula_b_vec(7) <= (rf_rb_data(7) and not is_addi) or (imm4_vec(7) and is_addi);
-        ula_b_vec(6) <= (rf_rb_data(6) and not is_addi) or (imm4_vec(6) and is_addi);
-        ula_b_vec(5) <= (rf_rb_data(5) and not is_addi) or (imm4_vec(5) and is_addi);
-        ula_b_vec(4) <= (rf_rb_data(4) and not is_addi) or (imm4_vec(4) and is_addi);
-        ula_b_vec(3) <= (rf_rb_data(3) and not is_addi) or (imm4_vec(3) and is_addi);
-        ula_b_vec(2) <= (rf_rb_data(2) and not is_addi) or (imm4_vec(2) and is_addi);
-        ula_b_vec(1) <= (rf_rb_data(1) and not is_addi) or (imm4_vec(1) and is_addi);
-
+    ula_b_vec(15) <= (rf_rb_data(15) and not is_addi) or (imm4_vec(15) and is_addi);
+    ula_b_vec(14) <= (rf_rb_data(14) and not is_addi) or (imm4_vec(14) and is_addi);
+    ula_b_vec(13) <= (rf_rb_data(13) and not is_addi) or (imm4_vec(13) and is_addi);
+    ula_b_vec(12) <= (rf_rb_data(12) and not is_addi) or (imm4_vec(12) and is_addi);
+    ula_b_vec(11) <= (rf_rb_data(11) and not is_addi) or (imm4_vec(11) and is_addi);
+    ula_b_vec(10) <= (rf_rb_data(10) and not is_addi) or (imm4_vec(10) and is_addi);
+    ula_b_vec(9) <= (rf_rb_data(9) and not is_addi) or (imm4_vec(9) and is_addi);
+    ula_b_vec(8) <= (rf_rb_data(8) and not is_addi) or (imm4_vec(8) and is_addi);
+    ula_b_vec(7) <= (rf_rb_data(7) and not is_addi) or (imm4_vec(7) and is_addi);
+    ula_b_vec(6) <= (rf_rb_data(6) and not is_addi) or (imm4_vec(6) and is_addi);
+    ula_b_vec(5) <= (rf_rb_data(5) and not is_addi) or (imm4_vec(5) and is_addi);
+    ula_b_vec(4) <= (rf_rb_data(4) and not is_addi) or (imm4_vec(4) and is_addi);
+    ula_b_vec(3) <= (rf_rb_data(3) and not is_addi) or (imm4_vec(3) and is_addi);
+    ula_b_vec(2) <= (rf_rb_data(2) and not is_addi) or (imm4_vec(2) and is_addi);
+    ula_b_vec(1) <= (rf_rb_data(1) and not is_addi) or (imm4_vec(1) and is_addi);
+    ula_b_vec(0) <= (rf_rb_data(0) and not is_addi) or (imm4_vec(0) and is_addi);
     ula_a_vec <= rf_ra_data;
 
     -- ULA

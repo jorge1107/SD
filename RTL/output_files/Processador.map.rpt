@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Processador
-Thu Jun 18 22:26:28 2026
+Sun Jun 21 13:55:44 2026
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -46,13 +46,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jun 18 22:26:28 2026           ;
+; Analysis & Synthesis Status        ; Successful - Sun Jun 21 13:55:44 2026           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Processador                                     ;
 ; Top-level Entity Name              ; Processador                                     ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 822                                             ;
-;     Total combinational functions  ; 566                                             ;
+; Total logic elements               ; 828                                             ;
+;     Total combinational functions  ; 572                                             ;
 ;     Dedicated logic registers      ; 283                                             ;
 ; Total registers                    ; 283                                             ;
 ; Total pins                         ; 68                                              ;
@@ -187,16 +187,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 822   ;
+; Estimated Total logic elements              ; 828   ;
 ;                                             ;       ;
-; Total combinational functions               ; 566   ;
+; Total combinational functions               ; 572   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 508   ;
+;     -- 4 input functions                    ; 514   ;
 ;     -- 3 input functions                    ; 50    ;
 ;     -- <=2 input functions                  ; 8     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 566   ;
+;     -- normal mode                          ; 572   ;
 ;     -- arithmetic mode                      ; 0     ;
 ;                                             ;       ;
 ; Total registers                             ; 283   ;
@@ -207,7 +207,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; clk   ;
 ; Maximum fan-out                             ; 283   ;
-; Total fan-out                               ; 3353  ;
+; Total fan-out                               ; 3377  ;
 ; Average fan-out                             ; 3.66  ;
 +---------------------------------------------+-------+
 
@@ -217,12 +217,12 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node     ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                            ; Library Name ;
 +--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------+--------------+
-; |Processador                   ; 566 (0)           ; 283 (0)      ; 0           ; 0            ; 0       ; 0         ; 68   ; 0            ; |Processador                                                                   ; work         ;
-;    |ControlUnit:u_ctrl|        ; 15 (15)           ; 3 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|ControlUnit:u_ctrl                                                ; work         ;
+; |Processador                   ; 572 (0)           ; 283 (0)      ; 0           ; 0            ; 0       ; 0         ; 68   ; 0            ; |Processador                                                                   ; work         ;
+;    |ControlUnit:u_ctrl|        ; 16 (16)           ; 3 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|ControlUnit:u_ctrl                                                ; work         ;
 ;       |FlipFlopD:u0|           ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|ControlUnit:u_ctrl|FlipFlopD:u0                                   ; work         ;
 ;       |FlipFlopD:u1|           ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|ControlUnit:u_ctrl|FlipFlopD:u1                                   ; work         ;
 ;       |FlipFlopD:u2|           ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|ControlUnit:u_ctrl|FlipFlopD:u2                                   ; work         ;
-;    |datapath:u_dp|             ; 551 (87)          ; 280 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp                                                     ; work         ;
+;    |datapath:u_dp|             ; 556 (86)          ; 280 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp                                                     ; work         ;
 ;       |Comparador16Bits:u_cmp| ; 21 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|Comparador16Bits:u_cmp                              ; work         ;
 ;          |Comparador:st0|      ; 12 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|Comparador16Bits:u_cmp|Comparador:st0               ; work         ;
 ;          |Comparador:st11|     ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|Comparador16Bits:u_cmp|Comparador:st11              ; work         ;
@@ -592,14 +592,15 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;             |FlipFlopD:ff7|    ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:u_reg_9|FlipFlopD:ff7   ; work         ;
 ;             |FlipFlopD:ff8|    ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:u_reg_9|FlipFlopD:ff8   ; work         ;
 ;             |FlipFlopD:ff9|    ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|RegisterFile:u_rf|Reg16Bits:u_reg_9|FlipFlopD:ff9   ; work         ;
-;       |ULA:u_ula|              ; 93 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|ULA:u_ula                                           ; work         ;
+;       |ULA:u_ula|              ; 99 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|ULA:u_ula                                           ; work         ;
 ;          |Adder16Bit:u_add|    ; 28 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|ULA:u_ula|Adder16Bit:u_add                          ; work         ;
+;             |FullAdder:U0|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|ULA:u_ula|Adder16Bit:u_add|FullAdder:U0             ; work         ;
 ;             |FullAdder:U10|    ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|ULA:u_ula|Adder16Bit:u_add|FullAdder:U10            ; work         ;
 ;             |FullAdder:U11|    ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|ULA:u_ula|Adder16Bit:u_add|FullAdder:U11            ; work         ;
 ;             |FullAdder:U12|    ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|ULA:u_ula|Adder16Bit:u_add|FullAdder:U12            ; work         ;
 ;             |FullAdder:U13|    ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|ULA:u_ula|Adder16Bit:u_add|FullAdder:U13            ; work         ;
 ;             |FullAdder:U14|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|ULA:u_ula|Adder16Bit:u_add|FullAdder:U14            ; work         ;
-;             |FullAdder:U1|     ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|ULA:u_ula|Adder16Bit:u_add|FullAdder:U1             ; work         ;
+;             |FullAdder:U1|     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|ULA:u_ula|Adder16Bit:u_add|FullAdder:U1             ; work         ;
 ;             |FullAdder:U2|     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|ULA:u_ula|Adder16Bit:u_add|FullAdder:U2             ; work         ;
 ;             |FullAdder:U3|     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|ULA:u_ula|Adder16Bit:u_add|FullAdder:U3             ; work         ;
 ;             |FullAdder:U4|     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|ULA:u_ula|Adder16Bit:u_add|FullAdder:U4             ; work         ;
@@ -608,7 +609,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;             |FullAdder:U7|     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|ULA:u_ula|Adder16Bit:u_add|FullAdder:U7             ; work         ;
 ;             |FullAdder:U8|     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|ULA:u_ula|Adder16Bit:u_add|FullAdder:U8             ; work         ;
 ;             |FullAdder:U9|     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|ULA:u_ula|Adder16Bit:u_add|FullAdder:U9             ; work         ;
-;          |ELA:u_ela|           ; 65 (65)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|ULA:u_ula|ELA:u_ela                                 ; work         ;
+;          |ELA:u_ela|           ; 71 (71)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|datapath:u_dp|ULA:u_ula|ELA:u_ela                                 ; work         ;
 +--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -634,7 +635,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
 ; 16:1               ; 16 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; No         ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:u_mux_a_6|Mux2x1:m30|d ;
-; 16:1               ; 16 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; No         ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:u_mux_b_0|Mux2x1:m30|d ;
+; 16:1               ; 16 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; No         ; |Processador|datapath:u_dp|RegisterFile:u_rf|Mux16x1:u_mux_b_4|Mux2x1:m30|d ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
 
 
@@ -654,7 +655,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
-; b0   ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
@@ -710,7 +710,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:27     ;
+; Top            ; 00:00:25     ;
 +----------------+--------------+
 
 
@@ -720,7 +720,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Jun 18 22:25:56 2026
+    Info: Processing started: Sun Jun 21 13:55:13 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Processador -c Processador
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file processador.vhd
@@ -798,14 +798,14 @@ Warning (12125): Using design file controlunit.vhd, which is not specified as a 
 Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:u_ctrl"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 906 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 912 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 34 input pins
     Info (21059): Implemented 34 output pins
-    Info (21061): Implemented 838 logic cells
+    Info (21061): Implemented 844 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 20 warnings
-    Info: Peak virtual memory: 4658 megabytes
-    Info: Processing ended: Thu Jun 18 22:26:28 2026
-    Info: Elapsed time: 00:00:32
+    Info: Peak virtual memory: 4662 megabytes
+    Info: Processing ended: Sun Jun 21 13:55:44 2026
+    Info: Elapsed time: 00:00:31
     Info: Total CPU time (on all processors): 00:00:27
 
 
